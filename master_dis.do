@@ -33,7 +33,7 @@ clear all
 
 *pathways
 gl d0 = "/Users/scottmiller/Dropbox (UFL)/Dissertation/Analysis" // master file
-gl d1 = "$d0/Stata Files" // do files stored here
+gl d1 = "/Users/scottmiller/GitHub/dissertation" // do files stored here
 gl d2 = "$d0/Output" // used to store output
 gl d3 = "$d0/Data" // data folder
 
