@@ -1,6 +1,6 @@
 
 /*******************************************************************************
-dis2.d0		
+dis0_6.d0		
 					
 - Generates a merged dataset at the HH level
 	Collapses HH data from ind. level to HH level
@@ -17,24 +17,9 @@ set more off, perm
 ** create merged dataset at HH level **
 cd "$d3"
 
-
-* co-op data with treatment status
 clear
-use "Baseline_Merged_treat.dta"
+use "$d3/HH_Ind.dta"
 
-drop _merge
-		
-save CO_Merged.dta, replace
-
-
-** Household Dataset **
-clear
-use "$d3/Household_Merged_Edit.dta"
-
-rename IDX idx
-
-drop Co_opTransparencyTransparency_no Live_EntexofemaleExotic_Female Live_EntcrofemaleCross_Breed_Fem
-rename Live_EntCro_breed_female_goats Live_EntCro_breed_female
 
 * Collapse to one row per HH.
 foreach v of var * {
@@ -84,11 +69,10 @@ foreach v of var * {
 }
 
 * Merge and save dataset
-merge m:m idx using "CO_Merged.dta", force
+merge m:m idx using "CO_Merged_Ind.dta", force
+drop _merge
 
-drop if _merge == 1 // banke district in HH data
-
-save HH_Merged.dta, replace
+save HH_Merged_Ind.dta, replace
 
 
 

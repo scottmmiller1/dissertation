@@ -1,6 +1,6 @@
 
 /*******************************************************************************
-dis3.d0		
+dis0_3.d0		
 					
 - Creates command for ICW Summary Indices
 	(published by Cyrus Samii, NYU, December 2017) 

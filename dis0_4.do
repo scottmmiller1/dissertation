@@ -1,13 +1,13 @@
 
 /*******************************************************************************
-dis3.d0		
+dis0_4.d0		
 					
-- Creates indicator variables & ICW Summary Indices from
-	r_CO_Merged_PAP.dta (co-op level dataset)
-	and r_HH_Merged_PAP.dta (HH level dataset)
+- Creates indicator variables from:
+	Cooperative_collapse.dta (co-op level dataset)
+	and Household_Merged.dta (HH level dataset)
 	Saves new datasets respectively as: 
-	r_CO_Merged_Ind.dta
-	r_HH_Merged_Ind.dta
+	CO_Ind.dta
+	HH_Ind.dta
 	
 *******************************************************************************/
 
@@ -20,8 +20,23 @@ cd "$d3"
 
 ** co-op dataset **
 clear
-use "CO_Merged.dta"
+use "$d3/Cooperative_collapse.dta"
 
+
+** Goat Sales, Revenue, Costs **
+* Create per member measures of revenue and cost
+destring REC7, replace
+lab var REC7 "Total co-op cost"
+destring REV4, replace
+lab var REV4 "Total co-op revenue"
+
+gen totrev_member = REV4 / MAN3
+gen totcost_mem = REC7 / MAN3
+gen goatssold_mem = REC1 / MAN3
+
+lab var totrev_member "Co-op revenue (all sources) per member"
+lab var totcost_mem "Co-op cost (all sources) per member"
+lab var goatssold_mem "Co-op goats sold per member"
 
 
 ** Communication **
@@ -156,18 +171,18 @@ gen Otherassets = EQP2_2X + EQP4_2 + EQP5_2 + EQP6_2
 
 
 
-save "$d3/CO_Merged_Ind.dta", replace
+save "$d3/CO_Ind.dta", replace
 
 
 
 ****************
 ** HH dataset **
 clear
-use "$d3/HH_Merged.dta"
+use "$d3/Household_Merged.dta"
 
 * Weights = 1 & control group
 generate wgt = 1
-generate stdgroup = treat
+generate stdgroup = 1
 
 ** Communication **
 
@@ -178,30 +193,6 @@ Total times contacted about livestock sales : COM3
 replace COM3 = 0 if COM3 ==.
 gen bCOM3 = 1 if COM3 > 0
 replace bCOM3 = 0 if bCOM3 ==.
-
-
-* transparency
-/* Variables
-Mandate : HH_TRN1
-Annual Report : HH_TRN2
-Annual Budget : HH_TRN3
-Financial Report: HH_TRN4 
-Meeting minutes : HH_TRN5
-Election Results : HH_TRN6
-Sale Records : HH_TRN7
-Evaluations : HH_TRN8
-*/
-
-** Transparency Discrepancy index
-	forvalues i=1/7 { 
-		gen dTRN`i' = 1 if CO_TRN`i' == HH_TRN`i' ///
-			&  !missing(CO_TRN`i') & !missing(HH_TRN`i')
-		replace dTRN`i' = 0 if CO_TRN`i' != HH_TRN`i' ///
-			&  !missing(CO_TRN`i') & !missing(HH_TRN`i')
-		}
-		
-local local_dTRN dTRN1 dTRN2 dTRN3 dTRN4 dTRN5 dTRN6 dTRN7
-make_index_gr dTRN wgt stdgroup `local_dTRN' 
 
 
 
@@ -478,6 +469,6 @@ gen index_emp = EMP1A + EMP2A + EMP3A + EMP4A + EMP5A + EMP6A + EMP7A + EMP8A + 
 * loan
 * BR1
 
-save "$d3/HH_Merged_Ind.dta", replace
+save "$d3/HH_Ind.dta", replace
 
 
