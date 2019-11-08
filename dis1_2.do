@@ -1,5 +1,11 @@
 
-* K-means clustering for Oaxaca Decomposition
+/*******************************************************************************
+dis1_2.d0		
+					
+- K-means clustering for Oaxaca Decomposition						
+	
+*******************************************************************************/
+
 
 cd "$d3" 
 
@@ -7,7 +13,7 @@ cd "$d3"
 ** Co-op level dataset
 ********************************************* 
 clear
-use "$d3/CO_Merged_Ind.dta"
+use "$d3/CO_Final.dta"
 
 cluster kmeans goatssold_mem totrev_member MAN3 LS9, k(2) gen(high_low)
 
