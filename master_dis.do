@@ -33,6 +33,7 @@ clear all
 *packages
 *ssc install outreg
 *ssc install ietoolkit
+set scheme modern, perm
 
 *pathways
 gl d0 = "/Users/scottmiller/Dropbox (UFL)/Dissertation/Analysis" // master file
@@ -51,6 +52,7 @@ cd "$d0"
 forv i = 1/7 {
 	do "$d1/dis0_`i'.do"
 }
+
 
 * Essay 1
 forv i = 1/ {

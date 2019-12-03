@@ -43,6 +43,7 @@ save "$d3/CO_Final.dta", replace
 
 *------------------------------------------------------------------------------ 
 ** Remove intermediary datasets
+/*
 erase "$d3/Borrowing_edit.dta"
 erase "$d3/Children_edit.dta"
 erase "$d3/Cooperative_collapse.dta"
@@ -52,10 +53,11 @@ erase "$d3/Livestocksales_collapse_edit.dta"
 erase "$d3/Livestocksales_collapse.dta"
 erase "$d3/modules_merged.dta"
 erase "$d3/Roster_edit.dta"
-erase "$d3/Baseline_Merged_treat.dta"
-erase "$d3/Baseline_Merged.dta"
+*erase "$d3/Baseline_Merged_treat.dta"
+*erase "$d3/Baseline_Merged.dta"
 erase "$d3/CO_Merged_Ind.dta"
 erase "$d3/CO_Ind.dta"
 erase "$d3/HH_Merged_Ind.dta"
 erase "$d3/HH_Ind.dta"
 erase "$d3/Household_Merged_Edit.dta"
+*/

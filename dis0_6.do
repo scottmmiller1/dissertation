@@ -55,9 +55,9 @@ foreach v of var * {
 	}
 }
 
-ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno, has(type string)
+ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno *rev_*, has(type string)
 local HHstrings = "`r(varlist)'"
-ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno, has(type numeric)
+ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno *rev_*, has(type numeric)
 local HHnumeric = "`r(varlist)'"
 
 collapse (firstnm) `HHstrings' (mean) `HHnumeric', by(___index)
