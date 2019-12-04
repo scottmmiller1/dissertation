@@ -59,13 +59,12 @@ clear
 use "$d3/HH_Final.dta"
 
 drop if LS8 == 0
+gen side_sell = outsidegoatno > 0
 
 ** HH indicators **
 
-gl hh_summ HHR4 HHR14 MEM11 ///
-			bCOM3 co_opgoatno_w LS8_w ///
-			rev_goat_w rev_co_opgoat_w ///
-			net_goat_income_w  ///
+gl hh_summ HHR4 HHR14 bCOM3 goats_owned goat_seller side_sell LS8_w ///
+			co_opgoatno_w rev_goat_w rev_co_opgoat_w net_goat_income_w  ///
 	
 
 local listsize : list sizeof global(hh_summ)
@@ -92,8 +91,10 @@ forv i = 2/`listsize' { // appends into single matrix
 }
 
 * Table
-frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
+frmttable using E2_HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Age (years)"\"Literacy (0/1)"\"Number of SHG meetings attended (count)"\"Received Sale Information (0/1)"\"Cooperative goats sold (count)"\"Total goats sold (count)"\"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\"Net goat income (USD)") replace
- 
-
+rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
+		"Goats owned (count)"\"Household sells goats (0/1)"\"Household side-sells (0/1)" ///
+		\"Total goats sold (count)"\"Cooperative goats sold (count)"\ ///
+		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
+		"Net goat income (USD)") replace
