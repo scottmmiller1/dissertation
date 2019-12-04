@@ -1,22 +1,21 @@
 
 /*******************************************************************************
-dis1_1.d0		
+dis2_1.d0		
 					
 - Generates Summary Statistic Tables						
 	
 *******************************************************************************/
 
 
-
 clear
 set more off, perm
 cd "$d2"
 
-
+/*
 ** Co-op level dataset
 ********************************************* 
 clear
-use "$d3/CO_Merged_Ind.dta"
+use "$d3/CO_Final.dta"
 
 
 ** Co-op variables **
@@ -52,13 +51,14 @@ frmttable using CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("C
 ctitle("","N","Mean","sd","Min","Max") ///
 rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Revenue per member (USD)"\"Net revenue per member (USD)"\"Goat revenue (USD)"\"Planning time horizon (years)")replace
  
-
+*/
 
 ** HH level dataset
 ********************************************* 
 clear
-use "$d3/HH_Merged_Ind.dta"
+use "$d3/HH_Final.dta"
 
+drop if LS8 == 0
 
 ** HH indicators **
 
@@ -94,6 +94,6 @@ forv i = 2/`listsize' { // appends into single matrix
 * Table
 frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Age (years)"\"Literacy (0/1)"\"Number of SHG meetings attended (count)"\"Received Sale Information (0/1)"\"Cooperative goats sold (count)"\"Total goats sold (count)"\"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\"Net goat income (USD)"\"Transparency discrepancy index") replace
+rtitle("Age (years)"\"Literacy (0/1)"\"Number of SHG meetings attended (count)"\"Received Sale Information (0/1)"\"Cooperative goats sold (count)"\"Total goats sold (count)"\"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\"Net goat income (USD)") replace
  
 

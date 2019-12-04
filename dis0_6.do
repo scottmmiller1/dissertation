@@ -1,81 +1,101 @@
-
-/*******************************************************************************
+/************************************************************************
 dis0_6.d0		
 					
-- Generates a merged dataset at the HH level
-	Collapses HH data from ind. level to HH level
-	Saves respective datasets as CO_Merged.dta
-	and HH_Merged.dta
+- Generates Summary Statistic Tables						
 	
 *******************************************************************************/
 
 
-clear all
-set more off, perm
-
-
-** create merged dataset at HH level **
-cd "$d3"
-
 clear
-use "$d3/HH_Ind.dta"
+set more off, perm
+cd "$d2"
 
 
-* Collapse to one row per HH.
-foreach v of var * {
-	cap local vv = subinstr("`v'", "Follow_up_", "Follup",.) // names too long for macros
-	if _rc == 0 {
-		rename `v' `vv'
-		local v `vv'
-	}
-	cap local vv = subinstr("`v'", "Food_Consumption", "Food_Cons",.) // names too long for macros
-	if _rc == 0 {
-		rename `v' `vv'
-		local v `vv'
-	}
-	cap local vv = subinstr("`v'", "Livestock_related_empowerment", "Livestock_empowerment",.) // names too long for macros
-	if _rc == 0 {
-		rename `v' `vv'
-		local v `vv'
-	}
-	cap local vv = subinstr("`v'", "Livestock_Enterprises", "Livestock_Enter",.) // names too long for macros
-	if _rc == 0 {
-		rename `v' `vv'
-		local v `vv'
-	}
-	cap local vv = subinstr("`v'", "Post_questionnaire", "Post_",.) // names too long for macros
-	if _rc == 0 {
-		rename `v' `vv'
-		local v `vv'
-	}
-	local l`v' : variable label `v'
-	local ll`v': val lab `v'
-	if `"`l`v''"' == "" {
-		local l`v' "`v'"
-	}
+** Co-op level dataset
+********************************************* 
+clear
+use "$d3/CO_Final.dta"
+
+
+** Co-op variables **
+
+gl co_summ MAN3 revenue costs net_rev rev_member net_rev_member goatrev ///
+		PNG2 ICTassets Otherassets
+
+local listsize : list sizeof global(co_summ)
+tokenize $co_summ
+
+forv i = 1/`listsize' {
+		
+	quietly {
+		sum ``i''
+		return list
+		scalar N_``i'' = r(N) // N
+		scalar mean_``i'' = r(mean) // mean
+		scalar sd_``i'' = r(sd)  // sd
+		scalar min_``i'' = r(min)  // sd
+		scalar max_``i'' = r(max)  // sd
+		
+	* matrix for table
+		matrix mat_`i' = (N_``i'',mean_``i'',sd_``i'',min_``i'',max_``i'')
+		}
+}
+matrix A = mat_1
+forv i = 2/`listsize' { // appends into single matrix
+	matrix A = A \ mat_`i'
 }
 
-ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno *rev_*, has(type string)
-local HHstrings = "`r(varlist)'"
-ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx *salevalue *goatno *rev_*, has(type numeric)
-local HHnumeric = "`r(varlist)'"
+* Table
+frmttable using CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
+ctitle("","N","Mean","sd","Min","Max") ///
+rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\ ///
+		"Revenue per member (USD)"\"Net revenue per member (USD)"\"Goat revenue (USD)"\ ///
+		"Planning time horizon (years)"\"ICT Assets (count)"\"Non-ICT Assets(count)")replace
+ 
 
-collapse (firstnm) `HHstrings' (mean) `HHnumeric', by(___index)
 
-* re-assign labels post-collapse
-foreach v of var * {
-	label var `v' "`l`v''"
-	cap label val `v' "`ll`v''"
+** HH level dataset
+********************************************* 
+clear
+use "$d3/HH_Final.dta"
+
+
+** HH indicators **
+
+gl hh_summ HHR4 HHR14 bCOM3 goats_owned goat_seller LS8_w ///
+			co_opgoatno_w rev_goat_w rev_co_opgoat_w net_goat_income_w  ///
+	
+
+local listsize : list sizeof global(hh_summ)
+tokenize $hh_summ
+
+forv i = 1/`listsize' {
+		
+	quietly {
+		sum ``i''
+		return list
+		scalar N_``i'' = r(N) // N
+		scalar mean_``i'' = r(mean) // mean
+		scalar sd_``i'' = r(sd)  // sd
+		scalar min_``i'' = r(min)  // sd
+		scalar max_``i'' = r(max)  // sd
+		
+	* matrix for table
+		matrix mat_`i' = (N_``i'',mean_``i'',sd_``i'',min_``i'',max_``i'')
+		}
+}
+matrix A = mat_1
+forv i = 2/`listsize' { // appends into single matrix
+	matrix A = A \ mat_`i'
 }
 
-* Merge and save dataset
-merge m:m idx using "CO_Merged_Ind.dta", force
-drop _merge
-
-save HH_Merged_Ind.dta, replace
-
-
-
-
-
+* Table
+frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
+ctitle("","N","Mean","sd","Min","Max") ///
+rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
+		"Goats owned (count)"\"Household sells goats (0/1)"\"Total goats sold (count)"\ ///
+		"Cooperative goats sold (count)"\ ///
+		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
+		"Net goat income (USD)") replace
+ 
 

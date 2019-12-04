@@ -20,23 +20,7 @@ cd "$d3"
 
 ** co-op dataset **
 clear
-use "$d3/Cooperative_collapse.dta"
-
-
-** Goat Sales, Revenue, Costs **
-* Create per member measures of revenue and cost
-destring REC7, replace
-lab var REC7 "Total co-op cost"
-destring REV4, replace
-lab var REV4 "Total co-op revenue"
-
-gen totrev_member = REV4 / MAN3
-gen totcost_mem = REC7 / MAN3
-gen goatssold_mem = REC1 / MAN3
-
-lab var totrev_member "Co-op revenue (all sources) per member"
-lab var totcost_mem "Co-op cost (all sources) per member"
-lab var goatssold_mem "Co-op goats sold per member"
+use "$d3/CO_Merged.dta"
 
 
 ** Communication **
@@ -178,7 +162,7 @@ save "$d3/CO_Ind.dta", replace
 ****************
 ** HH dataset **
 clear
-use "$d3/Household_Merged.dta"
+use "$d3/HH_Merged.dta"
 
 * Weights = 1 & control group
 generate wgt = 1
@@ -211,6 +195,23 @@ replace LS8 = 0 if LS8 ==.
 replace co_opgoatno = 0 if co_opgoatno ==.
 replace outsidegoatno = 0 if outsidegoatno ==.
 * -----------------------------------------------
+
+* binary goat seller
+gen goat_seller = 0
+replace goat_seller = 1 if LS8 > 0
+
+* goats owned
+forvalues i=1/3 {
+	replace LSE2_`i' = 0 if LSE2_`i' == .
+	replace LSE3_`i' = 0 if LSE3_`i' == .
+	replace LSE6_`i' = 0 if LSE6_`i' == .
+	replace LSE7_`i' = 0 if LSE7_`i' == .
+	replace LSE9_`i' = 0 if LSE9_`i' == .
+}
+
+gen goats_owned = LSE2_1 + LSE2_2 + LSE2_3 + LSE3_1 + LSE3_2 + LSE3_3 ///
+				+ LSE6_1 + LSE6_2 + LSE6_3 + LSE7_1 + LSE7_2 + LSE7_3 ///
+				+ LSE9_1 + LSE9_2 + LSE9_3
 
 
 ** Winsorize LS8
