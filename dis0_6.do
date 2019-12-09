@@ -59,10 +59,19 @@ rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\ ///
 clear
 use "$d3/HH_Final.dta"
 
+replace rev_goat_w = . if LS8_w == 0
+replace rev_co_opgoat_w = . if co_opgoatno_w == 0
+gen side_sell = 0
+replace side_sell = 1 if outsidegoatno > 0
+replace side_sell = . if LS8_w == 0
+replace LS8_w = . if LS8_w == 0
+replace co_opgoatno_w =. if LS8_w ==. 
+replace net_goat_income_w = . if LS8_w ==. 
+
 
 ** HH indicators **
 
-gl hh_summ HHR4 HHR14 bCOM3 goats_owned goat_seller LS8_w ///
+gl hh_summ HHR4 HHR14 bCOM3 goats_owned goat_seller side_sell LS8_w ///
 			co_opgoatno_w rev_goat_w rev_co_opgoat_w net_goat_income_w  ///
 	
 
@@ -93,8 +102,8 @@ forv i = 2/`listsize' { // appends into single matrix
 frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
 rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
-		"Goats owned (count)"\"Household sells goats (0/1)"\"Total goats sold (count)"\ ///
-		"Cooperative goats sold (count)"\ ///
+		"Goats owned (count)"\"Household sells goats (0/1)"\"Household side-sells goats (0/1)"\ ///
+		"Total goats sold (count)"\"Cooperative goats sold (count)"\ ///
 		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
 		"Net goat income (USD)") replace
  

@@ -3,10 +3,10 @@ version 15.1
 DO FILE DIRECTORY 
 	
 dis0_1:
-	Cleans co-op dataset
+	Cleans co-op and HH datasets
 	
 dis0_2:
-	Cleans HH dataset 
+	Merges treatment status from LSIL VCC project into datasets
 	
 dis0_3: 
 	Creates command for ICW Summary Indices
@@ -23,9 +23,6 @@ dis0_6:
 	Generates a merged dataset at the HH level
 	Collapses HH data from individual level to HH level
 
-dis0_7: 
-	Merges treatment status from LSIL VCC project
-	into clean datasets	
 
 
 *******************************************************************************/
