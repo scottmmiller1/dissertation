@@ -48,7 +48,7 @@ forv i = 2/`listsize' { // appends into single matrix
 }
 
 * Table
-frmttable using CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
+frmttable using E1_CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
 rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Revenue per member (USD)"\"Net revenue per member (USD)"\"Goat revenue (USD)"\"Planning time horizon (years)")replace
  
@@ -59,13 +59,23 @@ rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Reve
 clear
 use "$d3/HH_Merged_Ind.dta"
 
+gen travel_time = MEM10_a*60 + MEM10_b
+sum travel_time, d
+replace travel_time = `r(p99)' if travel_time > `r(p99)'
+replace SER33 = SER33*(0.0099)
+replace SER33 = 0 if SER33 ==.
+gen mem_length = MEM2_1 + (MEM2_2 / 12)
+sum mem_length, d
+replace mem_length = `r(p99)' if mem_length > `r(p99)'
+replace COM8 = 0 if COM8 ==.
+gen bCOM8 = 1 if COM8 > 0 
+replace bCOM8 = 0 if COM8 ==0
+replace MEM7 = 0 if MEM7 ==.
+
 
 ** HH indicators **
 
-gl hh_summ HHR4 HHR14 MEM11 ///
-			bCOM3 co_opgoatno_w LS8_w ///
-			rev_goat_w rev_co_opgoat_w ///
-			net_goat_income_w  ///
+gl hh_summ mem_length MEM7 MEM11 travel_time MEM12 MEM14 MEM16 SER33 bCOM3 bCOM8
 	
 
 local listsize : list sizeof global(hh_summ)
@@ -92,8 +102,13 @@ forv i = 2/`listsize' { // appends into single matrix
 }
 
 * Table
-frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
+frmttable using E1_HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Age (years)"\"Literacy (0/1)"\"Number of SHG meetings attended (count)"\"Received Sale Information (0/1)"\"Cooperative goats sold (count)"\"Total goats sold (count)"\"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\"Net goat income (USD)"\"Transparency discrepancy index") replace
+rtitle("Length of membership (years)"\"Self-help group meetings attended (count)"\ ///
+		"Cooperative meetings attended (count)"\"Round-trip travel time (minutes)"\ ///
+		"Participates in annual general meeting (0/1)"\"Voted in elections (0/1)"\ ///
+		"Voted on policies (0/1)"\ "Dividend payments received (USD)"\ ///
+		"Contacted about cooperative sales (0/1)"\ ///
+		"Contacted about cooperative activities (0/1)") replace
  
 

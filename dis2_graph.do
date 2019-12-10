@@ -30,16 +30,16 @@ ranksum LS8_w, by(side_sell)
 * density - price
 kdensity rev_goat_w if (side_sell==1), plot(kdensity rev_goat_w if (side_sell==0), bwidth(12) lwidth(thick)) ///
 			bwidth(12) lwidth(thick) ///
-			legend(ring(0) pos(2) cols(1) region(lwidth(none)) ///
+			legend(ring(0) pos(2) cols(1) size(large) region(lwidth(none)) ///
 			label(1 "Outside Sale") label(2 "Cooperative Sale")) ///
-			ylabel(,labsize(small)) ///
-			xlabel(,labsize(small)) ///
-			xtitle(Price (USD), placement(6) margin(top)) ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Price (USD), placement(6) margin(top) size(medlarge)) ///
 			graphregion(color(white) ilcolor(white)) ///
 			title("") note("") ///
-			ylabel(, angle(0)) ytitle(Density, orientation(horizontal)) ///
+			ylabel(, angle(0)) ytitle(Density, size(medlarge)) ///
 			plotregion(margin(zero)) 
-graph export "$d0/Figures/Essay 2/E2_PriceDensity.png", replace	
+graph export "$d0/Figures/Essay 2/E2_PriceDensity_Annual.png", replace	
 
 
 	
@@ -65,17 +65,15 @@ replace LS9 =`r(p99)' if LS9 > `r(p99)'
 gen coop_goats = LS8 if LS3 == 1
 gen outside_goats = LS8 if LS3 == 2
 
-xlabel(1 "04" 2 "05" 3 "06" 4 "07" 5 "08" 6 "09" 7 "10" 8 "11" 9 "12" 10 "01" 11 "02" 12 "03")
-
 gen month = LS2
 label define mnt 1 "Apr." 2 "May" 3 "Jun." 4 "Jul." 5 "Aug." 6 "Sept." 7 "Oct." 8 "Nov." 9 "Dec." 10 "Jan." 11 "Feb." 12 "Mar."
 label values month mnt
 
-graph bar (sum) outside_goats (sum) coop_goats, over(month, label(angle(horizontal))) ///
-		 legend(ring(0) pos(2) cols(1) region(lwidth(none)) ///
+graph bar (sum) outside_goats (sum) coop_goats, over(month, label(angle(horizontal) labsize(medlarge))) ///
+		 legend(ring(0) pos(2) cols(1) size(large) region(lwidth(none)) ///
          label(1 "Outside Sale") label(2 "Cooperative Sale")) ///
 		 graphregion(color(white) ilcolor(white)) ///
-		 ytitle(Goats Sold, orientation(horizontal)) 
+		 ytitle(Goats Sold, orientation(vertical) size(medlarge)) 
 graph export "$d0/Figures/Essay 2/E2_SaleMonth.png", replace	
 			
 
@@ -119,28 +117,28 @@ replace rev_goat = `r(p99)' if rev_goat > `r(p99)'
 * festival season
 kdensity rev_goat if (side_sell==1 & festival ==1), plot(kdensity rev_goat if (side_sell==0 & festival ==1), bwidth(12) lwidth(thick)) ///
 			bwidth(12) lwidth(thick) ///
-			legend(ring(0) pos(2) cols(1) region(lwidth(none)) ///
+			legend(ring(0) pos(2) cols(1) size(large) region(lwidth(none)) ///
 			label(1 "Outside Sale") label(2 "Cooperative Sale")) ///
-			ylabel(,labsize(small)) ///
-			xlabel(,labsize(small)) ///
-			xtitle(Price (USD), placement(6) margin(top)) ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Price (USD), placement(6) margin(top) size(medlarge)) ///
 			graphregion(color(white) ilcolor(white)) ///
-			title("Festival Season") note("") ///
-			ylabel(, angle(0)) ytitle(Density, orientation(horizontal)) ///
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Density, orientation(vertical) size(medlarge)) ///
 			plotregion(margin(zero)) 	
-			
+graph export "$d0/Figures/Essay 2/E2_PriceDensity_Festival.png", replace				
 
 * non-festival season
 kdensity rev_goat if (side_sell==1 & festival ==0), plot(kdensity rev_goat if (side_sell==0 & festival ==0), bwidth(15) lwidth(thick)) ///
 			bwidth(15) lwidth(thick) ///
-			legend(ring(0) pos(2) cols(1) region(lwidth(none)) ///
+			legend(ring(0) pos(2) cols(1) size(large) region(lwidth(none)) ///
 			label(1 "Outside Sale") label(2 "Cooperative Sale")) ///
-			ylabel(,labsize(small)) ///
-			xlabel(,labsize(small)) ///
-			xtitle(Price (USD), placement(6) margin(top)) ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Price (USD), placement(6) margin(top) size(medlarge)) ///
 			graphregion(color(white) ilcolor(white)) ///
-			title("Non-Festival Season") note("") ///
-			ylabel(, angle(0)) ytitle(Density, orientation(horizontal)) ///
-			plotregion(margin(zero)) 				
-
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Density, orientation(vertical) size(medlarge)) ///
+			plotregion(margin(zero)) ylabel(0(.005).015)				
+graph export "$d0/Figures/Essay 2/E2_PriceDensity_NonFest.png", replace
 

@@ -60,6 +60,8 @@ use "$d3/HH_Final.dta"
 
 drop if LS8 == 0
 gen side_sell = outsidegoatno > 0
+replace rev_co_opgoat_w = . if co_opgoatno_w == 0
+
 
 ** HH indicators **
 
@@ -94,7 +96,7 @@ forv i = 2/`listsize' { // appends into single matrix
 frmttable using E2_HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
 rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
-		"Goats owned (count)"\"Household sells goats (0/1)"\"Household side-sells (0/1)" ///
+		"Goats owned (count)"\"Household sells goats (0/1)"\"Household side-sells goats (0/1)" ///
 		\"Total goats sold (count)"\"Cooperative goats sold (count)"\ ///
 		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
 		"Net goat income (USD)") replace
