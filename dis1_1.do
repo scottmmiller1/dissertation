@@ -19,10 +19,20 @@ clear
 use "$d3/CO_Merged_Ind.dta"
 
 
+replace MAN2 = MAN2*(0.0099)
+replace MAN2 = 0 if MAN2 ==.
+gen assembly_pct = MAN10 / MAN3
+replace assembly_pct = 1 if assembly_pct > 1
+replace CO_SER15 = 1 if CO_SER15 > 0
+replace CO_SER2 = 1 if CO_SER2 > 0
+replace CO_SER1 = 1 if CO_SER1 > 0
+replace CO_SERV2 = 1 if CO_SERV2 > 0
+replace CO_SER18 = 1 if CO_SER18 > 0
+
+
 ** Co-op variables **
 
-gl co_summ MAN3 revenue costs net_rev rev_member net_rev_member goatrev ///
-		PNG2
+gl co_summ MAN1 MAN2 MAN4 assembly_pct CO_SER15 CO_SER1 CO_SER2 CO_SERV2 CO_SER18
 
 local listsize : list sizeof global(co_summ)
 tokenize $co_summ
@@ -50,7 +60,11 @@ forv i = 2/`listsize' { // appends into single matrix
 * Table
 frmttable using E1_CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Revenue per member (USD)"\"Net revenue per member (USD)"\"Goat revenue (USD)"\"Planning time horizon (years)")replace
+rtitle("Cooperative has a membership fee (0/1)"\"Size of membership fee (USD)"\ ///
+		"Size of management committee (count)"\"Share attending last general assembly (count)"\ ///
+		"Organizes goat sales (0/1)"\"Accepts savings deposits (0/1)"\ ///
+		"Offers loans (0/1)"\"Provides goat price information (0/1)"\ ///
+		"Pays dividends to share owners (0/1)")replace
  
 
 
