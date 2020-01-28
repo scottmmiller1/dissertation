@@ -46,10 +46,11 @@ forv i = 2/`listsize' { // appends into single matrix
 }
 
 * Table
-frmttable using CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
+frmttable using CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) ///
+title("Cooperative Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\ ///
-		"Revenue per member (USD)"\"Net revenue per member (USD)"\"Goat revenue (USD)"\ ///
+rtitle("Number of Members (count)"\"Annual Revenue (USD)"\"Annual Costs (USD)"\"Annual Net revenue (USD)"\ ///
+		"Annual Revenue per member (USD)"\"Annual Net revenue per member (USD)"\"Annual Goat revenue (USD)"\ ///
 		"Planning time horizon (years)"\"ICT Assets (count)"\"Non-ICT Assets(count)")replace
  
 
@@ -99,12 +100,14 @@ forv i = 2/`listsize' { // appends into single matrix
 }
 
 * Table
-frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
+frmttable using HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) ///
+title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
-		"Goats owned (count)"\"Household sells goats (0/1)"\"Household side-sells goats (0/1)"\ ///
-		"Total goats sold (count)"\"Cooperative goats sold (count)"\ ///
-		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
-		"Net goat income (USD)") replace
+rtitle("Age of female cooperative member (years)"\"Literacy of female cooperative member (0/1)"\ ///
+		"Received cooperative sale information (0/1)"\"Total number of goats owned (count)"\ ///
+		"Household sold goats in the last 12-months (0/1)"\"Household side-sold goats in the last 12-months (0/1)"\ ///
+		"Annual number of goats sold (count)"\"Annual number of cooperative goats sold (count)"\ ///
+		"Annual revenue per goat (USD)"\"Annual revenue per cooperative goat (USD)"\ ///
+		"Annual net goat income (USD)") replace
  
 

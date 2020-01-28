@@ -60,11 +60,11 @@ forv i = 2/`listsize' { // appends into single matrix
 * Table
 frmttable using E1_CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Cooperative has a membership fee (0/1)"\"Size of membership fee (USD)"\ ///
-		"Size of management committee (count)"\"Share attending last general assembly (count)"\ ///
-		"Organizes goat sales (0/1)"\"Accepts savings deposits (0/1)"\ ///
-		"Offers loans (0/1)"\"Provides goat price information (0/1)"\ ///
-		"Pays dividends to share owners (0/1)")replace
+rtitle("Cooperative has an initial membership fee (0/1)"\"Size of initial membership fee (USD)"\ ///
+		"Size of current management committee (count)"\"Share of members the attending last general assembly (count)"\ ///
+		"Cooperative organizes goat sales (0/1)"\"Cooperative accepts savings deposits (0/1)"\ ///
+		"Cooperative Offers loans (0/1)"\"Cooperative provides goat price information (0/1)"\ ///
+		"Cooperative pays dividends to share owners (0/1)")replace
  
 
 
@@ -118,11 +118,11 @@ forv i = 2/`listsize' { // appends into single matrix
 * Table
 frmttable using E1_HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Length of membership (years)"\"Self-help group meetings attended (count)"\ ///
-		"Cooperative meetings attended (count)"\"Round-trip travel time (minutes)"\ ///
-		"Participates in annual general meeting (0/1)"\"Voted in elections (0/1)"\ ///
-		"Voted on policies (0/1)"\ "Dividend payments received (USD)"\ ///
-		"Contacted about cooperative sales (0/1)"\ ///
-		"Contacted about cooperative activities (0/1)") replace
+rtitle("Length of membership (years)"\"Number of self-help group meetings attended (count)"\ ///
+		"Number of cooperative meetings attended (count)"\"Round-trip travel time to cooperative meetings (minutes)"\ ///
+		"Participates in annual general meeting (0/1)"\"Voted in elections in last 2-years (0/1)"\ ///
+		"Voted on policies in last 2-years (0/1)"\ "Value of dividend payments received (USD)"\ ///
+		"Contacted about cooperative sales in last 6-months (0/1)"\ ///
+		"Contacted about cooperative activities in last 6-months (0/1)") replace
  
 
