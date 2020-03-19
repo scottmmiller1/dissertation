@@ -28,7 +28,7 @@ dis0_6:
 *******************************************************************************/
 clear all
 *packages
-*ssc install outreg
+*ssc install outreg2
 *ssc install ietoolkit
 
 *pathways

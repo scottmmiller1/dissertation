@@ -154,6 +154,28 @@ gen ICTassets = EQP1_2 + EQP2_2
 gen Otherassets = EQP2_2X + EQP4_2 + EQP5_2 + EQP6_2
 
 
+** Essay 1 variables
+* -----------------------------------------
+* co-op membership fee
+replace MAN2 = MAN2*(0.0099)
+replace MAN2 = 0 if MAN2 ==.
+
+* pct attending co-op general assembly
+gen assembly_pct = MAN10 / MAN3
+replace assembly_pct = 1 if assembly_pct > 1
+
+* co-op coordinates goat sales
+replace CO_SER15 = 1 if CO_SER15 > 0
+* co-op offers loans
+replace CO_SER2 = 1 if CO_SER2 > 0
+* co-op accepts savings
+replace CO_SER1 = 1 if CO_SER1 > 0
+* co-op provides goat price info
+replace CO_SERV2 = 1 if CO_SERV2 > 0
+* co-op provides dividends
+replace CO_SER18 = 1 if CO_SER18 > 0
+
+
 
 save "$d3/CO_Ind.dta", replace
 
@@ -167,6 +189,39 @@ use "$d3/HH_Merged.dta"
 * Weights = 1 & control group
 generate wgt = 1
 generate stdgroup = 1
+
+
+** Essay 1 variables
+* -------------------------------------------------------
+* travel time to co-op
+gen travel_time = MEM10_a*60 + MEM10_b
+sum travel_time, d
+replace travel_time = `r(p99)' if travel_time > `r(p99)'
+* co-op dividend payment amount (USD)
+replace SER33 = SER33*(0.0099)
+replace SER33 = 0 if SER33 ==.
+* length of co-op membership
+gen mem_length = MEM2_1 + (MEM2_2 / 12)
+sum mem_length, d
+replace mem_length = `r(p99)' if mem_length > `r(p99)'
+* received co-op activities (non-sale)
+replace COM8 = 0 if COM8 ==.
+gen bCOM8 = 1 if COM8 > 0 
+replace bCOM8 = 0 if COM8 ==0
+* number of SHG meetings attended
+replace MEM7 = 0 if MEM7 ==.
+* co-op coordinates goat sales
+replace CO_SER15 = 1 if CO_SER15 > 0
+* co-op offers loans
+replace CO_SER2 = 1 if CO_SER2 > 0
+* co-op accepts savings
+replace CO_SER1 = 1 if CO_SER1 > 0
+* co-op provides goat price info
+replace CO_SERV2 = 1 if CO_SERV2 > 0
+* co-op provides dividends
+replace CO_SER18 = 1 if CO_SER18 > 0
+
+
 
 ** Communication **
 

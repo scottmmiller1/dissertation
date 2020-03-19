@@ -6,61 +6,47 @@ dis1_3.d0
 	
 *******************************************************************************/
 
-ssc install oaxaca
+*ssc install oaxaca
 
 
 ** HH level dataset
 ********************************************* 
 use "$d3/HH_Final.dta"
 
-replace co_opsalevalue = 0 if co_opsalevalue ==.
-
-sort idx
-by idx: egen co_rev_mean = mean(co_opsalevalue)
-
-
-gen low = 0 
-
-sum co_rev_mean, d
-
-replace low = 1 if co_rev_mean <= `r(p50)'
-
-
-
 
 * --------------
 * Oaxaca command
 
-oaxaca co_opsalevalue LS9_w, by(low)
+oaxaca co_opsalevalue goats_owned, by(gr_pct_COM3) swap
 
 
 * --------------
 * Oaxaca - by hand
 
 * high
-reg co_opsalevalue LS9_w if low == 0
+reg co_opsalevalue goats_owned if gr_pct_COM3 == 1
 
-scalar b1_h = _b[LS9_w]
+scalar b1_h = _b[goats_owned]
 
-sum co_opsalevalue if low == 0
+sum co_opsalevalue if gr_pct_COM3 == 1
 
 scalar Ybar_h = `r(mean)'
 
-sum LS9_w if low == 0
+sum goats_owned if gr_pct_COM3 == 1
 
 scalar Xbar_h = `r(mean)'
 
 
 * low
-reg co_opsalevalue LS9_w if low == 1
+reg co_opsalevalue goats_owned if gr_pct_COM3 == 0
 
-scalar b1_l = _b[LS9_w]
+scalar b1_l = _b[goats_owned]
 
-sum co_opsalevalue if low == 1
+sum co_opsalevalue if gr_pct_COM3 == 0
 
 scalar Ybar_l = `r(mean)'
 
-sum LS9_w if low == 1
+sum goats_owned if gr_pct_COM3 == 0
 
 scalar Xbar_l = `r(mean)'
 

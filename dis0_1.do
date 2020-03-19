@@ -212,8 +212,8 @@ use "$d3/Livestocksales.dta"
 
 
 * drop data collection notes & time stamps 
-drop LS2 LS6 LS6_1 ___id ___uuid ___submission_time ///
-		___parent_table_name ___tags ___notes LS4 
+drop LS6 ___id ___uuid ___submission_time ///
+		___parent_table_name ___tags ___notes 
 		
 * total revenue through co-op		
 gen co_opsalevalue = LS9 if LS3==1 			
@@ -252,6 +252,19 @@ foreach v of varlist LS3 LS39 LS44 LS45 {
 	quietly replace `v'=0 if `v'==2
 }
 
+* generate binary LS4 indicators
+forvalues i=1/5 {
+	gen LS4_`i' = (LS4 == `i')
+	replace LS4_`i' =. if LS4 ==.
+}
+
+* generate binary LS2 indicators
+forvalues i=1/12 {
+	gen LS2_`i' = (LS2 == `i')
+	replace LS2_`i' =. if LS2 ==.
+}
+
+
 * generate variable for # of sales
 bysort ___parent_index: egen LS_n_sales=count(___parent_index)
 
@@ -273,7 +286,7 @@ quietly foreach v of var * {
 }
 
 * collapse
-collapse (firstnm) LS_n_sales (mean) LS3 *LS6* LS7 (sum) LS8 LS9 LS10 LS12 LS13 LS14 LS15 LS16 ///
+collapse (firstnm) LS_n_sales (mean) LS3 LS4_* LS6* LS7 (sum) LS8 LS9 LS10 LS12 LS13 LS14 LS15 LS16 ///
 		LS17 LS25 LS26 LS27 LS28 LS29 LS30 LS31 *LS32* LS33 LS34 LS35 LS36 LS37 ///
 		LS38 LS39 LS40 LS41 LS42 *LS43* LS44 LS45 LS46 ///
 		LS47 co_opsalevalue co_opgoatno outsidesalevalue outsidegoatno, by(___parent_index)

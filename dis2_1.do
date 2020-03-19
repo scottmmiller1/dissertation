@@ -100,3 +100,9 @@ rtitle("Age (years)"\"Literacy (0/1)"\"Received sale information (0/1)"\ ///
 		\"Total goats sold (count)"\"Cooperative goats sold (count)"\ ///
 		"Revenue per goat (USD)"\"Revenue per cooperative goat (USD)"\ ///
 		"Net goat income (USD)") replace
+		
+		
+		
+		
+		
+		
