@@ -11,7 +11,21 @@ dis1_3.d0
 
 ** HH level dataset
 ********************************************* 
-use "$d3/HH_Final.dta"
+use "$d3/HH_Final.dta", clear
+
+* --------------
+* OLS regression
+
+* predictors of participation / membership / benefits
+
+* leadership role
+tab MEM4
+gen bMEM4 = (MEM4 > 1 & MEM4 !=.)
+replace bMEM4 = . if MEM4 ==.
+
+logit bMEM4 goats_owned HHR14 mem_length HHR4 travel_time
+
+
 
 
 * --------------

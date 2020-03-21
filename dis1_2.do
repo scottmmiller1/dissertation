@@ -77,73 +77,7 @@ tab MEM17
 	* policy votes by role 
 	tab MEM4 MEM16
 
-	
-** participation table
 * ----------------------------------------------------------------------
-* co-op meetings
-gl hh_inc_1 MEM8 MEM11 MEM9_1 MEM9_2 MEM9_3 MEM9_4 MEM9_5 MEM9_6 MEM9_7
-	
-local listsize : list sizeof global(hh_inc_1)
-tokenize $hh_inc_1
-
-forv i = 1/`listsize' {
-		
-	quietly {
-		sum ``i''
-		return list
-		*scalar N_``i'' = r(N) // N
-		scalar mean_``i'' = r(mean) // mean
-		*scalar sd_``i'' = r(sd)  // sd
-		*scalar min_``i'' = r(min)  // sd
-		*scalar max_``i'' = r(max)  // sd
-		
-	* matrix for table
-		matrix mat_`i' = (mean_``i'')
-		}
-}
-matrix A = mat_1 \ mat_2 \ (.) \ (.)
-
-forv i = 3/`listsize' { // appends into single matrix
-	matrix A = A \ mat_`i'
-}
-
-* annual general meeting
-gl hh_inc_2 MEM12 MEM13_1 MEM13_2 MEM13_3 MEM13_4 MEM13_5 MEM13_6 MEM13_7
-	
-local listsize : list sizeof global(hh_inc_2)
-tokenize $hh_inc_2
-
-forv i = 1/`listsize' {
-		
-	quietly {
-		sum ``i''
-		return list
-		*scalar N_``i'' = r(N) // N
-		scalar mean_``i'' = r(mean) // mean
-		*scalar sd_``i'' = r(sd)  // sd
-		*scalar min_``i'' = r(min)  // sd
-		*scalar max_``i'' = r(max)  // sd
-		
-	* matrix for table
-		matrix mat_`i' = (mean_``i'')
-		}
-}
-matrix B = mat_1 \ (.) \ (.) \ (.)
-
-forv i = 2/`listsize' { // appends into single matrix
-	matrix B = B \ mat_`i'
-}
-
-* Table
-frmttable using E1_HH_inc.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
-ctitle("","Cooperative") ///
-rtitle("Ever attended a meeting (0/1)"\"Number of meetings attended in last 6-months (count)"\""\ ///
-		"Reason for not attending meetings:"\"Too far away (0/1)"\"No interest (0/1)"\"Not enough time (0/1)"\ ///
-		"I did not have permission to leave the house (0/1)"\"There are no cooperative meetings (0/1)"\ ///
-		"Do not know where/when cooperative meetings take place (0/1)"\"Someone attended on my behalf (0/1)") replace	
-frmttable using E1_HH_inc.tex, tex statmat(B) sdec(2) coljust(l;c;l;l) title("Household Indicators - Summmary Statistics") ///
-ctitle("Annual general meeting") merge
-	
 	
 
 
@@ -154,6 +88,7 @@ sum COM3, d
 sum bCOM3 
 
 	* percentage variable
+	cap drop pct_COM3 gr_pct_COM3
 	bysort idx: egen pct_COM3 = mean(bCOM3)
 	* exclude co-ops that do not sell goats
 	replace pct_COM3 = . if CO_SER15 == 0
@@ -169,6 +104,7 @@ sum COM8, d
 sum bCOM8 
 
 	* percentage variable
+	cap drop pct_COM8 gr_pct_COM8
 	bysort idx: egen pct_COM8 = mean(bCOM8)
 	
 	* group var

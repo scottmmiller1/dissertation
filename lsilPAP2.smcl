@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/scottmiller/GitHub/dissertation/lsilPAP2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}16 Mar 2020, 11:56:27
+ {txt}opened on:  {res}21 Mar 2020, 12:43:02
 {txt}
 {com}. 
 . 
@@ -3436,179 +3436,179 @@ str12 now)
 (label LS38 already defined)
 (label LS7 already defined)
 (label LS3 already defined)
-(label ID1 already defined)
-(label ID2 already defined)
-(label ID6 already defined)
-(label ID7 already defined)
-(label ID8 already defined)
-(label HHR7 already defined)
-(label LND2 already defined)
-(label LND3 already defined)
-(label HSE1 already defined)
-(label HSE2 already defined)
-(label HSE3 already defined)
-(label HSE6 already defined)
-(label HSE7 already defined)
-(label HSE8 already defined)
-(label HSE9 already defined)
-(label HSE10 already defined)
-(label HSE11 already defined)
-(label HSE12 already defined)
-(label HSE13 already defined)
-(label MEM3 already defined)
-(label MEM4 already defined)
-(label MEM5 already defined)
-(label MEM6 already defined)
-(label MEM8 already defined)
-(label MEM9 already defined)
-(label MEM12 already defined)
-(label MEM13 already defined)
-(label MEM14 already defined)
-(label MEM16 already defined)
-(label SER1 already defined)
-(label SER2 already defined)
-(label SER3 already defined)
-(label SER4 already defined)
-(label SER6 already defined)
-(label SER7 already defined)
-(label SER8 already defined)
-(label SER9 already defined)
-(label SER10 already defined)
-(label SER11 already defined)
-(label SER12 already defined)
-(label SER13 already defined)
-(label SER14 already defined)
-(label SER15 already defined)
-(label SER16 already defined)
-(label SER17 already defined)
-(label SER18 already defined)
-(label SER19 already defined)
-(label SER21 already defined)
-(label SER22 already defined)
-(label SER24 already defined)
-(label SER25 already defined)
-(label SER26 already defined)
-(label SER27 already defined)
-(label SER28 already defined)
-(label SER29 already defined)
-(label SER30 already defined)
-(label SER31 already defined)
-(label SER32 already defined)
-(label MGT1 already defined)
-(label MGT2 already defined)
-(label MGT3_1 already defined)
-(label MGT4 already defined)
-(label MGT5 already defined)
-(label MGT6 already defined)
-(label COM4 already defined)
-(label COM5 already defined)
-(label COM71 already defined)
-(label COM72 already defined)
-(label COM73 already defined)
-(label COM74 already defined)
-(label COM75 already defined)
-(label COM76 already defined)
-(label COM77 already defined)
-(label COM10 already defined)
-(label COM11 already defined)
-(label GTT4 already defined)
-(label GTT4_1 already defined)
-(label GTT4_2 already defined)
-(label GTT4_3 already defined)
-(label GTT4_4 already defined)
-(label GTT4_5 already defined)
-(label GTT4_6 already defined)
-(label GTT4_7 already defined)
-(label GTT4_8 already defined)
-(label GTT4_9 already defined)
-(label GTT4_10 already defined)
-(label Co_opGoat_transactionsGTT497 already defined)
-(label TRN1 already defined)
-(label TRN2 already defined)
-(label TRN3 already defined)
-(label TRN4 already defined)
-(label TRN5 already defined)
-(label TRN6 already defined)
-(label TRN7 already defined)
-(label TRN8 already defined)
-(label TRN9 already defined)
-(label TRN10 already defined)
-(label TRN11 already defined)
-(label TRN12 already defined)
-(label TRN13 already defined)
-(label SV3 already defined)
-(label SV4 already defined)
-(label SV7 already defined)
-(label SV8 already defined)
-(label BR1 already defined)
-(label FC1A already defined)
-(label FC1B already defined)
-(label FC1C already defined)
-(label FC1D already defined)
-(label FC1E already defined)
-(label FC1F already defined)
-(label FC1G already defined)
-(label FC1H already defined)
-(label EMP2A already defined)
-(label EMP2B already defined)
-(label EMP2C already defined)
-(label EMP2D already defined)
-(label EMP2E already defined)
-(label EMP2F already defined)
-(label EMP2G already defined)
-(label EMP2X already defined)
-(label EMP2a_A already defined)
-(label EMP3a_A already defined)
-(label EMP4a_A already defined)
-(label EMP5a_A already defined)
-(label EMP6A already defined)
-(label EMP6B already defined)
-(label EMP6C already defined)
-(label EMP6D already defined)
-(label EMP6E already defined)
-(label EMP6F already defined)
-(label EMP6G already defined)
-(label EMP6X already defined)
-(label EMP6a_A already defined)
-(label EMP7a_A already defined)
-(label EMP8a_A already defined)
-(label EMP9a_A already defined)
-(label EMP10a_A already defined)
-(label EMP11a_A already defined)
-(label EMP12a_A already defined)
-(label EMP13a already defined)
-(label EMP13b already defined)
-(label LSE1_1 already defined)
-(label LSE1_2 already defined)
-(label LSE1_3 already defined)
-(label LSE1_4 already defined)
-(label LSE4_1 already defined)
-(label LSE5_1 already defined)
-(label LSE4_2 already defined)
-(label LSE5_2 already defined)
-(label LSE4_3 already defined)
-(label LSE5_3 already defined)
-(label GP2 already defined)
-(label GP3_1 already defined)
-(label GP3_2 already defined)
-(label GP3_3 already defined)
-(label GP4_2 already defined)
-(label GP4_3 already defined)
-(label GP4_97 already defined)
-(label GP5 already defined)
-(label GP6 already defined)
-(label GP7 already defined)
-(label GP8 already defined)
-(label GP13 already defined)
-(label GP14 already defined)
-(label GP16 already defined)
-(label GP17_2 already defined)
-(label GP17_3 already defined)
-(label GP19 already defined)
-(label GP20 already defined)
-(label GP21 already defined)
-(label GP24 already defined)
 (label BR7 already defined)
+(label GP24 already defined)
+(label GP21 already defined)
+(label GP20 already defined)
+(label GP19 already defined)
+(label GP17_3 already defined)
+(label GP17_2 already defined)
+(label GP16 already defined)
+(label GP14 already defined)
+(label GP13 already defined)
+(label GP8 already defined)
+(label GP7 already defined)
+(label GP6 already defined)
+(label GP5 already defined)
+(label GP4_97 already defined)
+(label GP4_3 already defined)
+(label GP4_2 already defined)
+(label GP3_3 already defined)
+(label GP3_2 already defined)
+(label GP3_1 already defined)
+(label GP2 already defined)
+(label LSE5_3 already defined)
+(label LSE4_3 already defined)
+(label LSE5_2 already defined)
+(label LSE4_2 already defined)
+(label LSE5_1 already defined)
+(label LSE4_1 already defined)
+(label LSE1_4 already defined)
+(label LSE1_3 already defined)
+(label LSE1_2 already defined)
+(label LSE1_1 already defined)
+(label EMP13b already defined)
+(label EMP13a already defined)
+(label EMP12a_A already defined)
+(label EMP11a_A already defined)
+(label EMP10a_A already defined)
+(label EMP9a_A already defined)
+(label EMP8a_A already defined)
+(label EMP7a_A already defined)
+(label EMP6a_A already defined)
+(label EMP6X already defined)
+(label EMP6G already defined)
+(label EMP6F already defined)
+(label EMP6E already defined)
+(label EMP6D already defined)
+(label EMP6C already defined)
+(label EMP6B already defined)
+(label EMP6A already defined)
+(label EMP5a_A already defined)
+(label EMP4a_A already defined)
+(label EMP3a_A already defined)
+(label EMP2a_A already defined)
+(label EMP2X already defined)
+(label EMP2G already defined)
+(label EMP2F already defined)
+(label EMP2E already defined)
+(label EMP2D already defined)
+(label EMP2C already defined)
+(label EMP2B already defined)
+(label EMP2A already defined)
+(label FC1H already defined)
+(label FC1G already defined)
+(label FC1F already defined)
+(label FC1E already defined)
+(label FC1D already defined)
+(label FC1C already defined)
+(label FC1B already defined)
+(label FC1A already defined)
+(label BR1 already defined)
+(label SV8 already defined)
+(label SV7 already defined)
+(label SV4 already defined)
+(label SV3 already defined)
+(label TRN13 already defined)
+(label TRN12 already defined)
+(label TRN11 already defined)
+(label TRN10 already defined)
+(label TRN9 already defined)
+(label TRN8 already defined)
+(label TRN7 already defined)
+(label TRN6 already defined)
+(label TRN5 already defined)
+(label TRN4 already defined)
+(label TRN3 already defined)
+(label TRN2 already defined)
+(label TRN1 already defined)
+(label Co_opGoat_transactionsGTT497 already defined)
+(label GTT4_10 already defined)
+(label GTT4_9 already defined)
+(label GTT4_8 already defined)
+(label GTT4_7 already defined)
+(label GTT4_6 already defined)
+(label GTT4_5 already defined)
+(label GTT4_4 already defined)
+(label GTT4_3 already defined)
+(label GTT4_2 already defined)
+(label GTT4_1 already defined)
+(label GTT4 already defined)
+(label COM11 already defined)
+(label COM10 already defined)
+(label COM77 already defined)
+(label COM76 already defined)
+(label COM75 already defined)
+(label COM74 already defined)
+(label COM73 already defined)
+(label COM72 already defined)
+(label COM71 already defined)
+(label COM5 already defined)
+(label COM4 already defined)
+(label MGT6 already defined)
+(label MGT5 already defined)
+(label MGT4 already defined)
+(label MGT3_1 already defined)
+(label MGT2 already defined)
+(label MGT1 already defined)
+(label SER32 already defined)
+(label SER31 already defined)
+(label SER30 already defined)
+(label SER29 already defined)
+(label SER28 already defined)
+(label SER27 already defined)
+(label SER26 already defined)
+(label SER25 already defined)
+(label SER24 already defined)
+(label SER22 already defined)
+(label SER21 already defined)
+(label SER19 already defined)
+(label SER18 already defined)
+(label SER17 already defined)
+(label SER16 already defined)
+(label SER15 already defined)
+(label SER14 already defined)
+(label SER13 already defined)
+(label SER12 already defined)
+(label SER11 already defined)
+(label SER10 already defined)
+(label SER9 already defined)
+(label SER8 already defined)
+(label SER7 already defined)
+(label SER6 already defined)
+(label SER4 already defined)
+(label SER3 already defined)
+(label SER2 already defined)
+(label SER1 already defined)
+(label MEM16 already defined)
+(label MEM14 already defined)
+(label MEM13 already defined)
+(label MEM12 already defined)
+(label MEM9 already defined)
+(label MEM8 already defined)
+(label MEM6 already defined)
+(label MEM5 already defined)
+(label MEM4 already defined)
+(label MEM3 already defined)
+(label HSE13 already defined)
+(label HSE12 already defined)
+(label HSE11 already defined)
+(label HSE10 already defined)
+(label HSE9 already defined)
+(label HSE8 already defined)
+(label HSE7 already defined)
+(label HSE6 already defined)
+(label HSE3 already defined)
+(label HSE2 already defined)
+(label HSE1 already defined)
+(label LND3 already defined)
+(label LND2 already defined)
+(label HHR7 already defined)
+(label ID8 already defined)
+(label ID7 already defined)
+(label ID6 already defined)
+(label ID2 already defined)
+(label ID1 already defined)
 
 {col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -3999,6 +3999,46 @@ str12 now)
 {txt}
 {com}. 
 . 
+. ** Essay 1 variables
+. * -----------------------------------------
+. * co-op membership fee
+. replace MAN2 = MAN2*(0.0099)
+{txt}(99 real changes made)
+
+{com}. replace MAN2 = 0 if MAN2 ==.
+{txt}(9 real changes made)
+
+{com}. 
+. * pct attending co-op general assembly
+. gen assembly_pct = MAN10 / MAN3
+{txt}(1 missing value generated)
+
+{com}. replace assembly_pct = 1 if assembly_pct > 1
+{txt}(2 real changes made)
+
+{com}. 
+. * co-op coordinates goat sales
+. replace CO_SER15 = 1 if CO_SER15 > 0
+{txt}(4 real changes made)
+
+{com}. * co-op offers loans
+. replace CO_SER2 = 1 if CO_SER2 > 0
+{txt}(2 real changes made)
+
+{com}. * co-op accepts savings
+. replace CO_SER1 = 1 if CO_SER1 > 0
+{txt}(1 real change made)
+
+{com}. * co-op provides goat price info
+. replace CO_SERV2 = 1 if CO_SERV2 > 0
+{txt}(4 real changes made)
+
+{com}. * co-op provides dividends
+. replace CO_SER18 = 1 if CO_SER18 > 0
+{txt}(3 real changes made)
+
+{com}. 
+. 
 . 
 . save "$d3/CO_Ind.dta", replace
 {txt}file /Users/scottmiller/Dropbox (UFL)/Dissertation/Analysis/Data/CO_Ind.dta saved
@@ -4019,6 +4059,100 @@ str12 now)
 {com}. generate stdgroup = 1
 {txt}
 {com}. 
+. 
+. ** Essay 1 variables
+. * -------------------------------------------------------
+. * travel time to co-op
+. gen travel_time = MEM10_a*60 + MEM10_b
+{txt}(133 missing values generated)
+
+{com}. sum travel_time, d
+
+                         {txt}travel_time
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        5              0
+{txt} 5%    {res}       10              0
+{txt}10%    {res}       10              0       {txt}Obs         {res}      2,723
+{txt}25%    {res}       30              0       {txt}Sum of Wgt. {res}      2,723
+
+{txt}50%    {res}       50                      {txt}Mean          {res} 91.86816
+                        {txt}Largest       Std. Dev.     {res} 225.7996
+{txt}75%    {res}      100           3000
+{txt}90%    {res}      180           3000       {txt}Variance      {res} 50985.45
+{txt}95%    {res}      240           3600       {txt}Skewness      {res} 10.34173
+{txt}99%    {res}      420           3600       {txt}Kurtosis      {res} 125.1797
+{txt}
+{com}. replace travel_time = `r(p99)' if travel_time > `r(p99)'
+{txt}(159 real changes made)
+
+{com}. * co-op dividend payment amount (USD)
+. replace SER33 = SER33*(0.0099)
+{txt}(358 real changes made)
+
+{com}. replace SER33 = 0 if SER33 ==.
+{txt}(1,579 real changes made)
+
+{com}. * length of co-op membership
+. gen mem_length = MEM2_1 + (MEM2_2 / 12)
+{txt}
+{com}. sum mem_length, d
+
+                         {txt}mem_length
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res} .5833333              0
+{txt}10%    {res}        1              0       {txt}Obs         {res}      2,856
+{txt}25%    {res} 1.666667              0       {txt}Sum of Wgt. {res}      2,856
+
+{txt}50%    {res}        3                      {txt}Mean          {res} 5.289303
+                        {txt}Largest       Std. Dev.     {res} 67.07079
+{txt}75%    {res}        4             60
+{txt}90%    {res} 5.416667       2070.167       {txt}Variance      {res} 4498.491
+{txt}95%    {res} 6.166667        2072.25       {txt}Skewness      {res} 30.73324
+{txt}99%    {res}        9         2072.5       {txt}Kurtosis      {res} 946.9991
+{txt}
+{com}. replace mem_length = `r(p99)' if mem_length > `r(p99)'
+{txt}(28 real changes made)
+
+{com}. * received co-op activities (non-sale)
+. replace COM8 = 0 if COM8 ==.
+{txt}(357 real changes made)
+
+{com}. gen bCOM8 = 1 if COM8 > 0 
+{txt}(1,773 missing values generated)
+
+{com}. replace bCOM8 = 0 if COM8 ==0
+{txt}(1,773 real changes made)
+
+{com}. * number of SHG meetings attended
+. replace MEM7 = 0 if MEM7 ==.
+{txt}(133 real changes made)
+
+{com}. * co-op coordinates goat sales
+. replace CO_SER15 = 1 if CO_SER15 > 0
+{txt}(192 real changes made)
+
+{com}. * co-op offers loans
+. replace CO_SER2 = 1 if CO_SER2 > 0
+{txt}(168 real changes made)
+
+{com}. * co-op accepts savings
+. replace CO_SER1 = 1 if CO_SER1 > 0
+{txt}(24 real changes made)
+
+{com}. * co-op provides goat price info
+. replace CO_SERV2 = 1 if CO_SERV2 > 0
+{txt}(192 real changes made)
+
+{com}. * co-op provides dividends
+. replace CO_SER18 = 1 if CO_SER18 > 0
+{txt}(216 real changes made)
+
+{com}. 
+. 
+. 
 . ** Communication **
 . 
 . /* Variables 
@@ -4640,20 +4774,20 @@ str12 now)
                       {txt}HHR4 Age in years
 {hline 61}
       Percentiles      Smallest
- 1%    {res}     22.5              6
-{txt} 5%    {res}     25.5           16.5
-{txt}10%    {res}       28       18.33333       {txt}Obs         {res}      2,856
-{txt}25%    {res}     33.5             19       {txt}Sum of Wgt. {res}      2,856
+ 1%    {res}       21              6
+{txt} 5%    {res}       24             17
+{txt}10%    {res}       26             19       {txt}Obs         {res}      2,856
+{txt}25%    {res}       31             19       {txt}Sum of Wgt. {res}      2,856
 
-{txt}50%    {res}       41                      {txt}Mean          {res} 42.31846
-                        {txt}Largest       Std. Dev.     {res} 11.57664
-{txt}75%    {res}       50           77.5
-{txt}90%    {res}     58.5             78       {txt}Variance      {res} 134.0186
-{txt}95%    {res}    63.75             79       {txt}Skewness      {res} .4655514
-{txt}99%    {res}     70.4             83       {txt}Kurtosis      {res} 2.720694
+{txt}50%    {res}       39                      {txt}Mean          {res}  40.3638
+                        {txt}Largest       Std. Dev.     {res} 11.56117
+{txt}75%    {res}       48             75
+{txt}90%    {res}       57             76       {txt}Variance      {res} 133.6606
+{txt}95%    {res}       62             77       {txt}Skewness      {res}  .513219
+{txt}99%    {res}       70             83       {txt}Kurtosis      {res} 2.771959
 {txt}
 {com}. replace HHR4 = `r(p1)' if HHR4 < 20
-{txt}(6 real changes made)
+{txt}(7 real changes made)
 
 {com}. 
 . * number of SHG meetings
@@ -5056,8 +5190,8 @@ str12 now)
 {txt}{center:{hline 100}}
 {center:{txt}{lalign 55:}{txt}{center 10:N}{txt}{center 8:Mean}{txt}{center 8:sd}{txt}{center 9:Min}{txt}{center 8:Max}}
 {txt}{center:{hline 100}}
-{center:{txt}{lalign 55:Age of female cooperative member (years)}{res}{center 10:2,856.00}{res}{center 8:42.33}{res}{center 8:11.55}{res}{center 9:20.00}{res}{center 8:83.00}}
-{center:{txt}{lalign 55:Literacy of female cooperative member (0/1)}{res}{center 10:2,856.00}{res}{center 8:0.79}{res}{center 8:0.36}{res}{center 9:0.00}{res}{center 8:1.00}}
+{center:{txt}{lalign 55:Age of female cooperative member (years)}{res}{center 10:2,856.00}{res}{center 8:40.37}{res}{center 8:11.54}{res}{center 9:20.00}{res}{center 8:83.00}}
+{center:{txt}{lalign 55:Literacy of female cooperative member (0/1)}{res}{center 10:2,853.00}{res}{center 8:0.72}{res}{center 8:0.45}{res}{center 9:0.00}{res}{center 8:1.00}}
 {center:{txt}{lalign 55:Received cooperative sale information (0/1)}{res}{center 10:2,856.00}{res}{center 8:0.35}{res}{center 8:0.48}{res}{center 9:0.00}{res}{center 8:1.00}}
 {center:{txt}{lalign 55:Total number of goats owned (count)}{res}{center 10:2,856.00}{res}{center 8:5.76}{res}{center 8:4.95}{res}{center 9:0.00}{res}{center 8:69.00}}
 {center:{txt}{lalign 55:Household sold goats in the last 12-months (0/1)}{res}{center 10:2,856.00}{res}{center 8:0.48}{res}{center 8:0.50}{res}{center 9:0.00}{res}{center 8:1.00}}
@@ -5096,1608 +5230,618 @@ str12 now)
 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02119.000000"
 {txt}
-{com}. foreach i in A B C D E F G {c -(}
-{txt}  2{com}.         tab LS4`i'
-{txt}  3{com}. {c )-}
-{err}variable {bf}LS4A{sf} not found
-{txt}{search r(111), local:r(111);}
+{com}. 
+. ** HH level dataset
+. ********************************************* 
+. use "$d3/HH_Final.dta"
+{err}no; data in memory would be lost
+{txt}{search r(4), local:r(4);}
 
 end of do-file
 
-{search r(111), local:r(111);}
+{search r(4), local:r(4);}
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+{com}. do "/Users/scottmiller/GitHub/dissertation/dis1_2.do"
 {txt}
-{com}. forv i=1/5 {c -(}
-{txt}  2{com}.         tab LS4_`i'
-{txt}  3{com}. {c )-}
+{com}. 
+. /*******************************************************************************
+> dis1_2.d0               
+> 
+> - Background statistics                                 
+> - Group definitions                                             
+>         
+> *******************************************************************************/
+. 
+. 
+. clear
+{txt}
+{com}. set more off, perm
+{txt}({cmd:set more} preference recorded)
 
-      {txt}LS4_1 {c |}      Freq.     Percent        Cum.
+{com}. cd "$d2"
+{res}/Users/scottmiller/Dropbox (UFL)/Dissertation/Analysis/Output
+{txt}
+{com}. 
+. 
+. ** Co-op level dataset
+. ********************************************* 
+. clear
+{txt}
+{com}. use "$d3/CO_Final.dta"
+{txt}( )
+
+{com}. 
+. 
+. 
+. 
+. 
+. 
+. 
+. ** HH level dataset
+. ********************************************* 
+. clear
+{txt}
+{com}. use "$d3/HH_Final.dta"
+{txt}( )
+
+{com}. 
+. * length of membership
+. sum mem_length, d
+
+                         {txt}mem_length
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res} .5833333              0
+{txt}10%    {res}        1              0       {txt}Obs         {res}      2,856
+{txt}25%    {res} 1.666667              0       {txt}Sum of Wgt. {res}      2,856
+
+{txt}50%    {res}        3                      {txt}Mean          {res} 3.041112
+                        {txt}Largest       Std. Dev.     {res} 1.840517
+{txt}75%    {res}        4              9
+{txt}90%    {res} 5.416667              9       {txt}Variance      {res} 3.387502
+{txt}95%    {res} 6.166667              9       {txt}Skewness      {res}  .758159
+{txt}99%    {res}        9              9       {txt}Kurtosis      {res} 3.343336
+{txt}
+{com}. * role in co-op
+. tab MEM4
+
+    {txt}MEM4 What is your role in the {c |}
+                           co-op? {c |}      Freq.     Percent        Cum.
+{hline 34}{c +}{hline 35}
+                   Regular member {c |}{res}      2,670       93.49       93.49
+{txt}             Management committee {c |}{res}         77        2.70       96.18
+{txt}Account and supervision committee {c |}{res}         36        1.26       97.44
+{txt}                   Loan committee {c |}{res}         16        0.56       98.00
+{txt}              Education committee {c |}{res}          2        0.07       98.07
+{txt}           Other (please specify) {c |}{res}         55        1.93      100.00
+{txt}{hline 34}{c +}{hline 35}
+                            Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * attended SHG meeting
+. tab MEM6
+
+  {txt}MEM6 Have {c |}
+   you ever {c |}
+ attended a {c |}
+        SHG {c |}
+   meeting? {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          0 {c |}{res}        408       36.20       36.20
-{txt}   .1666667 {c |}{res}          1        0.09       36.29
-{txt}        .25 {c |}{res}          1        0.09       36.38
-{txt}   .3333333 {c |}{res}          7        0.62       37.00
-{txt}         .5 {c |}{res}         51        4.53       41.53
-{txt}         .6 {c |}{res}          1        0.09       41.61
-{txt}   .6666667 {c |}{res}          9        0.80       42.41
-{txt}        .75 {c |}{res}          2        0.18       42.59
-{txt}          1 {c |}{res}        647       57.41      100.00
+          0 {c |}{res}        133        4.66        4.66
+{txt}        Yes {c |}{res}      2,723       95.34      100.00
 {txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * # of SHG meetings in last 6-months
+. tab MEM7
 
-      {txt}LS4_2 {c |}      Freq.     Percent        Cum.
+{txt}MEM7 In the {c |}
+     past 6 {c |}
+months, how {c |}
+   many SHG {c |}
+   meetings {c |}
+   have you {c |}
+  attended? {c |}
+   (Note to {c |}
+        int {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          0 {c |}{res}        794       70.45       70.45
-{txt}   .1666667 {c |}{res}          1        0.09       70.54
-{txt}        .25 {c |}{res}          3        0.27       70.81
-{txt}   .3333333 {c |}{res}         11        0.98       71.78
-{txt}         .5 {c |}{res}         57        5.06       76.84
-{txt}   .6666667 {c |}{res}          4        0.35       77.20
-{txt}          1 {c |}{res}        257       22.80      100.00
+          0 {c |}{res}        167        5.85        5.85
+{txt}          1 {c |}{res}         23        0.81        6.65
+{txt}          2 {c |}{res}         66        2.31        8.96
+{txt}          3 {c |}{res}         66        2.31       11.27
+{txt}          4 {c |}{res}        101        3.54       14.81
+{txt}          5 {c |}{res}         77        2.70       17.51
+{txt}          6 {c |}{res}      2,309       80.85       98.35
+{txt}          7 {c |}{res}          6        0.21       98.56
+{txt}          8 {c |}{res}          1        0.04       98.60
+{txt}          9 {c |}{res}          2        0.07       98.67
+{txt}         11 {c |}{res}          1        0.04       98.70
+{txt}         12 {c |}{res}         36        1.26       99.96
+{txt}         15 {c |}{res}          1        0.04      100.00
 {txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * attended co-op meeting
+. tab MEM8
 
-      {txt}LS4_3 {c |}      Freq.     Percent        Cum.
+  {txt}MEM8 Have {c |}
+   you ever {c |}
+ attended a {c |}
+      co-op {c |}
+   meeting? {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          0 {c |}{res}      1,009       89.53       89.53
-{txt}   .1666667 {c |}{res}          1        0.09       89.62
-{txt}        .25 {c |}{res}          4        0.35       89.97
-{txt}   .3333333 {c |}{res}          5        0.44       90.42
-{txt}         .4 {c |}{res}          1        0.09       90.51
-{txt}         .5 {c |}{res}         28        2.48       92.99
-{txt}   .6666667 {c |}{res}          2        0.18       93.17
-{txt}          1 {c |}{res}         77        6.83      100.00
+          0 {c |}{res}      1,220       42.72       42.72
+{txt}        Yes {c |}{res}      1,636       57.28      100.00
 {txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * # of co-op meetings in last 6-months
+. tab MEM11
 
-      {txt}LS4_4 {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}      1,096       97.25       97.25
-{txt}        .25 {c |}{res}          2        0.18       97.43
-{txt}   .3333333 {c |}{res}          3        0.27       97.69
-{txt}         .5 {c |}{res}          8        0.71       98.40
-{txt}          1 {c |}{res}         18        1.60      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
-
-      {txt}LS4_5 {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}      1,089       96.63       96.63
-{txt}   .3333333 {c |}{res}          1        0.09       96.72
-{txt}         .5 {c |}{res}         10        0.89       97.60
-{txt}   .6666667 {c |}{res}          1        0.09       97.69
-{txt}   .8333333 {c |}{res}          1        0.09       97.78
-{txt}          1 {c |}{res}         25        2.22      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. count if LS4_1 > 0 & LS4_1 !=.
-  {res}719
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. count if LS4_1 > 0 & LS4_1 !=. & LS4_2 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0
-  {res}647
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * sold to trader only & exclusive side-seller
-. count if LS4_1 > 0 & LS4_1 !=. & LS4_2 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0 & side_sell == 1
-  {res}620
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * sold to trader only & exclusive side-seller
-. count if LS4_1 > 0 & LS4_1 !=. & LS4_2 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0 & side_sell == 1 & co_opgoatno == 0
-  {res}588
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. count if LS4_1 > 0 & LS4_1 !=. & LS4_2 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0 & co_opgoatno == 0
-  {res}613
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. count if LS4_2 > 0 & LS4_2 !=.
-  {res}333
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * sold to neighbors
-. count if LS4_2 > 0 & LS4_2 !=.
-  {res}333
-{txt}
-{com}.         * sold to neighbors only
-.         count if LS4_2 > 0 & LS4_2 !=. & LS4_1 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0
-  {res}257
-{txt}
-{com}.         * sold to neighbors only & exclusive side-seller
-.         count if LS4_2 > 0 & LS4_2 !=. & LS4_1 == 0 & LS4_3 == 0 & LS4_4 == 0 & LS4_5 == 0 & co_opgoatno == 0   
-  {res}240
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * sold to relatives
-. count if LS4_3 > 0 & LS4_3 !=.
-  {res}118
-{txt}
-{com}.         * sold to neighbors only
-.         count if LS4_3 > 0 & LS4_3 !=. & LS4_1 == 0 & LS4_2 == 0 & LS4_4 == 0 & LS4_5 == 0
-  {res}77
-{txt}
-{com}.         * sold to neighbors only & exclusive side-seller
-.         count if LS4_3 > 0 & LS4_3 !=. & LS4_1 == 0 & LS4_2 == 0 & LS4_4 == 0 & LS4_5 == 0 & co_opgoatno == 0
-  {res}71
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}.         count if LS4_3 == 1
-  {res}77
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. count if LS4_4 > 0 & LS4_4 !=.
-  {res}31
-{txt}
-{com}.         * sold to relatives only
-.         count if LS4_4 > 0 & LS4_4 !=. & LS4_1 == 0 & LS4_2 == 0 & LS4_3 == 0 & LS4_5 == 0
-  {res}18
-{txt}
-{com}.         * sold to relatives only & exclusive side-seller
-.         count if LS4_4 > 0 & LS4_4 !=. & LS4_1 == 0 & LS4_2 == 0 & LS4_3 == 0 & LS4_5 == 0 & co_opgoatno == 0   
-  {res}17
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. foreach i in A B C D {c -(}
-{txt}  2{com}.         tab LS6`i'
-{txt}  3{com}. {c )-}
-
-   {txt}LS6A Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
+   {txt}MEM11 In {c |}
+ the past 6 {c |}
+months, how {c |}
+       many {c |}
 cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
+   meetings {c |}
+   have you {c |}
+  attended? {c |}
+        (No {c |}      Freq.     Percent        Cum.
 {hline 12}{c +}{hline 35}
-          0 {c |}{res}      1,038       92.10       92.10
-{txt}   .1111111 {c |}{res}          1        0.09       92.19
-{txt}        .25 {c |}{res}          3        0.27       92.46
-{txt}   .3333333 {c |}{res}          6        0.53       92.99
-{txt}         .5 {c |}{res}          9        0.80       93.79
-{txt}   .6666667 {c |}{res}          1        0.09       93.88
-{txt}        .75 {c |}{res}          1        0.09       93.97
-{txt}          1 {c |}{res}         68        6.03      100.00
+          0 {c |}{res}      1,472       51.54       51.54
+{txt}          1 {c |}{res}        375       13.13       64.67
+{txt}          2 {c |}{res}        235        8.23       72.90
+{txt}          3 {c |}{res}        133        4.66       77.56
+{txt}          4 {c |}{res}         68        2.38       79.94
+{txt}          5 {c |}{res}         25        0.88       80.81
+{txt}          6 {c |}{res}        533       18.66       99.47
+{txt}          7 {c |}{res}          1        0.04       99.51
+{txt}          8 {c |}{res}          3        0.11       99.61
+{txt}          9 {c |}{res}          1        0.04       99.65
+{txt}         10 {c |}{res}          1        0.04       99.68
+{txt}         12 {c |}{res}          6        0.21       99.89
+{txt}         15 {c |}{res}          1        0.04       99.93
+{txt}         20 {c |}{res}          1        0.04       99.96
+{txt}         24 {c |}{res}          1        0.04      100.00
 {txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * why don't you attend co-op meetings
+. tab MEM9
 
-   {txt}LS6B Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        919       81.54       81.54
-{txt}   .3333333 {c |}{res}          4        0.35       81.90
-{txt}         .5 {c |}{res}         26        2.31       84.21
-{txt}         .6 {c |}{res}          1        0.09       84.29
-{txt}   .6666667 {c |}{res}          2        0.18       84.47
-{txt}        .75 {c |}{res}          1        0.09       84.56
-{txt}          1 {c |}{res}        174       15.44      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
-
-   {txt}LS6C Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        562       49.87       49.87
-{txt}   .1666667 {c |}{res}          1        0.09       49.96
-{txt}   .3333333 {c |}{res}          3        0.27       50.22
-{txt}         .5 {c |}{res}         23        2.04       52.26
-{txt}         .6 {c |}{res}          2        0.18       52.44
-{txt}   .6666667 {c |}{res}          3        0.27       52.71
-{txt}          1 {c |}{res}        533       47.29      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
-
-   {txt}LS6D Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        797       70.72       70.72
-{txt}        .25 {c |}{res}          1        0.09       70.81
-{txt}   .3333333 {c |}{res}          2        0.18       70.98
-{txt}         .5 {c |}{res}         17        1.51       72.49
-{txt}   .6666667 {c |}{res}          1        0.09       72.58
-{txt}        .75 {c |}{res}          1        0.09       72.67
-{txt}          1 {c |}{res}        308       27.33      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,127      100.00
+        {txt}MEM9 Why don't you attend co-op {c |}
+                              meetings? {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                           Too far away {c |}{res}        122       10.00       10.00
+{txt}                            No interest {c |}{res}         98        8.03       18.03
+{txt}              I do not have enough time {c |}{res}        328       26.89       44.92
+{txt}I did not receive permission to leave t {c |}{res}         14        1.15       46.07
+{txt}      There are no cooperative meetings {c |}{res}         47        3.85       49.92
+{txt}I do not know where or when they are he {c |}{res}        351       28.77       78.69
+{txt}           Someone attended as my proxy {c |}{res}        245       20.08       98.77
+{txt}                 Other (please specify) {c |}{res}         15        1.23      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}      1,220      100.00
 {txt}
 {com}. 
-{txt}end of do-file
+.         forvalues i=1/7 {c -(}
+{txt}  2{com}.                 gen MEM9_`i' = (MEM9 == `i')
+{txt}  3{com}.                 replace MEM9_`i' =. if MEM9 == .
+{txt}  4{com}.         {c )-}
+{txt}(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
+(1,636 real changes made, 1,636 to missing)
 
-{com}. count if co_opgoatno > 0
-  {res}353
+{com}. 
+. * travel time to co-op
+. sum travel_time, d
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+                         {txt}travel_time
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        5              0
+{txt} 5%    {res}       10              0
+{txt}10%    {res}       10              0       {txt}Obs         {res}      2,856
+{txt}25%    {res}       30              0       {txt}Sum of Wgt. {res}      2,856
+
+{txt}50%    {res}       60                      {txt}Mean          {res} 91.57983
+                        {txt}Largest       Std. Dev.     {res} 103.4131
+{txt}75%    {res}      120            420
+{txt}90%    {res}      240            420       {txt}Variance      {res} 10694.28
+{txt}95%    {res}      420            420       {txt}Skewness      {res} 2.023689
+{txt}99%    {res}      420            420       {txt}Kurtosis      {res}  6.53249
+{txt}
+{com}. * Participate in annual general meeting
+. tab MEM12
+
+   {txt}MEM12 Do {c |}
+        you {c |}
+participate {c |}
+     in the {c |}
+     annual {c |}
+    general {c |}
+ meeting of {c |}
+ your co-op {c |}
+or co-op un {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        884       30.95       30.95
+{txt}        Yes {c |}{res}      1,972       69.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * why don't you participate
+. tab MEM13
+
+       {txt}MEM13 Why don't you participate? {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                           Too far away {c |}{res}        139       15.72       15.72
+{txt}                            No interest {c |}{res}         73        8.26       23.98
+{txt}              I do not have enough time {c |}{res}        306       34.62       58.60
+{txt}I did not receive permission to leave t {c |}{res}         17        1.92       60.52
+{txt}      There are no cooperative meetings {c |}{res}         65        7.35       67.87
+{txt}I do not know where or when they are he {c |}{res}        196       22.17       90.05
+{txt}           Someone attended as my proxy {c |}{res}         70        7.92       97.96
+{txt}                 Other (please specify) {c |}{res}         18        2.04      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}        884      100.00
+{txt}
+{com}.         
+.         forvalues i=1/7 {c -(}
+{txt}  2{com}.                 gen MEM13_`i' = (MEM13 == `i')
+{txt}  3{com}.                 replace MEM13_`i' =. if MEM13 == .
+{txt}  4{com}.         {c )-}
+{txt}(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+(1,972 real changes made, 1,972 to missing)
+
+{com}. 
+. * ever voted in co-op elections
+. tab MEM14
+
+ {txt}MEM14 Have {c |}
+   you ever {c |}
+   voted in {c |}
+      co-op {c |}
+ elections? {c |}
+ (every 2-4 {c |}
+     years) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      2,590       90.69       90.69
+{txt}        Yes {c |}{res}        266        9.31      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * # times voted in co-op elections
+. tab MEM15
+
+   {txt}MEM15 In {c |}
+   the past {c |}
+ 2-4 years, {c |}
+   how many {c |}
+ times have {c |}
+  you voted {c |}
+   in co-op {c |}
+ elections? {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          4        1.50        1.50
+{txt}          1 {c |}{res}        135       50.75       52.26
+{txt}          2 {c |}{res}         99       37.22       89.47
+{txt}          3 {c |}{res}         21        7.89       97.37
+{txt}          4 {c |}{res}          5        1.88       99.25
+{txt}          5 {c |}{res}          2        0.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        266      100.00
+{txt}
+{com}.         
+.         * election votes by role 
+.         tab MEM4 MEM14
+
+                      {txt}{c |}  MEM14 Have you ever
+                      {c |}    voted in co-op
+                      {c |} elections? (every 2-4
+    MEM4 What is your {c |}        years)
+   role in the co-op? {c |}         0        Yes {c |}     Total
+{hline 22}{c +}{hline 22}{c +}{hline 10}
+       Regular member {c |}{res}     2,426        244 {txt}{c |}{res}     2,670 
+{txt} Management committee {c |}{res}        62         15 {txt}{c |}{res}        77 
+{txt}Account and supervisi {c |}{res}        32          4 {txt}{c |}{res}        36 
+{txt}       Loan committee {c |}{res}        13          3 {txt}{c |}{res}        16 
+{txt}  Education committee {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}Other (please specify {c |}{res}        55          0 {txt}{c |}{res}        55 
+{txt}{hline 22}{c +}{hline 22}{c +}{hline 10}
+                Total {c |}{res}     2,590        266 {txt}{c |}{res}     2,856 
+{txt}
+{com}.         
+. * ever voted on co-op policies
+. tab MEM16
+
+ {txt}MEM16 Have {c |}
+   you ever {c |}
+   voted on {c |}
+      co-op {c |}
+  policies? {c |}
+ (every 2-4 {c |}
+     years) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      2,771       97.02       97.02
+{txt}        Yes {c |}{res}         85        2.98      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,856      100.00
+{txt}
+{com}. * # times voted in co-op policies
+. tab MEM17
+
+   {txt}MEM17 In {c |}
+   the past {c |}
+ 2-4 years, {c |}
+   how many {c |}
+ times have {c |}
+  you voted {c |}
+   on co-op {c |}
+  policies? {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          3        3.53        3.53
+{txt}          1 {c |}{res}         52       61.18       64.71
+{txt}          2 {c |}{res}         17       20.00       84.71
+{txt}          3 {c |}{res}          6        7.06       91.76
+{txt}          4 {c |}{res}          4        4.71       96.47
+{txt}          5 {c |}{res}          2        2.35       98.82
+{txt}          6 {c |}{res}          1        1.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         85      100.00
 {txt}
 {com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(1,750 real changes made)
-(1,763 real changes made)
-(1,761 real changes made)
-(1,751 real changes made)
+.         * policy votes by role 
+.         tab MEM4 MEM16
 
+                      {txt}{c |}  MEM16 Have you ever
+                      {c |}    voted on co-op
+                      {c |} policies? (every 2-4
+    MEM4 What is your {c |}        years)
+   role in the co-op? {c |}         0        Yes {c |}     Total
+{hline 22}{c +}{hline 22}{c +}{hline 10}
+       Regular member {c |}{res}     2,598         72 {txt}{c |}{res}     2,670 
+{txt} Management committee {c |}{res}        67         10 {txt}{c |}{res}        77 
+{txt}Account and supervisi {c |}{res}        34          2 {txt}{c |}{res}        36 
+{txt}       Loan committee {c |}{res}        15          1 {txt}{c |}{res}        16 
+{txt}  Education committee {c |}{res}         2          0 {txt}{c |}{res}         2 
+{txt}Other (please specify {c |}{res}        55          0 {txt}{c |}{res}        55 
+{txt}{hline 22}{c +}{hline 22}{c +}{hline 10}
+                Total {c |}{res}     2,771         85 {txt}{c |}{res}     2,856 
+{txt}
 {com}. 
-{txt}end of do-file
+. * ----------------------------------------------------------------------
+.         
+. 
+. 
+. ** Group variable definitons
+. 
+. * pct of members receiving co-op sale info
+. sum COM3, d
 
-{com}. tab LS6*
-{err}too many variables specified
-{txt}{search r(103), local:r(103);}
+      {txt}COM3 In the past 6 months, how many times did you
+               receive information about co-o
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res}        0              0
+{txt}10%    {res}        0              0       {txt}Obs         {res}      2,856
+{txt}25%    {res}        0              0       {txt}Sum of Wgt. {res}      2,856
 
-{com}. sum LS6*
+{txt}50%    {res}        0                      {txt}Mean          {res} .9268207
+                        {txt}Largest       Std. Dev.     {res} 1.632389
+{txt}75%    {res}        1              8
+{txt}90%    {res}        3              8       {txt}Variance      {res} 2.664695
+{txt}95%    {res}        5             10       {txt}Skewness      {res} 2.108659
+{txt}99%    {res}        6             15       {txt}Kurtosis      {res} 7.878881
+{txt}
+{com}. sum bCOM3 
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-{space 8}LS6A {c |}{res}      2,856    .0311625    .1737871          0          1
-{txt}{space 8}LS6B {c |}{res}      2,856    .0728291    .2599013          0          1
-{txt}{space 8}LS6C {c |}{res}      2,856    .1978291    .3984324          0          1
-{txt}{space 8}LS6D {c |}{res}      2,856    .1155462     .319736          0          1
-{txt}{space 8}LS6X {c |}{res}      1,127    .1343291    .3353017          0          1
-{txt}{hline 13}{c +}{hline 57}
-{space 7}LS6_1 {c |}{res}          1           0           .          0          0
+{space 7}bCOM3 {c |}{res}      2,856    .3511905    .4774259          0          1
+{txt}
+{com}. 
+.         * percentage variable
+.         cap drop pct_COM3 gr_pct_COM3
+{txt}
+{com}.         bysort idx: egen pct_COM3 = mean(bCOM3)
+{txt}
+{com}.         * exclude co-ops that do not sell goats
+.         replace pct_COM3 = . if CO_SER15 == 0
+{txt}(360 real changes made, 360 to missing)
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. ** HH level dataset
-. ********************************************* 
-. clear
-{txt}
-{com}. use "$d3/HH_Final.dta"
-{txt}( )
+{com}.         
+.         * group var
+.         sum pct_COM3, d
 
-{com}. 
-. drop if LS8 == 0
-{txt}(1,472 observations deleted)
+                          {txt}pct_COM3
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res}        0              0
+{txt}10%    {res}        0              0       {txt}Obs         {res}      2,496
+{txt}25%    {res} .0416667              0       {txt}Sum of Wgt. {res}      2,496
 
-{com}. 
-. * binary side selling
-. gen side_sell = outsidegoatno > 0
+{txt}50%    {res} .3958333                      {txt}Mean          {res} .3866186
+                        {txt}Largest       Std. Dev.     {res} .2977196
+{txt}75%    {res}     .625       .9583333
+{txt}90%    {res} .7916667       .9583333       {txt}Variance      {res} .0886369
+{txt}95%    {res}     .875       .9583333       {txt}Skewness      {res} .0993374
+{txt}99%    {res} .9583333       .9583333       {txt}Kurtosis      {res} 1.706837
 {txt}
-{com}. label define sidesel 1 "outside" 0 "co-op"
+{com}.         gen gr_pct_COM3 = (pct_COM3 > `r(p50)')
 {txt}
-{com}. label values side_sell sidesel
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(335 real changes made)
-(348 real changes made)
-(346 real changes made)
-(336 real changes made)
+{com}.         replace gr_pct_COM3 = . if CO_SER15 == 0
+{txt}(360 real changes made, 360 to missing)
 
 {com}. 
-{txt}end of do-file
+. 
+. * pct of members receiving co-op non-sale info
+. sum COM8, d
 
-{com}. sum LS6*
+      {txt}COM8 In the past 6 months, how many times did you
+               receive information about co-o
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res}        0              0
+{txt}10%    {res}        0              0       {txt}Obs         {res}      2,856
+{txt}25%    {res}        0              0       {txt}Sum of Wgt. {res}      2,856
+
+{txt}50%    {res}        0                      {txt}Mean          {res} .9740896
+                        {txt}Largest       Std. Dev.     {res} 3.594902
+{txt}75%    {res}        1             30
+{txt}90%    {res}        3             99       {txt}Variance      {res} 12.92332
+{txt}95%    {res}        4             99       {txt}Skewness      {res} 21.93911
+{txt}99%    {res}        6            100       {txt}Kurtosis      {res} 591.2184
+{txt}
+{com}. sum bCOM8 
 
 {txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
 {hline 13}{c +}{hline 57}
-{space 8}LS6A {c |}{res}      1,070    .0698858    .2463913          0          1
-{txt}{space 8}LS6B {c |}{res}      1,070    .1682399    .3637836          0          1
-{txt}{space 8}LS6C {c |}{res}      1,070    .4821184    .4926548          0          1
-{txt}{space 8}LS6D {c |}{res}      1,070     .284891    .4460589          0          1
-{txt}{space 8}LS6X {c |}{res}      1,070     .136812    .3376877          0          1
-{txt}{hline 13}{c +}{hline 57}
-{space 7}LS6_1 {c |}{res}          1           0           .          0          0
+{space 7}bCOM8 {c |}{res}      2,856    .3792017    .4852733          0          1
+{txt}
+{com}. 
+.         * percentage variable
+.         cap drop pct_COM8 gr_pct_COM8
+{txt}
+{com}.         bysort idx: egen pct_COM8 = mean(bCOM8)
+{txt}
+{com}.         
+.         * group var
+.         sum pct_COM8, d
 
-{com}. tab LS6A
+                          {txt}pct_COM8
+{hline 61}
+      Percentiles      Smallest
+ 1%    {res}        0              0
+{txt} 5%    {res} .0416667              0
+{txt}10%    {res} .0833333              0       {txt}Obs         {res}      2,856
+{txt}25%    {res} .1666667              0       {txt}Sum of Wgt. {res}      2,856
 
-   {txt}LS6A Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        983       91.87       91.87
-{txt}   .1111111 {c |}{res}          1        0.09       91.96
-{txt}        .25 {c |}{res}          3        0.28       92.24
-{txt}   .3333333 {c |}{res}          6        0.56       92.80
-{txt}         .5 {c |}{res}          9        0.84       93.64
-{txt}   .6666667 {c |}{res}          1        0.09       93.74
-{txt}        .75 {c |}{res}          1        0.09       93.83
-{txt}          1 {c |}{res}         66        6.17      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
+{txt}50%    {res} .4166667                      {txt}Mean          {res} .3792017
+                        {txt}Largest       Std. Dev.     {res} .2240726
+{txt}75%    {res} .5416667       .9583333
+{txt}90%    {res} .7083333       .9583333       {txt}Variance      {res} .0502086
+{txt}95%    {res}      .75       .9583333       {txt}Skewness      {res} .0883729
+{txt}99%    {res} .7916667       .9583333       {txt}Kurtosis      {res} 2.141391
+{txt}
+{com}.         gen gr_pct_COM8 = (pct_COM8 > `r(p50)')
+{txt}
+{com}. 
+.         
+. save "$d3/HH_Final.dta", replace
+{txt}file /Users/scottmiller/Dropbox (UFL)/Dissertation/Analysis/Data/HH_Final.dta saved
 
-{com}. ereturn list
+{com}. 
+. 
+. 
+{txt}end of do-file
 
-. return list
-
-{txt}scalars:
-                  r(N) =  {res}1070
-                  {txt}r(r) =  {res}8
-
-{com}. `r(1)'
-. display `r(2)'
-{res}
-
-{com}. display _r(2)
-{res}{err}2 invalid name
-{txt}{search r(198), local:r(198);}
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02119.000000"
 {txt}
 {com}. 
 . ** HH level dataset
 . ********************************************* 
-. clear
-{txt}
-{com}. use "$d3/HH_Final.dta"
+. use "$d3/HH_Final.dta", clear
 {txt}( )
 
 {com}. 
-. drop if LS8 == 0
-{txt}(1,472 observations deleted)
+. * --------------
+. * OLS regression
+. 
+. * predictors of participation / membership / benefits
+. 
+. * leadership role
+. tab MEM4
 
+    {txt}MEM4 What is your role in the {c |}
+                           co-op? {c |}      Freq.     Percent        Cum.
+{hline 34}{c +}{hline 35}
+                   Regular member {c |}{res}      2,670       93.49       93.49
+{txt}             Management committee {c |}{res}         77        2.70       96.18
+{txt}Account and supervision committee {c |}{res}         36        1.26       97.44
+{txt}                   Loan committee {c |}{res}         16        0.56       98.00
+{txt}              Education committee {c |}{res}          2        0.07       98.07
+{txt}           Other (please specify) {c |}{res}         55        1.93      100.00
+{txt}{hline 34}{c +}{hline 35}
+                            Total {c |}{res}      2,856      100.00
+{txt}
 {com}. 
-. * binary side selling
-. gen side_sell = outsidegoatno > 0
+. gen bMEM4 = (MEM4 > 1 & MEM4 !=.)
 {txt}
-{com}. label define sidesel 1 "outside" 0 "co-op"
-{txt}
-{com}. label values side_sell sidesel
-{txt}
+{com}. replace bMEM4 = . if MEM4 ==.
+{txt}(0 real changes made)
+
 {com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02119.000000"
 {txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(335 real changes made)
-(348 real changes made)
-(346 real changes made)
-(336 real changes made)
+{com}. logit bMEM4 goats_owned HHR14 mem_length HHR4
 
-{com}. 
-. 
-. gl hh_ss_reason LS6*
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)
-{txt}  7{com}.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt}  8{com}.                 {c )-}
-{txt}  9{com}. {c )-}
-{err}varlist not allowed
-{txt}{search r(101), local:r(101);}
-
-end of do-file
-
-{search r(101), local:r(101);}
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(335 real changes made)
-(348 real changes made)
-(346 real changes made)
-(336 real changes made)
-
-{com}. 
-. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)
-{txt}  7{com}.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt}  8{com}.                 {c )-}
-{txt}  9{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}{txt:(note: file E2_ss_reason.tex not found)}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,384.00}{res}{center 18:0.06}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,384.00}{res}{center 18:0.14}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,384.00}{res}{center 18:0.38}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,384.00}{res}{center 18:0.23}}
-{txt}{center:{hline 79}}
-
-
-{com}. 
-. restore         
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. ** HH level dataset
-. ********************************************* 
-. clear
-{txt}
-{com}. use "$d3/HH_Final.dta"
-{txt}( )
-
-{com}. 
-. drop if LS8 == 0
-{txt}(1,472 observations deleted)
-
-{com}. 
-. * binary side selling
-. gen side_sell = outsidegoatno > 0
-{txt}
-{com}. label define sidesel 1 "outside" 0 "co-op"
-{txt}
-{com}. label values side_sell sidesel
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(335 real changes made)
-(348 real changes made)
-(346 real changes made)
-(336 real changes made)
-
-{com}. 
-. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)
-{txt}  7{com}.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt}  8{com}.                 {c )-}
-{txt}  9{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
+{res}{txt}Iteration 0:{space 3}log likelihood = {res: -687.6513}  
+Iteration 1:{space 3}log likelihood = {res:-645.32206}  
+Iteration 2:{space 3}log likelihood = {res:-636.34145}  
+Iteration 3:{space 3}log likelihood = {res:-636.06425}  
+Iteration 4:{space 3}log likelihood = {res:-636.06262}  
+Iteration 5:{space 3}log likelihood = {res:-636.06262}  
 {res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,384.00}{res}{center 18:0.06}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,384.00}{res}{center 18:0.14}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,384.00}{res}{center 18:0.38}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,384.00}{res}{center 18:0.23}}
-{txt}{center:{hline 79}}
+{txt}Logistic regression{col 49}Number of obs{col 67}= {res}     2,853
+{txt}{col 49}LR chi2({res}4{txt}){col 67}= {res}    103.18
+{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log likelihood = {res}-636.06262{txt}{col 49}Pseudo R2{col 67}= {res}    0.0750
 
-
-{com}. 
-. restore         
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. foreach i in A B C D {c -(}
-{txt}  2{com}.         tab LS6`i'
-{txt}  3{com}. {c )-}
-
-   {txt}LS6A Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        983       91.87       91.87
-{txt}   .1111111 {c |}{res}          1        0.09       91.96
-{txt}        .25 {c |}{res}          3        0.28       92.24
-{txt}   .3333333 {c |}{res}          6        0.56       92.80
-{txt}         .5 {c |}{res}          9        0.84       93.64
-{txt}   .6666667 {c |}{res}          1        0.09       93.74
-{txt}        .75 {c |}{res}          1        0.09       93.83
-{txt}          1 {c |}{res}         66        6.17      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6B Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        873       81.59       81.59
-{txt}   .3333333 {c |}{res}          4        0.37       81.96
-{txt}         .5 {c |}{res}         26        2.43       84.39
-{txt}         .6 {c |}{res}          1        0.09       84.49
-{txt}   .6666667 {c |}{res}          2        0.19       84.67
-{txt}        .75 {c |}{res}          1        0.09       84.77
-{txt}          1 {c |}{res}        163       15.23      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6C Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        538       50.28       50.28
-{txt}   .1666667 {c |}{res}          1        0.09       50.37
-{txt}   .3333333 {c |}{res}          3        0.28       50.65
-{txt}         .5 {c |}{res}         23        2.15       52.80
-{txt}         .6 {c |}{res}          2        0.19       52.99
-{txt}   .6666667 {c |}{res}          3        0.28       53.27
-{txt}          1 {c |}{res}        500       46.73      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6D Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        754       70.47       70.47
-{txt}        .25 {c |}{res}          1        0.09       70.56
-{txt}   .3333333 {c |}{res}          2        0.19       70.75
-{txt}         .5 {c |}{res}         17        1.59       72.34
-{txt}   .6666667 {c |}{res}          1        0.09       72.43
-{txt}        .75 {c |}{res}          1        0.09       72.52
-{txt}          1 {c |}{res}        294       27.48      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. browse LS6*
-
-. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' = (LS6`i' > 0 & LS6`i' !=.)
-{txt}  3{com}. {c )-}
-{txt}(335 real changes made)
-(348 real changes made)
-(346 real changes made)
-(336 real changes made)
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       bMEM4{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}goats_owned {c |}{col 14}{res}{space 2} .0296036{col 26}{space 2} .0117716{col 37}{space 1}    2.51{col 46}{space 3}0.012{col 54}{space 4} .0065317{col 67}{space 3} .0526755
+{txt}{space 7}HHR14 {c |}{col 14}{res}{space 2} 2.345129{col 26}{space 2} .3952814{col 37}{space 1}    5.93{col 46}{space 3}0.000{col 54}{space 4} 1.570392{col 67}{space 3} 3.119866
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-.1942665{col 26}{space 2} .0475832{col 37}{space 1}   -4.08{col 46}{space 3}0.000{col 54}{space 4}-.2875279{col 67}{space 3} -.101005
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-.0010559{col 26}{space 2}  .007513{col 37}{space 1}   -0.14{col 46}{space 3}0.888{col 54}{space 4}-.0157811{col 67}{space 3} .0136693
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-4.305322{col 26}{space 2}  .527092{col 37}{space 1}   -8.17{col 46}{space 3}0.000{col 54}{space 4}-5.338403{col 67}{space 3}-3.272241
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 
 {com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02119.000000"
 {txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' =  1 if LS6`i' > 0 & LS6`i' !=.
-{txt}  3{com}. {c )-}
-{txt}(21 real changes made)
-(34 real changes made)
-(32 real changes made)
-(22 real changes made)
+{com}. logit bMEM4 goats_owned HHR14 mem_length HHR4 travel_time
 
-{com}. 
-. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)
-{txt}  7{com}.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt}  8{com}.                 {c )-}
-{txt}  9{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
+{res}{txt}Iteration 0:{space 3}log likelihood = {res: -687.6513}  
+Iteration 1:{space 3}log likelihood = {res:-643.95444}  
+Iteration 2:{space 3}log likelihood = {res:-634.64514}  
+Iteration 3:{space 3}log likelihood = {res:-634.34607}  
+Iteration 4:{space 3}log likelihood = {res:-634.34426}  
+Iteration 5:{space 3}log likelihood = {res:-634.34426}  
 {res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:0.08}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:0.18}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:0.50}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:0.30}}
-{txt}{center:{hline 79}}
+{txt}Logistic regression{col 49}Number of obs{col 67}= {res}     2,853
+{txt}{col 49}LR chi2({res}5{txt}){col 67}= {res}    106.61
+{txt}{col 49}Prob > chi2{col 67}= {res}    0.0000
+{txt}Log likelihood = {res}-634.34426{txt}{col 49}Pseudo R2{col 67}= {res}    0.0775
 
-
-{com}. 
-. restore         
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(3) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 80}}
-{center:{txt}{lalign 49:}{txt}{center 11:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 80}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 11:1,070.000}{res}{center 18:0.081}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 11:1,070.000}{res}{center 18:0.184}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 11:1,070.000}{res}{center 18:0.497}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 11:1,070.000}{res}{center 18:0.295}}
-{txt}{center:{hline 80}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' =  1 if LS6`i' > 0 & LS6`i' !=.
-{txt}  3{com}. {c )-}
-{txt}(21 real changes made)
-(34 real changes made)
-(32 real changes made)
-(22 real changes made)
-
-{com}. 
-. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)*100
-{txt}  7{com}.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt}  8{com}.                 {c )-}
-{txt}  9{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(3) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 80}}
-{center:{txt}{lalign 49:}{txt}{center 11:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 80}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 11:1,070.000}{res}{center 18:8.131}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 11:1,070.000}{res}{center 18:18.411}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 11:1,070.000}{res}{center 18:49.720}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 11:1,070.000}{res}{center 18:29.533}}
-{txt}{center:{hline 80}}
-
-
-{com}. 
-. restore         
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{txt}{center:{hline 79}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{txt}{center:{hline 79}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. foreach i in A B C D X {c -(}
-{txt}  2{com}.         tab LS6`i'
-{txt}  3{com}. {c )-}
-
-   {txt}LS6A Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        983       91.87       91.87
-{txt}   .1111111 {c |}{res}          1        0.09       91.96
-{txt}        .25 {c |}{res}          3        0.28       92.24
-{txt}   .3333333 {c |}{res}          6        0.56       92.80
-{txt}         .5 {c |}{res}          9        0.84       93.64
-{txt}   .6666667 {c |}{res}          1        0.09       93.74
-{txt}        .75 {c |}{res}          1        0.09       93.83
-{txt}          1 {c |}{res}         66        6.17      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6B Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        873       81.59       81.59
-{txt}   .3333333 {c |}{res}          4        0.37       81.96
-{txt}         .5 {c |}{res}         26        2.43       84.39
-{txt}         .6 {c |}{res}          1        0.09       84.49
-{txt}   .6666667 {c |}{res}          2        0.19       84.67
-{txt}        .75 {c |}{res}          1        0.09       84.77
-{txt}          1 {c |}{res}        163       15.23      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6C Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        538       50.28       50.28
-{txt}   .1666667 {c |}{res}          1        0.09       50.37
-{txt}   .3333333 {c |}{res}          3        0.28       50.65
-{txt}         .5 {c |}{res}         23        2.15       52.80
-{txt}         .6 {c |}{res}          2        0.19       52.99
-{txt}   .6666667 {c |}{res}          3        0.28       53.27
-{txt}          1 {c |}{res}        500       46.73      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6D Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        754       70.47       70.47
-{txt}        .25 {c |}{res}          1        0.09       70.56
-{txt}   .3333333 {c |}{res}          2        0.19       70.75
-{txt}         .5 {c |}{res}         17        1.59       72.34
-{txt}   .6666667 {c |}{res}          1        0.09       72.43
-{txt}        .75 {c |}{res}          1        0.09       72.52
-{txt}          1 {c |}{res}        294       27.48      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-
-   {txt}LS6X Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        915       85.51       85.51
-{txt}         .5 {c |}{res}         16        1.50       87.01
-{txt}   .6666667 {c |}{res}          1        0.09       87.10
-{txt}   .8333333 {c |}{res}          1        0.09       87.20
-{txt}   .8888889 {c |}{res}          1        0.09       87.29
-{txt}          1 {c |}{res}        136       12.71      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,070      100.00
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. preserve
-{txt}
-{com}. 
-. foreach i in A B C D {c -(}
-{txt}  2{com}.         replace LS6`i' =  1 if LS6`i' > 0 & LS6`i' !=.
-{txt}  3{com}. {c )-}
-{txt}(21 real changes made)
-(34 real changes made)
-(32 real changes made)
-(22 real changes made)
-
-{com}. 
-. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar N_``i'' = r(N) // N      
-{txt}  6{com}.                 scalar mean_``i'' = r(mean)*100
-{txt}  7{com}. restore 
-{txt}  8{com}.                 sum ``i'' if ``i'' > 0 & ``i'' !=.
-{txt}  9{com}.                 scalar mean2_``i'' = r(mean)*100
-{txt} 10{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'',mean2_``i'')
-{txt} 11{com}.                 {c )-}
-{txt} 12{com}. {c )-}
-{err}nothing to restore
-{txt}{search r(622), local:r(622);}
-
-end of do-file
-
-{search r(622), local:r(622);}
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.                 sum ``i'' if ``i'' > 0 & ``i'' !=.
-{txt} 11{com}.                 scalar mean2_``i'' = r(mean)*100
-{txt} 12{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'',mean2_``i'')
-{txt} 13{com}.                 {c )-}
-{txt} 14{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households","\% of sales") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}{txt}{center 13:\% of sales}}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}{res}{center 13:85.95}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}{res}{center 13:91.38}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}{res}{center 13:96.97}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}{res}{center 13:96.47}}
-{txt}{center:{hline 92}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. ** Load Livestock Sales Module
-. clear
-{txt}
-{com}. use "$d3/Livestocksales.dta"
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. tab LS6A
-
-   {txt}LS6A Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}      1,361       92.33       92.33
-{txt}          1 {c |}{res}        113        7.67      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,474      100.00
-
-{com}. tab LS6C
-
-   {txt}LS6C Why {c |}
- wasn't the {c |}
-  sale made {c |}
-  through a {c |}
-cooperative {c |}
-   ? (Check {c |}
-   all that {c |}
-     apply) {c |}      Freq.     Percent        Cum.
-{hline 12}{c +}{hline 35}
-          0 {c |}{res}        762       51.70       51.70
-{txt}          1 {c |}{res}        712       48.30      100.00
-{txt}{hline 12}{c +}{hline 35}
-      Total {c |}{res}      1,474      100.00
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.                 sum ``i'' if ``i'' !=.
-{txt} 11{com}.                 scalar mean2_``i'' = r(mean)*100
-{txt} 12{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'',mean2_``i'')
-{txt} 13{com}.                 {c )-}
-{txt} 14{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households","\% of sales") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}{txt}{center 13:\% of sales}}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,474.00}{res}{center 18:7.67}{res}{center 13:7.67}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,474.00}{res}{center 18:18.39}{res}{center 13:18.39}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,474.00}{res}{center 18:48.30}{res}{center 13:48.30}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,474.00}{res}{center 18:27.82}{res}{center 13:27.82}}
-{txt}{center:{hline 92}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. sum LS6A
-
-{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
-{hline 13}{c +}{hline 57}
-{space 8}LS6A {c |}{res}      1,474    .0766621    .2661449          0          1
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. ** HH level dataset
-. ********************************************* 
-. clear
-{txt}
-{com}. use "$d3/HH_Final.dta"
-{txt}( )
-
-{com}. 
-. drop if LS8 == 0
-{txt}(1,472 observations deleted)
-
-{com}. 
-. * binary side selling
-. gen side_sell = outsidegoatno > 0
-{txt}
-{com}. label define sidesel 1 "outside" 0 "co-op"
-{txt}
-{com}. label values side_sell sidesel
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.                 sum ``i'' if ``i'' !=.
-{txt} 11{com}.                 scalar mean2_``i'' = r(mean)*100
-{txt} 12{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'',mean2_``i'')
-{txt} 13{com}.                 {c )-}
-{txt} 14{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households","\% of sales") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}{txt}{center 13:\% of sales}}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}{res}{center 13:6.99}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}{res}{center 13:16.82}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}{res}{center 13:48.21}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}{res}{center 13:28.49}}
-{txt}{center:{hline 92}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt} 11{com}.                 {c )-}
-{txt} 12{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. 
-. use "$d3/Livestocksales.dta", clear
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 sum ``i''
-{txt}  4{com}.                 return list
-{txt}  5{com}.                 scalar mean_``i'' = r(mean)*100
-{txt}  6{com}. 
-.         * matrix for table
-.                 matrix mat_`i' = (mean_``i'')
-{txt}  7{com}.                 {c )-}
-{txt}  8{com}. {c )-}
-{txt}
-{com}. matrix B = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix B = B \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. 
-. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{txt}{center:{hline 79}}
-
-
-{com}. frmttable using E2_ss_reason.tex, tex statmat(B) sdec(2) coljust(l;c;l;l) ///   
-> ctitle("\% of sales") append
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{center:{txt}{lalign 49:}{res}{center 10:7.67}{res}{center 18:}}
-{center:{txt}{lalign 49:}{res}{center 10:18.39}{res}{center 18:}}
-{center:{txt}{lalign 49:}{res}{center 10:48.30}{res}{center 18:}}
-{center:{txt}{lalign 49:}{res}{center 10:27.82}{res}{center 18:}}
-{txt}{center:{hline 79}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{txt}{center:{hline 79}}
-
-
-{com}. frmttable using E2_ss_reason.tex, tex statmat(B) sdec(2) coljust(l;c;l;l) ///   
-> ctitle("\% of sales") merge
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}{txt}{center 13:\% of sales}}
-{txt}{center:{hline 92}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}{res}{center 13:7.67}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}{res}{center 13:18.39}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}{res}{center 13:48.30}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}{res}{center 13:27.82}}
-{txt}{center:{hline 92}}
-
-
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt} 11{com}.                 {c )-}
-{txt} 12{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,474.00}{res}{center 18:7.67}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,474.00}{res}{center 18:18.39}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,474.00}{res}{center 18:48.30}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,474.00}{res}{center 18:27.82}}
-{txt}{center:{hline 79}}
-
-
-{com}.                 
-. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. ** HH level dataset
-. ********************************************* 
-. clear
-{txt}
-{com}. use "$d3/HH_Final.dta"
-{txt}( )
-
-{com}. 
-. drop if LS8 == 0
-{txt}(1,472 observations deleted)
-
-{com}. 
-. * binary side selling
-. gen side_sell = outsidegoatno > 0
-{txt}
-{com}. label define sidesel 1 "outside" 0 "co-op"
-{txt}
-{com}. label values side_sell sidesel
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02026.000000"
-{txt}
-{com}. 
-. gl hh_ss_reason LS6A LS6B LS6C LS6D
-{txt}
-{com}.         
-. 
-. local listsize : list sizeof global(hh_ss_reason)
-{txt}
-{com}. tokenize $hh_ss_reason
-{txt}
-{com}. 
-. forv i = 1/`listsize' {c -(}
-{txt}  2{com}.                 
-.         quietly {c -(}
-{txt}  3{com}.                 preserve
-{txt}  4{com}.                         replace ``i'' =  1 if ``i'' > 0 & ``i'' !=.
-{txt}  5{com}.                         sum ``i''
-{txt}  6{com}.                         return list
-{txt}  7{com}.                         scalar N_``i'' = r(N) // N      
-{txt}  8{com}.                         scalar mean_``i'' = r(mean)*100
-{txt}  9{com}.                 restore 
-{txt} 10{com}.         
-.         * matrix for table
-.                 matrix mat_`i' = (N_``i'',mean_``i'')
-{txt} 11{com}.                 {c )-}
-{txt} 12{com}. {c )-}
-{txt}
-{com}. matrix A = mat_1
-{txt}
-{com}. forv i = 2/`listsize' {c -(} // appends into single matrix
-{txt}  2{com}.         matrix A = A \ mat_`i'
-{txt}  3{com}. {c )-}
-{txt}
-{com}. 
-. * Table
-. frmttable using E2_ss_reason.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Reasons for side-selling") ///
-> ctitle("","N","\% of households") ///
-> rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far away"\"Trader offered a higher price"\ ///
->                 "Cooperative did not arrange a sale at this time") replace
-{res}
-{txt}{center:Reasons for side-selling}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:}{txt}{center 10:N}{txt}{center 18:\% of households}}
-{txt}{center:{hline 79}}
-{center:{txt}{lalign 49:Delayed payment with cooperative}{res}{center 10:1,070.00}{res}{center 18:8.13}}
-{center:{txt}{lalign 49:Cooperative sale point is too far away}{res}{center 10:1,070.00}{res}{center 18:18.41}}
-{center:{txt}{lalign 49:Trader offered a higher price}{res}{center 10:1,070.00}{res}{center 18:49.72}}
-{center:{txt}{lalign 49:Cooperative did not arrange a sale at this time}{res}{center 10:1,070.00}{res}{center 18:29.53}}
-{txt}{center:{hline 79}}
-
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}       bMEM4{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 1}goats_owned {c |}{col 14}{res}{space 2} .0272694{col 26}{space 2} .0119176{col 37}{space 1}    2.29{col 46}{space 3}0.022{col 54}{space 4} .0039113{col 67}{space 3} .0506274
+{txt}{space 7}HHR14 {c |}{col 14}{res}{space 2} 2.362165{col 26}{space 2}  .395836{col 37}{space 1}    5.97{col 46}{space 3}0.000{col 54}{space 4} 1.586341{col 67}{space 3}  3.13799
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-.1806294{col 26}{space 2} .0477803{col 37}{space 1}   -3.78{col 46}{space 3}0.000{col 54}{space 4}-.2742771{col 67}{space 3}-.0869817
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-.0008909{col 26}{space 2} .0075205{col 37}{space 1}   -0.12{col 46}{space 3}0.906{col 54}{space 4}-.0156308{col 67}{space 3}  .013849
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2} .0013091{col 26}{space 2} .0006846{col 37}{space 1}    1.91{col 46}{space 3}0.056{col 54}{space 4}-.0000328{col 67}{space 3} .0026509
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-4.479513{col 26}{space 2} .5371188{col 37}{space 1}   -8.34{col 46}{space 3}0.000{col 54}{space 4}-5.532247{col 67}{space 3} -3.42678
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
 
 {com}. 
 {txt}end of do-file

@@ -6,7 +6,8 @@ dis0_1:
 	Cleans co-op and HH datasets
 	
 dis0_2:
-	Merges treatment status from LSIL VCC project into datasets
+	Generates a merged dataset at the HH level
+	Collapses HH data from individual level to HH level
 	
 dis0_3: 
 	Creates command for ICW Summary Indices
@@ -16,12 +17,10 @@ dis0_4:
 	Creates indicator variables at the co-op and household levels
 	
 dis0_5:
-	collapses HH dataset to the co-op level	and merges with co-op dataset
-	to create a single dataset at the co-op level
+	Merges treatment status from LSIL VCC project into datasets
 	
 dis0_6: 
-	Generates a merged dataset at the HH level
-	Collapses HH data from individual level to HH level
+	Generates summmary statistis tables
 
 
 

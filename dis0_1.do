@@ -392,6 +392,31 @@ save "$d3/Children_edit.dta", replace
 use "$d3/Roster.dta"
 rename ___index A___index
 rename ___parent_index ___index
+
+	* collapse roster keeping only female co-op member's response
+	destring HHR3, replace
+	gsort ___index -HHR3
+	tostring HHR3, replace
+	
+	** save labels and value labels in macros 
+	quietly  {
+	foreach v of var * {
+		local l`v' : variable label `v'
+		local ll`v': val lab `v'
+		if `"`l`v''"' == "" {
+			local l`v' "`v'"
+		}
+	}
+	}
+	
+	collapse (firstnm) HHR*, by(___index)
+	
+	* re-assign labels post-collapse
+	foreach v of var * {
+		label var `v' "`l`v''"
+		cap label val `v' "`ll`v''"
+	}
+
 save "$d3/Roster_edit.dta", replace
 
 use "$d3/Livestocksales_collapse.dta"
@@ -449,7 +474,7 @@ drop start end *Note* HH_IDstartHHID HH_IDendHHID end_rooster Number_children_co
 	time_food start_stockR Live_rel_emp_stockR Live_Entsta_liveE Live_Ent_liveE  ///
 	Goat_Prod_Sys_goat GP2_1 GP4_1 GP8_1 Goat_Pro_Sys_goat Live_Sale_sales Live_Sale_sale ///
 	PQ1_1 PQ1 GPS ____version metainstanceID ___uuid ___submission_time ___tags ___notes ///
-	merge1 merge2 Rosterstart_Rooster RosterRoster_Note merge3 _merge ///
+	merge1 merge2 merge3 _merge ///
 	LSE10_2 LSE10_3 LSE10_1 SV8_1 LSE1 GP22_1 GP22_2 HHR1 HHR2 GP22_1 GP22_2
 
 	
