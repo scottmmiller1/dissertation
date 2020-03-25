@@ -45,6 +45,7 @@ tab MEM11
 tab MEM9
 
 	forvalues i=1/7 {
+		cap drop MEM9_`i'
 		gen MEM9_`i' = (MEM9 == `i')
 		replace MEM9_`i' =. if MEM9 == .
 	}
@@ -57,6 +58,7 @@ tab MEM12
 tab MEM13
 	
 	forvalues i=1/7 {
+		cap drop MEM13_`i'
 		gen MEM13_`i' = (MEM13 == `i')
 		replace MEM13_`i' =. if MEM13 == .
 	}
@@ -77,9 +79,21 @@ tab MEM17
 	* policy votes by role 
 	tab MEM4 MEM16
 
-* ----------------------------------------------------------------------
 	
+* Services offered	
+sum SER1-SER4 SER6-SER19	
 
+* Number of cooperative shares
+sum SER20
+
+* services used
+sum SER21-SER22 SER24-SER33
+
+
+* financial inclusion
+
+	
+* ----------------------------------------------------------------------
 
 ** Group variable definitons
 

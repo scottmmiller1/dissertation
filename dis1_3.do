@@ -14,8 +14,6 @@ dis1_3.d0
 use "$d3/HH_Final.dta", clear
 
 * --------------
-* OLS regression
-
 * predictors of participation / membership / benefits
 
 * leadership role
@@ -23,9 +21,47 @@ tab MEM4
 gen bMEM4 = (MEM4 > 1 & MEM4 !=.)
 replace bMEM4 = . if MEM4 ==.
 
-logit bMEM4 goats_owned HHR14 mem_length HHR4 travel_time
+lab var bMEM4 "Leadership role (0/1)" 
+lab var goats_owned "Total number of goats owned (count)" 
+lab var mem_length "Length of membership (years)"
+lab var travel_time "Round-trip travel time to cooperative meetings (minutes)"
+lab var HHR14 "Literacy (0/1)"
+lab var HHR4 "Age (years)"
+lab var ID10 "Number of household members (count)"
+lab var MAN3 "Number of cooperative members (count)"
+lab var MEM14 "Voted in cooperative election (0/1)"
+
+gen goats_owned2 = goats_owned*goats_owned
 
 
+logit bMEM4 HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN3 
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
+
+* receive sale information
+logit bCOM3 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
+* receive activity information
+logit bCOM8 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3 
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
+* Voted in co-op elections
+logit MEM14 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
+* Voted in co-op elections
+logit MEM16 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
+
+
+* Number of livestock shares
+reg SER20 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
 
 
 * --------------
