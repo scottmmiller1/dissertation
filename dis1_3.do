@@ -12,14 +12,19 @@ dis1_3.d0
 ** HH level dataset
 ********************************************* 
 use "$d3/HH_Final.dta", clear
+cd "$d2"
 
-* --------------
+* ----------------------------------------------------
 * predictors of participation / membership / benefits
 
 * leadership role
 tab MEM4
 gen bMEM4 = (MEM4 > 1 & MEM4 !=.)
 replace bMEM4 = . if MEM4 ==.
+
+* received co-op loan
+gen co_loan = (BR4 == "C")
+replace co_loan =. if CO_SER2 == 0
 
 lab var bMEM4 "Leadership role (0/1)" 
 lab var goats_owned "Total number of goats owned (count)" 
@@ -30,10 +35,10 @@ lab var HHR4 "Age (years)"
 lab var ID10 "Number of household members (count)"
 lab var MAN3 "Number of cooperative members (count)"
 lab var MEM14 "Voted in cooperative election (0/1)"
+lab var co_loan "Received a cooperative loan (0/1)"
 
-gen goats_owned2 = goats_owned*goats_owned
 
-
+* leadership role
 logit bMEM4 HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN3 
 margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
@@ -53,21 +58,36 @@ logit MEM14 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
 margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 
-* Voted in co-op elections
+/*
+* Voted on co-op policies
 logit MEM16 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+*/
+
+* received co-op loan
+logit co_loan HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
 margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 
 
 
-* Number of livestock shares
-reg SER20 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
+* ----------------------------------------------------
+** OLS regressions
+
+collapse (firstnm) totrev_member totcost_mem REV4 MAN3 MAN2 MAN4 MAN10 gr_pct_COM3 gr_pct_COM8  ///
+		 (mean) HHR14 HHR4 ID10 goats_owned mem_length travel_time, by(idx)
+
+* total revenue per member
+reg totrev_member HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10
+
+
 
 
 * --------------
 * Oaxaca command
 
-oaxaca co_opsalevalue goats_owned, by(gr_pct_COM3) swap
+oaxaca totrev_member HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10, by(gr_pct_COM8) swap
 
 
 * --------------

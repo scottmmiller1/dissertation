@@ -18,7 +18,9 @@ cd "$d2"
 clear
 use "$d3/CO_Final.dta"
 
+cap drop _merge
 
+save "$d3/CO_Final.dta", replace
 
 
 
@@ -128,4 +130,8 @@ sum bCOM8
 	
 save "$d3/HH_Final.dta", replace
 
+keep idx gr_pct_COM3 gr_pct_COM8
 
+merge m:1 idx using "$d3/CO_Final.dta"
+
+save "$d3/CO_Final.dta", replace
