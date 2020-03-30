@@ -15,12 +15,9 @@ cd "$d2"
 
 ** Co-op level dataset
 ********************************************* 
-clear
-use "$d3/CO_Final.dta"
+*clear
+*use "$d3/CO_Final.dta"
 
-cap drop _merge
-
-save "$d3/CO_Final.dta", replace
 
 
 
@@ -31,18 +28,7 @@ save "$d3/CO_Final.dta", replace
 clear
 use "$d3/HH_Final.dta"
 
-* length of membership
-sum mem_length, d
-* role in co-op
-tab MEM4
-* attended SHG meeting
-tab MEM6
-* # of SHG meetings in last 6-months
-tab MEM7
-* attended co-op meeting
-tab MEM8
-* # of co-op meetings in last 6-months
-tab MEM11
+
 * why don't you attend co-op meetings
 tab MEM9
 
@@ -52,8 +38,7 @@ tab MEM9
 		replace MEM9_`i' =. if MEM9 == .
 	}
 
-* travel time to co-op
-sum travel_time, d
+
 * Participate in annual general meeting
 tab MEM12
 * why don't you participate
@@ -65,31 +50,14 @@ tab MEM13
 		replace MEM13_`i' =. if MEM13 == .
 	}
 
-* ever voted in co-op elections
-tab MEM14
-* # times voted in co-op elections
-tab MEM15
-	
-	* election votes by role 
-	tab MEM4 MEM14
-	
-* ever voted on co-op policies
-tab MEM16
-* # times voted in co-op policies
-tab MEM17
-
-	* policy votes by role 
-	tab MEM4 MEM16
-
 	
 * Services offered	
 sum SER1-SER4 SER6-SER19	
 
-* Number of cooperative shares
-sum SER20
-
-* services used
-sum SER21-SER22 SER24-SER33
+cap drop no_services
+gen no_services = CO_SER1 + CO_SER2 + CO_SER3 + CO_SER4 + CO_SER5 + CO_SER6 + CO_SER7 ///
+				+ CO_SER8 + CO_SER9 + CO_SER10 + CO_SER11a + CO_SER12 + CO_SER13 + CO_SER14 ///
+				+ CO_SER15 + CO_SERV2 + CO_SER18
 
 
 * financial inclusion
@@ -126,12 +94,74 @@ sum bCOM8
 	* group var
 	sum pct_COM8, d
 	gen gr_pct_COM8 = (pct_COM8 > `r(p50)')
-
 	
+	
+* pct of members receiving co-op non-sale info
+sum COM8, d
+sum bCOM8 
+
+	* percentage variable
+	cap drop pct_COM8 gr_pct_COM8
+	bysort idx: egen pct_COM8 = mean(bCOM8)
+	
+	* group var
+	sum pct_COM8, d
+	gen gr_pct_COM8 = (pct_COM8 > `r(p50)')	
+	
+
+* size of membership fee
+sum MAN2, d	
+
+	* average variable
+	cap drop avg_MAN2 gr_avg_MAN2
+	bysort idx: egen avg_MAN2 = mean(MAN2)
+	
+	* group var
+	sum avg_MAN2, d
+	gen gr_avg_MAN2 = (avg_MAN2 < `r(p50)')
+	
+	
+* received co-op loans	
+cap drop co_loan
+gen co_loan = (BR4 == "C")
+replace co_loan =. if CO_SER2 == 0	
+
+	* average variable
+	cap drop pct_loan gr_pct_loan
+	bysort idx: egen pct_loan = mean(co_loan)
+	
+	* group var
+	sum pct_loan, d
+	gen gr_pct_loan = (pct_loan > `r(p50)')
+
+
+* aware that co-op provides price info
+	* average variable
+	cap drop pct_SER19 gr_pct_SER19
+	bysort idx: egen pct_SER19 = mean(SER19)
+		replace pct_SER19 =. if CO_SERV2 == 0
+	
+	* group var
+	sum pct_SER19, d
+	gen gr_pct_SER19 = (pct_SER19 > `r(p50)')
+	
+
+* members without goats
+	* 
+	cap drop low_goats pct_low_goats gr_pct_low_goats
+	sum goats_owned, d 
+	gen low_goats = (goats_owned < `r(p50)')
+	bysort idx: egen pct_low_goats = mean(low_goats)
+	
+	* group var
+	sum pct_low_goats, d
+	gen gr_pct_low_goats = (pct_low_goats > `r(p50)')
+	
+
 save "$d3/HH_Final.dta", replace
 
-keep idx gr_pct_COM3 gr_pct_COM8
+*keep idx gr_pct_COM3 gr_pct_COM8
 
-merge m:1 idx using "$d3/CO_Final.dta"
+*merge m:1 idx using "$d3/CO_Final.dta"
 
-save "$d3/CO_Final.dta", replace
+*save "$d3/CO_Final.dta", replace
