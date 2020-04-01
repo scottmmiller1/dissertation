@@ -157,8 +157,39 @@ replace co_loan =. if CO_SER2 == 0
 	sum pct_low_goats, d
 	gen gr_pct_low_goats = (pct_low_goats > `r(p50)')
 	
+	
+* Coefficient of variation on member assets
+	* 
+	cap drop goats_mean goats_sd cv_goats gr_cv_goats
+	bysort idx: egen goats_mean = mean(goats_owned)
+	bysort idx: egen goats_sd = sd(goats_owned)
+	gen cv_goats = goats_sd / goats_mean
+	
+	* group var
+	sum cv_goats, d
+	gen gr_cv_goats = (cv_goats > `r(p50)')	
+	
+* Pct voting in co-op elections
+	* 
+	cap drop pct_MEM14 gr_pct_MEM14 
+	bysort idx: egen pct_MEM14 = mean(MEM14)
+	
+	* group var
+	sum pct_MEM14, d
+	gen gr_pct_MEM14 = (pct_MEM14 > `r(p50)')		
+	
+	
+* Pct literate
+	* 
+	cap drop pct_HHR14 gr_pct_HHR14
+	bysort idx: egen pct_HHR14 = mean(HHR14)
+	
+	* group var
+	sum pct_HHR14, d
+	gen gr_pct_HHR14 = (pct_HHR14 < `r(p50)')		
+	
 
-save "$d3/HH_Final.dta", replace
+
 
 *keep idx gr_pct_COM3 gr_pct_COM8
 
