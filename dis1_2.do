@@ -81,19 +81,6 @@ sum bCOM3
 	sum pct_COM3, d
 	gen gr_pct_COM3 = (pct_COM3 > `r(p50)')
 	replace gr_pct_COM3 = . if CO_SER15 == 0
-
-
-* pct of members receiving co-op non-sale info
-sum COM8, d
-sum bCOM8 
-
-	* percentage variable
-	cap drop pct_COM8 gr_pct_COM8
-	bysort idx: egen pct_COM8 = mean(bCOM8)
-	
-	* group var
-	sum pct_COM8, d
-	gen gr_pct_COM8 = (pct_COM8 > `r(p50)')
 	
 	
 * pct of members receiving co-op non-sale info
@@ -123,7 +110,8 @@ sum MAN2, d
 	
 * received co-op loans	
 cap drop co_loan
-gen co_loan = (BR4 == "C")
+gen co_loan = (BR4_1 == "C") | (BR4_2 == "C") | (BR4_3 == "C") | (BR4_4 == "C") | (BR4_5 == "C") ///
+				| (BR4_6 == "C") | (BR4_7 == "C") | (BR4_8 == "C") | (BR4_9 == "C") | (BR4_10 == "C")
 replace co_loan =. if CO_SER2 == 0	
 
 	* average variable

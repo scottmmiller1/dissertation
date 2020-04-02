@@ -382,6 +382,20 @@ save "$d3/Household_edit.dta", replace
 * -----------------------------------------------
 use "$d3/Borrowing.dta"
 rename A__parent_index ___index
+
+	* reshape borrowing data to separetely save each loan
+	** save labels and value labels in macros 
+	
+	* gen loan number
+	bysort ___index: gen loan_no = _n
+	bysort ___index: gen loans = _N
+	keep BR2 BR3 BR4 BR7 ___index loan_no loans
+	foreach v of varlist BR* loans {
+		rename `v' `v'_
+	}
+	reshape wide BR* loans, i(___index) j(loan_no)
+	rename loans_1 loans
+	drop loans_*
 save "$d3/Borrowing_edit.dta", replace
 
 use "$d3/Children.dta"
@@ -486,11 +500,11 @@ quietly foreach v in `r(varlist)' {
 	
 *drop multi-choice vars with individual dummys already created
 drop COM1 COM2 COM6 COM7 SV2 LSE22 GP4 GP12 GP18 GP22 ///
-		GP25 LS48 PQ2 BR5 GP3 BR56 HHR10_1
+		GP25 LS48 PQ2 GP3 HHR10_1
 
 * Change 1-2 vars to binary
  foreach v of varlist MGT5 COM5 ///
-		SV3 SV4 SV7 BR1 FC1A FC1B FC1E FC1F FC1H GP7 ///
+		SV3 SV4 SV7 FC1A FC1B FC1E FC1F FC1H GP7 ///
 		GP13 GP16 GP19 GP21 {
 	quietly replace `v'=. if `v'==99
 	quietly replace `v'=. if `v'==97
@@ -522,7 +536,7 @@ quietly {
 	destring *COM1* *COM2* *COM6*, replace 
 	destring *COM7* *GTT* *SV2*, replace 
 	destring *EMP* *LSE*, replace 
-	destring *BR5* N0_childcal *HHR8* HHR12 *LS6*, replace 
+	destring N0_childcal *HHR8* HHR12 *LS6*, replace 
 	destring *GP* Roster_count Live_Sale_count, replace
 }
 

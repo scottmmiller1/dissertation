@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/scottmiller/GitHub/dissertation/lsilPAP2.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}31 Mar 2020, 13:35:04
+ {txt}opened on:  {res} 1 Apr 2020, 14:35:07
 {txt}
 {com}. 
 . 
@@ -3327,88 +3327,161 @@
 {res}{txt}  (all {it:newnames}=={it:oldnames})
 {res}{txt}  (all {it:newnames}=={it:oldnames})
 {res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
+{res}{txt}  (all {it:newnames}=={it:oldnames})
 
 {com}. 
 . ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx, has(type string)
-{txt}{col 1}HHR7_calc{col 15}HH_IDSID{col 29}ID5_2{col 43}EMP3{col 57}Live_rel_~P8{col 71}Live_rel_~14{col 85}LS48E{col 99}region
-{col 1}HHR9{col 15}HH_IDEID{col 29}MGT3{col 43}EMP4{col 57}Live_rel_~P9{col 71}LS48A{col 85}LS48F{col 99}district
-{col 1}HHR10{col 15}HH_IDSHG{col 29}BR4{col 43}Live_rel_~P5{col 57}Live_rel~P10{col 71}LS48B{col 85}LS48G{col 99}idx
-{col 1}HHR16{col 15}ID5{col 29}EMP1{col 43}Live_rel_~P6{col 57}Live_rel~P11{col 71}LS48C{col 85}LS48X
-{col 1}HH_IDMID{col 15}ID5_1{col 29}EMP2{col 43}Live_rel_~P7{col 57}Live_rel~P12{col 71}LS48D{col 85}GP17
+{txt}{col 1}HHR7_calc{col 15}HH_IDEID{col 29}BR4_1{col 43}BR4_7{col 57}EMP3{col 71}Live_rel_~P9{col 85}LS48B{col 99}LS48X
+{col 1}HHR9{col 15}HH_IDSHG{col 29}BR4_2{col 43}BR4_8{col 57}EMP4{col 71}Live_rel~P10{col 85}LS48C{col 99}GP17
+{col 1}HHR10{col 15}ID5{col 29}BR4_3{col 43}BR4_9{col 57}Live_rel_~P5{col 71}Live_rel~P11{col 85}LS48D{col 99}region
+{col 1}HHR16{col 15}ID5_1{col 29}BR4_4{col 43}BR4_10{col 57}Live_rel_~P6{col 71}Live_rel~P12{col 85}LS48E{col 99}district
+{col 1}HH_IDMID{col 15}ID5_2{col 29}BR4_5{col 43}EMP1{col 57}Live_rel_~P7{col 71}Live_rel_~14{col 85}LS48F{col 99}idx
+{col 1}HH_IDSID{col 15}MGT3{col 29}BR4_6{col 43}EMP2{col 57}Live_rel_~P8{col 71}LS48A{col 85}LS48G
 
 {com}. local HHstrings = "`r(varlist)'"
 {txt}
 {com}. ds *HHR* *ID* *LND* *HSE* *MEM* *SER* *MGT* *COM* *GTT* *TRN* *SV* *BR* *FC* *EMP* *LS* *GP* region district idx, has(type numeric)
-{txt}{col 1}HHR7{col 15}SER14{col 29}HH_GTT4_8{col 43}FC1B{col 57}EMP2B{col 71}EMP9G{col 85}LSE4_3{col 99}LS40
-{col 1}HHR20{col 15}SER15{col 29}HH_GTT4_9{col 43}FC3B_1{col 57}EMP2C{col 71}EMP9X{col 85}LSE5_3{col 99}LS41
-{col 1}HHR21{col 15}SER16{col 29}HH_GTT4_10{col 43}FC3B_2{col 57}EMP2D{col 71}EMP9a_A{col 85}LSE5_3a{col 99}LS42
-{col 1}HHR3{col 15}SER17{col 29}Co_opGoa~497{col 43}FC3B_3{col 57}EMP2E{col 71}EMP10A{col 85}LSE6_3{col 99}LS43_Head
-{col 1}HHR4{col 15}SER18{col 29}HH_TRN1{col 43}FC3B_4{col 57}EMP2F{col 71}EMP10B{col 85}LSE7_3{col 99}LS43_a
-{col 1}HHR5{col 15}SER19{col 29}HH_TRN2{col 43}FC3B_5{col 57}EMP2G{col 71}EMP10C{col 85}LSE7_3a{col 99}LS43_b
-{col 1}HHR8{col 15}SER20{col 29}HH_TRN3{col 43}FC3B_6{col 57}EMP2X{col 71}EMP10D{col 85}LSE7_3b{col 99}LS44
-{col 1}HHR11{col 15}SER21{col 29}HH_TRN4{col 43}FC1C{col 57}EMP2a_A{col 71}EMP10E{col 85}LSE7_3c{col 99}LS45
-{col 1}HHR12{col 15}SER22{col 29}HH_TRN5{col 43}FC3C_1{col 57}EMP3A{col 71}EMP10F{col 85}LSE7_3d{col 99}LS46
-{col 1}HHR13{col 15}SER24{col 29}HH_TRN6{col 43}FC3C_2{col 57}EMP3B{col 71}EMP10G{col 85}LSE9_3{col 99}LS47
-{col 1}HHR14{col 15}SER25{col 29}HH_TRN7{col 43}FC3C_3{col 57}EMP3C{col 71}EMP10X{col 85}LSE11_A{col 99}GP2
-{col 1}HHR15{col 15}SER26{col 29}HH_TRN8{col 43}FC3C_4{col 57}EMP3D{col 71}EMP10a_A{col 85}LSE12_A{col 99}GP3_1
-{col 1}HHR17{col 15}SER27{col 29}HH_TRN9{col 43}FC3C_5{col 57}EMP3E{col 71}EMP11A{col 85}LSE13_A{col 99}GP3_2
-{col 1}HHR18{col 15}SER28{col 29}HH_TRN10{col 43}FC3C_6{col 57}EMP3F{col 71}EMP11B{col 85}LSE14_A{col 99}GP3_3
-{col 1}HHR19{col 15}SER29{col 29}HH_TRN11{col 43}FC3C_7{col 57}EMP3G{col 71}EMP11C{col 85}LSE15{col 99}GP4_2
-{col 1}ID1{col 15}SER30{col 29}HH_TRN12{col 43}FC3C_8{col 57}EMP3X{col 71}EMP11D{col 85}LSE16{col 99}GP4_3
-{col 1}ID2{col 15}SER31{col 29}HH_TRN13{col 43}FC1D{col 57}EMP3I{col 71}EMP11E{col 85}LSE17a{col 99}GP4_97
-{col 1}ID3{col 15}SER32{col 29}SV2A{col 43}FC3D_1{col 57}EMP3a_A{col 71}EMP11F{col 85}LSE17b{col 99}Goat_Prod_~1
-{col 1}ID4{col 15}SER33{col 29}SV2B{col 43}FC3D_2{col 57}EMP4A{col 71}EMP11G{col 85}LSE18{col 99}GP5
-{col 1}ID6{col 15}MGT1{col 29}SV2C{col 43}FC3D_3{col 57}EMP4B{col 71}EMP11X{col 85}LSE19{col 99}GP6
-{col 1}ID7{col 15}MGT2{col 29}SV2D{col 43}FC3D_4{col 57}EMP4C{col 71}EMP11a_A{col 85}LSE20{col 99}GP7
-{col 1}ID8{col 15}MGT3_1{col 29}SV2E{col 43}FC3D_5{col 57}EMP4D{col 71}EMP12A{col 85}LSE21{col 99}GP8
-{col 1}ID10{col 15}MGT4{col 29}SV2F{col 43}FC3D_6{col 57}EMP4E{col 71}EMP12B{col 85}LSE22A{col 99}GP9
-{col 1}LND1{col 15}MGT5{col 29}SV2G{col 43}FC3D_7{col 57}EMP4F{col 71}EMP12C{col 85}LSE22B{col 99}GP10
-{col 1}LND2{col 15}MGT6{col 29}SV2H{col 43}FC1E{col 57}EMP4G{col 71}EMP12D{col 85}LSE22C{col 99}GP11
-{col 1}LND3{col 15}COM1A{col 29}SV2I{col 43}FC3E_1{col 57}EMP4X{col 71}EMP12E{col 85}LSE22D{col 99}GP12A
-{col 1}HSE1{col 15}COM1B{col 29}SV2J{col 43}FC3E_2{col 57}EMP4a_A{col 71}EMP12F{col 85}LSE22E{col 99}GP12B
-{col 1}HSE2{col 15}COM1C{col 29}SV2K{col 43}FC3E_3{col 57}EMP5A{col 71}EMP12G{col 85}LSE22F{col 99}GP12C
-{col 1}HSE3{col 15}COM1D{col 29}SV2L{col 43}FC3E_4{col 57}EMP5B{col 71}EMP12X{col 85}LSE22G{col 99}GP12D
-{col 1}HSE4{col 15}COM1E{col 29}SV2M{col 43}FC3E_5{col 57}EMP5C{col 71}EMP12a_A{col 85}LSE22X{col 99}GP12E
-{col 1}HSE5{col 15}COM1F{col 29}SV2N{col 43}FC3E_6{col 57}EMP5D{col 71}EMP13a{col 85}LS1{col 99}GP13
-{col 1}HSE6{col 15}COM1G{col 29}SV2O{col 43}FC3E_7{col 57}EMP5E{col 71}EMP13b{col 85}LS_n_sales{col 99}GP14
-{col 1}HSE7{col 15}COM1X{col 29}SV2X{col 43}FC3E_8{col 57}EMP5F{col 71}EMP14A{col 85}LS3{col 99}GP16
-{col 1}HSE8{col 15}COM2A{col 29}SV3{col 43}FC3E_9{col 57}EMP5G{col 71}EMP14B{col 85}LS4_1{col 99}GP17_1
-{col 1}HSE9{col 15}COM2B{col 29}SV4{col 43}FC1F{col 57}EMP5X{col 71}EMP14C{col 85}LS4_2{col 99}GP17_2
-{col 1}HSE10{col 15}COM2C{col 29}SV5{col 43}FC3F_1{col 57}EMP5I{col 71}EMP14D{col 85}LS4_3{col 99}GP17_3
-{col 1}HSE11{col 15}COM2D{col 29}SV6{col 43}FC3F_2{col 57}EMP5a_A{col 71}EMP14E{col 85}LS4_4{col 99}GP18A
-{col 1}HSE12{col 15}COM2E{col 29}SV7{col 43}FC3F_3{col 57}EMP6A{col 71}EMP14F{col 85}LS4_5{col 99}GP18B
-{col 1}HSE13{col 15}COM2F{col 29}SV8{col 43}FC3F_4{col 57}EMP6B{col 71}EMP14G{col 85}LS6A{col 99}GP18C
-{col 1}MEM2{col 15}COM2G{col 29}BR1{col 43}FC3F_5{col 57}EMP6C{col 71}EMP14X{col 85}LS6B{col 99}GP18D
-{col 1}MEM2_1{col 15}COM2X{col 29}BR{col 43}FC3F_6{col 57}EMP6D{col 71}LSE1_1{col 85}LS6C{col 99}GP18E
-{col 1}MEM2_2{col 15}COM3{col 29}BR2{col 43}FC3F_7{col 57}EMP6E{col 71}LSE1_2{col 85}LS6D{col 99}GP18F
-{col 1}MEM3{col 15}COM4{col 29}BR3{col 43}FC3F_8{col 57}EMP6F{col 71}LSE1_3{col 85}LS6X{col 99}GP18G
-{col 1}MEM4{col 15}COM5{col 29}BR5A{col 43}FC3F_9{col 57}EMP6G{col 71}LSE1_4{col 85}LS6_1{col 99}GP18H
-{col 1}MEM5{col 15}COM6A{col 29}BR5B{col 43}FC3F_10{col 57}EMP6X{col 71}LSE2_1{col 85}LS7{col 99}GP18I
-{col 1}MEM6{col 15}COM6B{col 29}BR5C{col 43}FC3F_11{col 57}EMP6a_A{col 71}LSE3_1{col 85}LS8{col 99}GP18J
-{col 1}MEM7{col 15}COM6C{col 29}BR5D{col 43}FC3F_12{col 57}EMP7A{col 71}LSE4_1{col 85}LS9{col 99}GP18K
-{col 1}MEM8{col 15}COM6D{col 29}BR5E{col 43}FC3F_13{col 57}EMP7B{col 71}LSE5_1{col 85}LS10{col 99}GP18L
-{col 1}MEM9{col 15}COM6X{col 29}BR5F{col 43}FC3F_14{col 57}EMP7C{col 71}LSE5_1a{col 85}LS12{col 99}GP19
-{col 1}MEM10_a{col 15}COM71{col 29}BR5G{col 43}FC3F_15{col 57}EMP7D{col 71}LSE6_1{col 85}LS13{col 99}GP20
-{col 1}MEM10_b{col 15}COM72{col 29}BR5X{col 43}FC1G{col 57}EMP7E{col 71}LSE7_1{col 85}LS14{col 99}GP21
-{col 1}MEM11{col 15}COM73{col 29}BR56A{col 43}FC3G_1{col 57}EMP7F{col 71}LSE7_1a{col 85}LS15{col 99}GP22A
-{col 1}MEM12{col 15}COM74{col 29}BR56B{col 43}FC3G_2{col 57}EMP7G{col 71}LSE7_1b{col 85}LS16{col 99}GP22B
-{col 1}MEM13{col 15}COM75{col 29}BR56C{col 43}FC3G_3{col 57}EMP7X{col 71}LSE7_1c{col 85}LS17{col 99}GP22C
-{col 1}MEM14{col 15}COM76{col 29}BR56D{col 43}FC3G_4{col 57}EMP7a_A{col 71}LSE7_1d{col 85}LS25{col 99}GP22D
-{col 1}MEM15{col 15}COM77{col 29}BR56E{col 43}FC3G_5{col 57}EMP8A{col 71}LSE9_1{col 85}LS26{col 99}GP22E
-{col 1}MEM16{col 15}COM8{col 29}BR56F{col 43}FC1H{col 57}EMP8B{col 71}LSE2_2{col 85}LS27{col 99}GP24
-{col 1}MEM17{col 15}COM10{col 29}BR56G{col 43}FC3H_1{col 57}EMP8C{col 71}LSE3_2{col 85}LS28{col 99}GP25A
-{col 1}SER1{col 15}COM11{col 29}BR56X{col 43}FC3H_2{col 57}EMP8D{col 71}LSE4_2{col 85}LS29{col 99}GP25B
-{col 1}SER2{col 15}HH_GTT1{col 29}BR7{col 43}FC3H_3{col 57}EMP8E{col 71}LSE5_2{col 85}LS30{col 99}GP25C
-{col 1}SER3{col 15}HH_GTT2{col 29}FC1A{col 43}FC3H_4{col 57}EMP8F{col 71}LSE5_2a{col 85}LS31{col 99}GP25D
-{col 1}SER4{col 15}HH_GTT3{col 29}FC3A_1{col 43}EMP1A{col 57}EMP8G{col 71}LSE6_2{col 85}LS32{col 99}GP25E
-{col 1}SER6{col 15}HH_GTT4{col 29}FC3A_2{col 43}EMP1B{col 57}EMP8X{col 71}LSE7_2{col 85}LS32_1{col 99}GP25F
-{col 1}SER7{col 15}HH_GTT4_1{col 29}FC3A_3{col 43}EMP1C{col 57}EMP8a_A{col 71}LSE7_2a{col 85}LS33{col 99}GP25G
-{col 1}SER8{col 15}HH_GTT4_2{col 29}FC3A_4{col 43}EMP1D{col 57}EMP9A{col 71}LSE7_2b{col 85}LS34{col 99}GP25X
-{col 1}SER9{col 15}HH_GTT4_3{col 29}FC3A_5{col 43}EMP1E{col 57}EMP9B{col 71}LSE7_2c{col 85}LS35{col 99}GPS_latitude
-{col 1}SER10{col 15}HH_GTT4_4{col 29}FC3A_6{col 43}EMP1F{col 57}EMP9C{col 71}LSE7_2d{col 85}LS36{col 99}GPS_longit~e
-{col 1}SER11{col 15}HH_GTT4_5{col 29}FC3A_7{col 43}EMP1G{col 57}EMP9D{col 71}LSE9_2{col 85}LS37{col 99}GPS_altitude
-{col 1}SER12{col 15}HH_GTT4_6{col 29}FC3A_8{col 43}EMP1X{col 57}EMP9E{col 71}LSE2_3{col 85}LS38{col 99}GPS_precis~n
-{col 1}SER13{col 15}HH_GTT4_7{col 29}FC3A_9{col 43}EMP2A{col 57}EMP9F{col 71}LSE3_3{col 85}LS39
+{txt}{col 1}HHR7{col 15}SER16{col 29}HH_TRN1{col 43}FC3A_5{col 57}EMP1G{col 71}EMP9F{col 85}LSE5_3{col 99}LS43_Head
+{col 1}HHR20{col 15}SER17{col 29}HH_TRN2{col 43}FC3A_6{col 57}EMP1X{col 71}EMP9G{col 85}LSE5_3a{col 99}LS43_a
+{col 1}HHR21{col 15}SER18{col 29}HH_TRN3{col 43}FC3A_7{col 57}EMP2A{col 71}EMP9X{col 85}LSE6_3{col 99}LS43_b
+{col 1}HHR3{col 15}SER19{col 29}HH_TRN4{col 43}FC3A_8{col 57}EMP2B{col 71}EMP9a_A{col 85}LSE7_3{col 99}LS44
+{col 1}HHR4{col 15}SER20{col 29}HH_TRN5{col 43}FC3A_9{col 57}EMP2C{col 71}EMP10A{col 85}LSE7_3a{col 99}LS45
+{col 1}HHR5{col 15}SER21{col 29}HH_TRN6{col 43}FC1B{col 57}EMP2D{col 71}EMP10B{col 85}LSE7_3b{col 99}LS46
+{col 1}HHR8{col 15}SER22{col 29}HH_TRN7{col 43}FC3B_1{col 57}EMP2E{col 71}EMP10C{col 85}LSE7_3c{col 99}LS47
+{col 1}HHR11{col 15}SER24{col 29}HH_TRN8{col 43}FC3B_2{col 57}EMP2F{col 71}EMP10D{col 85}LSE7_3d{col 99}GP2
+{col 1}HHR12{col 15}SER25{col 29}HH_TRN9{col 43}FC3B_3{col 57}EMP2G{col 71}EMP10E{col 85}LSE9_3{col 99}GP3_1
+{col 1}HHR13{col 15}SER26{col 29}HH_TRN10{col 43}FC3B_4{col 57}EMP2X{col 71}EMP10F{col 85}LSE11_A{col 99}GP3_2
+{col 1}HHR14{col 15}SER27{col 29}HH_TRN11{col 43}FC3B_5{col 57}EMP2a_A{col 71}EMP10G{col 85}LSE12_A{col 99}GP3_3
+{col 1}HHR15{col 15}SER28{col 29}HH_TRN12{col 43}FC3B_6{col 57}EMP3A{col 71}EMP10X{col 85}LSE13_A{col 99}GP4_2
+{col 1}HHR17{col 15}SER29{col 29}HH_TRN13{col 43}FC1C{col 57}EMP3B{col 71}EMP10a_A{col 85}LSE14_A{col 99}GP4_3
+{col 1}HHR18{col 15}SER30{col 29}SV2A{col 43}FC3C_1{col 57}EMP3C{col 71}EMP11A{col 85}LSE15{col 99}GP4_97
+{col 1}HHR19{col 15}SER31{col 29}SV2B{col 43}FC3C_2{col 57}EMP3D{col 71}EMP11B{col 85}LSE16{col 99}Goat_Prod_~1
+{col 1}ID1{col 15}SER32{col 29}SV2C{col 43}FC3C_3{col 57}EMP3E{col 71}EMP11C{col 85}LSE17a{col 99}GP5
+{col 1}ID2{col 15}SER33{col 29}SV2D{col 43}FC3C_4{col 57}EMP3F{col 71}EMP11D{col 85}LSE17b{col 99}GP6
+{col 1}ID3{col 15}MGT1{col 29}SV2E{col 43}FC3C_5{col 57}EMP3G{col 71}EMP11E{col 85}LSE18{col 99}GP7
+{col 1}ID4{col 15}MGT2{col 29}SV2F{col 43}FC3C_6{col 57}EMP3X{col 71}EMP11F{col 85}LSE19{col 99}GP8
+{col 1}ID6{col 15}MGT3_1{col 29}SV2G{col 43}FC3C_7{col 57}EMP3I{col 71}EMP11G{col 85}LSE20{col 99}GP9
+{col 1}ID7{col 15}MGT4{col 29}SV2H{col 43}FC3C_8{col 57}EMP3a_A{col 71}EMP11X{col 85}LSE21{col 99}GP10
+{col 1}ID8{col 15}MGT5{col 29}SV2I{col 43}FC1D{col 57}EMP4A{col 71}EMP11a_A{col 85}LSE22A{col 99}GP11
+{col 1}ID10{col 15}MGT6{col 29}SV2J{col 43}FC3D_1{col 57}EMP4B{col 71}EMP12A{col 85}LSE22B{col 99}GP12A
+{col 1}LND1{col 15}COM1A{col 29}SV2K{col 43}FC3D_2{col 57}EMP4C{col 71}EMP12B{col 85}LSE22C{col 99}GP12B
+{col 1}LND2{col 15}COM1B{col 29}SV2L{col 43}FC3D_3{col 57}EMP4D{col 71}EMP12C{col 85}LSE22D{col 99}GP12C
+{col 1}LND3{col 15}COM1C{col 29}SV2M{col 43}FC3D_4{col 57}EMP4E{col 71}EMP12D{col 85}LSE22E{col 99}GP12D
+{col 1}HSE1{col 15}COM1D{col 29}SV2N{col 43}FC3D_5{col 57}EMP4F{col 71}EMP12E{col 85}LSE22F{col 99}GP12E
+{col 1}HSE2{col 15}COM1E{col 29}SV2O{col 43}FC3D_6{col 57}EMP4G{col 71}EMP12F{col 85}LSE22G{col 99}GP13
+{col 1}HSE3{col 15}COM1F{col 29}SV2X{col 43}FC3D_7{col 57}EMP4X{col 71}EMP12G{col 85}LSE22X{col 99}GP14
+{col 1}HSE4{col 15}COM1G{col 29}SV3{col 43}FC1E{col 57}EMP4a_A{col 71}EMP12X{col 85}LS1{col 99}GP16
+{col 1}HSE5{col 15}COM1X{col 29}SV4{col 43}FC3E_1{col 57}EMP5A{col 71}EMP12a_A{col 85}LS_n_sales{col 99}GP17_1
+{col 1}HSE6{col 15}COM2A{col 29}SV5{col 43}FC3E_2{col 57}EMP5B{col 71}EMP13a{col 85}LS3{col 99}GP17_2
+{col 1}HSE7{col 15}COM2B{col 29}SV6{col 43}FC3E_3{col 57}EMP5C{col 71}EMP13b{col 85}LS4_1{col 99}GP17_3
+{col 1}HSE8{col 15}COM2C{col 29}SV7{col 43}FC3E_4{col 57}EMP5D{col 71}EMP14A{col 85}LS4_2{col 99}GP18A
+{col 1}HSE9{col 15}COM2D{col 29}SV8{col 43}FC3E_5{col 57}EMP5E{col 71}EMP14B{col 85}LS4_3{col 99}GP18B
+{col 1}HSE10{col 15}COM2E{col 29}BR1{col 43}FC3E_6{col 57}EMP5F{col 71}EMP14C{col 85}LS4_4{col 99}GP18C
+{col 1}HSE11{col 15}COM2F{col 29}BR{col 43}FC3E_7{col 57}EMP5G{col 71}EMP14D{col 85}LS4_5{col 99}GP18D
+{col 1}HSE12{col 15}COM2G{col 29}BR2_1{col 43}FC3E_8{col 57}EMP5X{col 71}EMP14E{col 85}LS6A{col 99}GP18E
+{col 1}HSE13{col 15}COM2X{col 29}BR3_1{col 43}FC3E_9{col 57}EMP5I{col 71}EMP14F{col 85}LS6B{col 99}GP18F
+{col 1}MEM2{col 15}COM3{col 29}BR7_1{col 43}FC1F{col 57}EMP5a_A{col 71}EMP14G{col 85}LS6C{col 99}GP18G
+{col 1}MEM2_1{col 15}COM4{col 29}BR2_2{col 43}FC3F_1{col 57}EMP6A{col 71}EMP14X{col 85}LS6D{col 99}GP18H
+{col 1}MEM2_2{col 15}COM5{col 29}BR3_2{col 43}FC3F_2{col 57}EMP6B{col 71}LSE1_1{col 85}LS6X{col 99}GP18I
+{col 1}MEM3{col 15}COM6A{col 29}BR7_2{col 43}FC3F_3{col 57}EMP6C{col 71}LSE1_2{col 85}LS6_1{col 99}GP18J
+{col 1}MEM4{col 15}COM6B{col 29}BR2_3{col 43}FC3F_4{col 57}EMP6D{col 71}LSE1_3{col 85}LS7{col 99}GP18K
+{col 1}MEM5{col 15}COM6C{col 29}BR3_3{col 43}FC3F_5{col 57}EMP6E{col 71}LSE1_4{col 85}LS8{col 99}GP18L
+{col 1}MEM6{col 15}COM6D{col 29}BR7_3{col 43}FC3F_6{col 57}EMP6F{col 71}LSE2_1{col 85}LS9{col 99}GP19
+{col 1}MEM7{col 15}COM6X{col 29}BR2_4{col 43}FC3F_7{col 57}EMP6G{col 71}LSE3_1{col 85}LS10{col 99}GP20
+{col 1}MEM8{col 15}COM71{col 29}BR3_4{col 43}FC3F_8{col 57}EMP6X{col 71}LSE4_1{col 85}LS12{col 99}GP21
+{col 1}MEM9{col 15}COM72{col 29}BR7_4{col 43}FC3F_9{col 57}EMP6a_A{col 71}LSE5_1{col 85}LS13{col 99}GP22A
+{col 1}MEM10_a{col 15}COM73{col 29}BR2_5{col 43}FC3F_10{col 57}EMP7A{col 71}LSE5_1a{col 85}LS14{col 99}GP22B
+{col 1}MEM10_b{col 15}COM74{col 29}BR3_5{col 43}FC3F_11{col 57}EMP7B{col 71}LSE6_1{col 85}LS15{col 99}GP22C
+{col 1}MEM11{col 15}COM75{col 29}BR7_5{col 43}FC3F_12{col 57}EMP7C{col 71}LSE7_1{col 85}LS16{col 99}GP22D
+{col 1}MEM12{col 15}COM76{col 29}BR2_6{col 43}FC3F_13{col 57}EMP7D{col 71}LSE7_1a{col 85}LS17{col 99}GP22E
+{col 1}MEM13{col 15}COM77{col 29}BR3_6{col 43}FC3F_14{col 57}EMP7E{col 71}LSE7_1b{col 85}LS25{col 99}GP24
+{col 1}MEM14{col 15}COM8{col 29}BR7_6{col 43}FC3F_15{col 57}EMP7F{col 71}LSE7_1c{col 85}LS26{col 99}GP25A
+{col 1}MEM15{col 15}COM10{col 29}BR2_7{col 43}FC1G{col 57}EMP7G{col 71}LSE7_1d{col 85}LS27{col 99}GP25B
+{col 1}MEM16{col 15}COM11{col 29}BR3_7{col 43}FC3G_1{col 57}EMP7X{col 71}LSE9_1{col 85}LS28{col 99}GP25C
+{col 1}MEM17{col 15}HH_GTT1{col 29}BR7_7{col 43}FC3G_2{col 57}EMP7a_A{col 71}LSE2_2{col 85}LS29{col 99}GP25D
+{col 1}SER1{col 15}HH_GTT2{col 29}BR2_8{col 43}FC3G_3{col 57}EMP8A{col 71}LSE3_2{col 85}LS30{col 99}GP25E
+{col 1}SER2{col 15}HH_GTT3{col 29}BR3_8{col 43}FC3G_4{col 57}EMP8B{col 71}LSE4_2{col 85}LS31{col 99}GP25F
+{col 1}SER3{col 15}HH_GTT4{col 29}BR7_8{col 43}FC3G_5{col 57}EMP8C{col 71}LSE5_2{col 85}LS32{col 99}GP25G
+{col 1}SER4{col 15}HH_GTT4_1{col 29}BR2_9{col 43}FC1H{col 57}EMP8D{col 71}LSE5_2a{col 85}LS32_1{col 99}GP25X
+{col 1}SER6{col 15}HH_GTT4_2{col 29}BR3_9{col 43}FC3H_1{col 57}EMP8E{col 71}LSE6_2{col 85}LS33{col 99}GPS_latitude
+{col 1}SER7{col 15}HH_GTT4_3{col 29}BR7_9{col 43}FC3H_2{col 57}EMP8F{col 71}LSE7_2{col 85}LS34{col 99}GPS_longit~e
+{col 1}SER8{col 15}HH_GTT4_4{col 29}BR2_10{col 43}FC3H_3{col 57}EMP8G{col 71}LSE7_2a{col 85}LS35{col 99}GPS_altitude
+{col 1}SER9{col 15}HH_GTT4_5{col 29}BR3_10{col 43}FC3H_4{col 57}EMP8X{col 71}LSE7_2b{col 85}LS36{col 99}GPS_precis~n
+{col 1}SER10{col 15}HH_GTT4_6{col 29}BR7_10{col 43}EMP1A{col 57}EMP8a_A{col 71}LSE7_2c{col 85}LS37
+{col 1}SER11{col 15}HH_GTT4_7{col 29}FC1A{col 43}EMP1B{col 57}EMP9A{col 71}LSE7_2d{col 85}LS38
+{col 1}SER12{col 15}HH_GTT4_8{col 29}FC3A_1{col 43}EMP1C{col 57}EMP9B{col 71}LSE9_2{col 85}LS39
+{col 1}SER13{col 15}HH_GTT4_9{col 29}FC3A_2{col 43}EMP1D{col 57}EMP9C{col 71}LSE2_3{col 85}LS40
+{col 1}SER14{col 15}HH_GTT4_10{col 29}FC3A_3{col 43}EMP1E{col 57}EMP9D{col 71}LSE3_3{col 85}LS41
+{col 1}SER15{col 15}Co_opGoa~497{col 29}FC3A_4{col 43}EMP1F{col 57}EMP9E{col 71}LSE4_3{col 85}LS42
 
 {com}. local HHnumeric = "`r(varlist)'"
 {txt}
@@ -3437,178 +3510,178 @@ str12 now)
 (label LS7 already defined)
 (label LS3 already defined)
 (label BR7 already defined)
-(label GP24 already defined)
-(label GP21 already defined)
-(label GP20 already defined)
-(label GP19 already defined)
-(label GP17_3 already defined)
-(label GP17_2 already defined)
-(label GP16 already defined)
-(label GP14 already defined)
-(label GP13 already defined)
-(label GP8 already defined)
-(label GP7 already defined)
-(label GP6 already defined)
-(label GP5 already defined)
-(label GP4_97 already defined)
-(label GP4_3 already defined)
-(label GP4_2 already defined)
-(label GP3_3 already defined)
-(label GP3_2 already defined)
-(label GP3_1 already defined)
-(label GP2 already defined)
-(label LSE5_3 already defined)
-(label LSE4_3 already defined)
-(label LSE5_2 already defined)
-(label LSE4_2 already defined)
-(label LSE5_1 already defined)
-(label LSE4_1 already defined)
-(label LSE1_4 already defined)
-(label LSE1_3 already defined)
-(label LSE1_2 already defined)
-(label LSE1_1 already defined)
-(label EMP13b already defined)
-(label EMP13a already defined)
-(label EMP12a_A already defined)
-(label EMP11a_A already defined)
-(label EMP10a_A already defined)
-(label EMP9a_A already defined)
-(label EMP8a_A already defined)
-(label EMP7a_A already defined)
-(label EMP6a_A already defined)
-(label EMP6X already defined)
-(label EMP6G already defined)
-(label EMP6F already defined)
-(label EMP6E already defined)
-(label EMP6D already defined)
-(label EMP6C already defined)
-(label EMP6B already defined)
-(label EMP6A already defined)
-(label EMP5a_A already defined)
-(label EMP4a_A already defined)
-(label EMP3a_A already defined)
-(label EMP2a_A already defined)
-(label EMP2X already defined)
-(label EMP2G already defined)
-(label EMP2F already defined)
-(label EMP2E already defined)
-(label EMP2D already defined)
-(label EMP2C already defined)
-(label EMP2B already defined)
-(label EMP2A already defined)
-(label FC1H already defined)
-(label FC1G already defined)
-(label FC1F already defined)
-(label FC1E already defined)
-(label FC1D already defined)
-(label FC1C already defined)
-(label FC1B already defined)
-(label FC1A already defined)
-(label BR1 already defined)
-(label SV8 already defined)
-(label SV7 already defined)
-(label SV4 already defined)
-(label SV3 already defined)
-(label TRN13 already defined)
-(label TRN12 already defined)
-(label TRN11 already defined)
-(label TRN10 already defined)
-(label TRN9 already defined)
-(label TRN8 already defined)
-(label TRN7 already defined)
-(label TRN6 already defined)
-(label TRN5 already defined)
-(label TRN4 already defined)
-(label TRN3 already defined)
-(label TRN2 already defined)
-(label TRN1 already defined)
-(label Co_opGoat_transactionsGTT497 already defined)
-(label GTT4_10 already defined)
-(label GTT4_9 already defined)
-(label GTT4_8 already defined)
-(label GTT4_7 already defined)
-(label GTT4_6 already defined)
-(label GTT4_5 already defined)
-(label GTT4_4 already defined)
-(label GTT4_3 already defined)
-(label GTT4_2 already defined)
-(label GTT4_1 already defined)
-(label GTT4 already defined)
-(label COM11 already defined)
-(label COM10 already defined)
-(label COM77 already defined)
-(label COM76 already defined)
-(label COM75 already defined)
-(label COM74 already defined)
-(label COM73 already defined)
-(label COM72 already defined)
-(label COM71 already defined)
-(label COM5 already defined)
-(label COM4 already defined)
-(label MGT6 already defined)
-(label MGT5 already defined)
-(label MGT4 already defined)
-(label MGT3_1 already defined)
-(label MGT2 already defined)
-(label MGT1 already defined)
-(label SER32 already defined)
-(label SER31 already defined)
-(label SER30 already defined)
-(label SER29 already defined)
-(label SER28 already defined)
-(label SER27 already defined)
-(label SER26 already defined)
-(label SER25 already defined)
-(label SER24 already defined)
-(label SER22 already defined)
-(label SER21 already defined)
-(label SER19 already defined)
-(label SER18 already defined)
-(label SER17 already defined)
-(label SER16 already defined)
-(label SER15 already defined)
-(label SER14 already defined)
-(label SER13 already defined)
-(label SER12 already defined)
-(label SER11 already defined)
-(label SER10 already defined)
-(label SER9 already defined)
-(label SER8 already defined)
-(label SER7 already defined)
-(label SER6 already defined)
-(label SER4 already defined)
-(label SER3 already defined)
-(label SER2 already defined)
-(label SER1 already defined)
-(label MEM16 already defined)
-(label MEM14 already defined)
-(label MEM13 already defined)
-(label MEM12 already defined)
-(label MEM9 already defined)
-(label MEM8 already defined)
-(label MEM6 already defined)
-(label MEM5 already defined)
-(label MEM4 already defined)
-(label MEM3 already defined)
-(label HSE13 already defined)
-(label HSE12 already defined)
-(label HSE11 already defined)
-(label HSE10 already defined)
-(label HSE9 already defined)
-(label HSE8 already defined)
-(label HSE7 already defined)
-(label HSE6 already defined)
-(label HSE3 already defined)
-(label HSE2 already defined)
-(label HSE1 already defined)
-(label LND3 already defined)
-(label LND2 already defined)
-(label HHR7 already defined)
-(label ID8 already defined)
-(label ID7 already defined)
-(label ID6 already defined)
-(label ID2 already defined)
 (label ID1 already defined)
+(label ID2 already defined)
+(label ID6 already defined)
+(label ID7 already defined)
+(label ID8 already defined)
+(label HHR7 already defined)
+(label LND2 already defined)
+(label LND3 already defined)
+(label HSE1 already defined)
+(label HSE2 already defined)
+(label HSE3 already defined)
+(label HSE6 already defined)
+(label HSE7 already defined)
+(label HSE8 already defined)
+(label HSE9 already defined)
+(label HSE10 already defined)
+(label HSE11 already defined)
+(label HSE12 already defined)
+(label HSE13 already defined)
+(label MEM3 already defined)
+(label MEM4 already defined)
+(label MEM5 already defined)
+(label MEM6 already defined)
+(label MEM8 already defined)
+(label MEM9 already defined)
+(label MEM12 already defined)
+(label MEM13 already defined)
+(label MEM14 already defined)
+(label MEM16 already defined)
+(label SER1 already defined)
+(label SER2 already defined)
+(label SER3 already defined)
+(label SER4 already defined)
+(label SER6 already defined)
+(label SER7 already defined)
+(label SER8 already defined)
+(label SER9 already defined)
+(label SER10 already defined)
+(label SER11 already defined)
+(label SER12 already defined)
+(label SER13 already defined)
+(label SER14 already defined)
+(label SER15 already defined)
+(label SER16 already defined)
+(label SER17 already defined)
+(label SER18 already defined)
+(label SER19 already defined)
+(label SER21 already defined)
+(label SER22 already defined)
+(label SER24 already defined)
+(label SER25 already defined)
+(label SER26 already defined)
+(label SER27 already defined)
+(label SER28 already defined)
+(label SER29 already defined)
+(label SER30 already defined)
+(label SER31 already defined)
+(label SER32 already defined)
+(label MGT1 already defined)
+(label MGT2 already defined)
+(label MGT3_1 already defined)
+(label MGT4 already defined)
+(label MGT5 already defined)
+(label MGT6 already defined)
+(label COM4 already defined)
+(label COM5 already defined)
+(label COM71 already defined)
+(label COM72 already defined)
+(label COM73 already defined)
+(label COM74 already defined)
+(label COM75 already defined)
+(label COM76 already defined)
+(label COM77 already defined)
+(label COM10 already defined)
+(label COM11 already defined)
+(label GTT4 already defined)
+(label GTT4_1 already defined)
+(label GTT4_2 already defined)
+(label GTT4_3 already defined)
+(label GTT4_4 already defined)
+(label GTT4_5 already defined)
+(label GTT4_6 already defined)
+(label GTT4_7 already defined)
+(label GTT4_8 already defined)
+(label GTT4_9 already defined)
+(label GTT4_10 already defined)
+(label Co_opGoat_transactionsGTT497 already defined)
+(label TRN1 already defined)
+(label TRN2 already defined)
+(label TRN3 already defined)
+(label TRN4 already defined)
+(label TRN5 already defined)
+(label TRN6 already defined)
+(label TRN7 already defined)
+(label TRN8 already defined)
+(label TRN9 already defined)
+(label TRN10 already defined)
+(label TRN11 already defined)
+(label TRN12 already defined)
+(label TRN13 already defined)
+(label SV3 already defined)
+(label SV4 already defined)
+(label SV7 already defined)
+(label SV8 already defined)
+(label BR1 already defined)
+(label FC1A already defined)
+(label FC1B already defined)
+(label FC1C already defined)
+(label FC1D already defined)
+(label FC1E already defined)
+(label FC1F already defined)
+(label FC1G already defined)
+(label FC1H already defined)
+(label EMP2A already defined)
+(label EMP2B already defined)
+(label EMP2C already defined)
+(label EMP2D already defined)
+(label EMP2E already defined)
+(label EMP2F already defined)
+(label EMP2G already defined)
+(label EMP2X already defined)
+(label EMP2a_A already defined)
+(label EMP3a_A already defined)
+(label EMP4a_A already defined)
+(label EMP5a_A already defined)
+(label EMP6A already defined)
+(label EMP6B already defined)
+(label EMP6C already defined)
+(label EMP6D already defined)
+(label EMP6E already defined)
+(label EMP6F already defined)
+(label EMP6G already defined)
+(label EMP6X already defined)
+(label EMP6a_A already defined)
+(label EMP7a_A already defined)
+(label EMP8a_A already defined)
+(label EMP9a_A already defined)
+(label EMP10a_A already defined)
+(label EMP11a_A already defined)
+(label EMP12a_A already defined)
+(label EMP13a already defined)
+(label EMP13b already defined)
+(label LSE1_1 already defined)
+(label LSE1_2 already defined)
+(label LSE1_3 already defined)
+(label LSE1_4 already defined)
+(label LSE4_1 already defined)
+(label LSE5_1 already defined)
+(label LSE4_2 already defined)
+(label LSE5_2 already defined)
+(label LSE4_3 already defined)
+(label LSE5_3 already defined)
+(label GP2 already defined)
+(label GP3_1 already defined)
+(label GP3_2 already defined)
+(label GP3_3 already defined)
+(label GP4_2 already defined)
+(label GP4_3 already defined)
+(label GP4_97 already defined)
+(label GP5 already defined)
+(label GP6 already defined)
+(label GP7 already defined)
+(label GP8 already defined)
+(label GP13 already defined)
+(label GP14 already defined)
+(label GP16 already defined)
+(label GP17_2 already defined)
+(label GP17_3 already defined)
+(label GP19 already defined)
+(label GP20 already defined)
+(label GP21 already defined)
+(label GP24 already defined)
 
 {col 5}Result{col 38}# of obs.
 {col 5}{hline 41}
@@ -4777,14 +4850,14 @@ str12 now)
  1%    {res}       21              6
 {txt} 5%    {res}       24             17
 {txt}10%    {res}       26             19       {txt}Obs         {res}      2,856
-{txt}25%    {res}       31             19       {txt}Sum of Wgt. {res}      2,856
+{txt}25%    {res}     31.5             19       {txt}Sum of Wgt. {res}      2,856
 
-{txt}50%    {res}       39                      {txt}Mean          {res} 40.35084
-                        {txt}Largest       Std. Dev.     {res} 11.54388
-{txt}75%    {res}       48             75
-{txt}90%    {res}       57             76       {txt}Variance      {res} 133.2611
-{txt}95%    {res}       61             77       {txt}Skewness      {res} .5011013
-{txt}99%    {res}       70             83       {txt}Kurtosis      {res} 2.743954
+{txt}50%    {res}       39                      {txt}Mean          {res} 40.39181
+                        {txt}Largest       Std. Dev.     {res} 11.58419
+{txt}75%    {res}       48             76
+{txt}90%    {res}       57             77       {txt}Variance      {res} 134.1935
+{txt}95%    {res}       62             78       {txt}Skewness      {res} .5144605
+{txt}99%    {res}       70             83       {txt}Kurtosis      {res}  2.77602
 {txt}
 {com}. replace HHR4 = `r(p1)' if HHR4 < 20
 {txt}(7 real changes made)
@@ -5190,7 +5263,7 @@ str12 now)
 {txt}{center:{hline 100}}
 {center:{txt}{lalign 55:}{txt}{center 10:N}{txt}{center 8:Mean}{txt}{center 8:sd}{txt}{center 9:Min}{txt}{center 8:Max}}
 {txt}{center:{hline 100}}
-{center:{txt}{lalign 55:Age of female cooperative member (years)}{res}{center 10:2,856.00}{res}{center 8:40.36}{res}{center 8:11.52}{res}{center 9:20.00}{res}{center 8:83.00}}
+{center:{txt}{lalign 55:Age of female cooperative member (years)}{res}{center 10:2,856.00}{res}{center 8:40.40}{res}{center 8:11.56}{res}{center 9:20.00}{res}{center 8:83.00}}
 {center:{txt}{lalign 55:Literacy of female cooperative member (0/1)}{res}{center 10:2,853.00}{res}{center 8:0.72}{res}{center 8:0.45}{res}{center 9:0.00}{res}{center 8:1.00}}
 {center:{txt}{lalign 55:Received cooperative sale information (0/1)}{res}{center 10:2,856.00}{res}{center 8:0.35}{res}{center 8:0.48}{res}{center 9:0.00}{res}{center 8:1.00}}
 {center:{txt}{lalign 55:Total number of goats owned (count)}{res}{center 10:2,856.00}{res}{center 8:5.76}{res}{center 8:4.95}{res}{center 9:0.00}{res}{center 8:69.00}}
@@ -5229,6 +5302,77 @@ str12 now)
 > {c )-}
 
 {txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. 
+. clear
+{txt}
+{com}. use "$d3/HH_Final.dta"
+{txt}( )
+
+{com}. 
+. * member awareness
+. gl hh_ser_1 SER1 SER2 SER19 SER15 SER14 SER18 SER12 SER13 SER4 SER3 SER8 SER7 SER11 SER6 SER10 SER9
+{txt}
+{com}.         
+. local listsize : list sizeof global(hh_ser_1)
+{txt}
+{com}. tokenize $hh_ser_1
+{txt}
+{com}. 
+. forv i = 1/`listsize' {c -(}
+{txt}  2{com}.                 
+.         quietly {c -(}
+{txt}  3{com}.                 sum ``i''
+{txt}  4{com}.                 return list
+{txt}  5{com}.                 *scalar N_``i'' = r(N) // N
+.                 scalar mean_``i'' = r(mean) // mean
+{txt}  6{com}.                 *scalar sd_``i'' = r(sd)  // sd
+.                 *scalar min_``i'' = r(min)  // sd
+.                 *scalar max_``i'' = r(max)  // sd
+.                 
+.         * matrix for table
+.                 matrix mat_`i' = (mean_``i'')
+{txt}  7{com}.                 {c )-}
+{txt}  8{com}. {c )-}
+{txt}
+{com}. matrix B = mat_1
+{txt}
+{com}. 
+. forv i = 2/`listsize' {c -(} // appends into single matrix
+{txt}  2{com}.         matrix B = B \ mat_`i'
+{txt}  3{com}. {c )-}
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. gen co_loan = (BR4_1 == "C") | (BR4_2 == "C") | (BR4_3 == "C") | (BR4_4 == "C") | (BR4_5 == "C") ///
+>                                 | (BR4_6 == "C") | (BR4_7 == "C") | (BR4_8 == "C") | (BR4_9 == "C") | (BR4_10 == "C")
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. browse co_loan BR$*
+{err}$ invalid name
+{txt}{search r(198), local:r(198);}
+
+{com}. browse co_loan BR4*
+
+. tab co_loan
+
+    {txt}co_loan {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}      1,928       67.51       67.51
+{txt}          1 {c |}{res}        928       32.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,856      100.00
+
+{com}. tab loans
+{err}variable {bf}loans{sf} not found
+{txt}{search r(111), local:r(111);}
 
 {com}. do "/Users/scottmiller/GitHub/dissertation/dis1_2.do"
 {txt}
@@ -5457,60 +5601,6 @@ or co-op un {c |}      Freq.     Percent        Cum.
 {com}.         replace gr_pct_COM3 = . if CO_SER15 == 0
 {txt}(360 real changes made, 360 to missing)
 
-{com}. 
-. 
-. * pct of members receiving co-op non-sale info
-. sum COM8, d
-
-      {txt}COM8 In the past 6 months, how many times did you
-               receive information about co-o
-{hline 61}
-      Percentiles      Smallest
- 1%    {res}        0              0
-{txt} 5%    {res}        0              0
-{txt}10%    {res}        0              0       {txt}Obs         {res}      2,856
-{txt}25%    {res}        0              0       {txt}Sum of Wgt. {res}      2,856
-
-{txt}50%    {res}        0                      {txt}Mean          {res} .9740896
-                        {txt}Largest       Std. Dev.     {res} 3.594902
-{txt}75%    {res}        1             30
-{txt}90%    {res}        3             99       {txt}Variance      {res} 12.92332
-{txt}95%    {res}        4             99       {txt}Skewness      {res} 21.93911
-{txt}99%    {res}        6            100       {txt}Kurtosis      {res} 591.2184
-{txt}
-{com}. sum bCOM8 
-
-{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
-{hline 13}{c +}{hline 57}
-{space 7}bCOM8 {c |}{res}      2,856    .3792017    .4852733          0          1
-{txt}
-{com}. 
-.         * percentage variable
-.         cap drop pct_COM8 gr_pct_COM8
-{txt}
-{com}.         bysort idx: egen pct_COM8 = mean(bCOM8)
-{txt}
-{com}.         
-.         * group var
-.         sum pct_COM8, d
-
-                          {txt}pct_COM8
-{hline 61}
-      Percentiles      Smallest
- 1%    {res}        0              0
-{txt} 5%    {res} .0416667              0
-{txt}10%    {res} .0833333              0       {txt}Obs         {res}      2,856
-{txt}25%    {res} .1666667              0       {txt}Sum of Wgt. {res}      2,856
-
-{txt}50%    {res} .4166667                      {txt}Mean          {res} .3792017
-                        {txt}Largest       Std. Dev.     {res} .2240726
-{txt}75%    {res} .5416667       .9583333
-{txt}90%    {res} .7083333       .9583333       {txt}Variance      {res} .0502086
-{txt}95%    {res}      .75       .9583333       {txt}Skewness      {res} .0883729
-{txt}99%    {res} .7916667       .9583333       {txt}Kurtosis      {res} 2.141391
-{txt}
-{com}.         gen gr_pct_COM8 = (pct_COM8 > `r(p50)')
-{txt}
 {com}.         
 .         
 . * pct of members receiving co-op non-sale info
@@ -5619,7 +5709,8 @@ or co-op un {c |}      Freq.     Percent        Cum.
 . * received co-op loans  
 . cap drop co_loan
 {txt}
-{com}. gen co_loan = (BR4 == "C")
+{com}. gen co_loan = (BR4_1 == "C") | (BR4_2 == "C") | (BR4_3 == "C") | (BR4_4 == "C") | (BR4_5 == "C") ///
+>                                 | (BR4_6 == "C") | (BR4_7 == "C") | (BR4_8 == "C") | (BR4_9 == "C") | (BR4_10 == "C")
 {txt}
 {com}. replace co_loan =. if CO_SER2 == 0      
 {txt}(240 real changes made, 240 to missing)
@@ -5638,17 +5729,17 @@ or co-op un {c |}      Freq.     Percent        Cum.
                           {txt}pct_loan
 {hline 61}
       Percentiles      Smallest
- 1%    {res}        0              0
-{txt} 5%    {res} .0416667              0
+ 1%    {res} .0416667              0
+{txt} 5%    {res} .0833333              0
 {txt}10%    {res} .0833333              0       {txt}Obs         {res}      2,616
 {txt}25%    {res} .2083333              0       {txt}Sum of Wgt. {res}      2,616
 
-{txt}50%    {res} .2916667                      {txt}Mean          {res} .2809633
-                        {txt}Largest       Std. Dev.     {res} .1295701
-{txt}75%    {res}     .375       .6666667
-{txt}90%    {res} .4583333       .6666667       {txt}Variance      {res} .0167884
-{txt}95%    {res}       .5       .6666667       {txt}Skewness      {res} .0606525
-{txt}99%    {res} .5416667       .6666667       {txt}Kurtosis      {res} 2.884761
+{txt}50%    {res} .3333333                      {txt}Mean          {res} .3268349
+                        {txt}Largest       Std. Dev.     {res} .1471896
+{txt}75%    {res} .4166667       .6666667
+{txt}90%    {res}       .5       .6666667       {txt}Variance      {res} .0216648
+{txt}95%    {res} .5416667       .6666667       {txt}Skewness      {res}-.0315512
+{txt}99%    {res} .6666667       .6666667       {txt}Kurtosis      {res} 2.616176
 {txt}
 {com}.         gen gr_pct_loan = (pct_loan > `r(p50)')
 {txt}
@@ -5813,12 +5904,12 @@ or co-op un {c |}      Freq.     Percent        Cum.
 {txt}10%    {res}       .5       .0833333       {txt}Obs         {res}      2,856
 {txt}25%    {res}     .625       .0833333       {txt}Sum of Wgt. {res}      2,856
 
-{txt}50%    {res}      .75                      {txt}Mean          {res} .7245855
-                        {txt}Largest       Std. Dev.     {res} .1582859
+{txt}50%    {res}      .75                      {txt}Mean          {res} .7242354
+                        {txt}Largest       Std. Dev.     {res} .1586131
 {txt}75%    {res} .8333333              1
-{txt}90%    {res} .9166667              1       {txt}Variance      {res} .0250544
-{txt}95%    {res} .9583333              1       {txt}Skewness      {res}-.7890345
-{txt}99%    {res} .9583333              1       {txt}Kurtosis      {res} 4.032058
+{txt}90%    {res} .9166667              1       {txt}Variance      {res} .0251581
+{txt}95%    {res} .9583333              1       {txt}Skewness      {res}-.7744522
+{txt}99%    {res} .9583333              1       {txt}Kurtosis      {res} 3.995605
 {txt}
 {com}.         gen gr_pct_HHR14 = (pct_HHR14 < `r(p50)')               
 {txt}
@@ -5834,9 +5925,11 @@ or co-op un {c |}      Freq.     Percent        Cum.
 . 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
 {txt}
-{com}. ********************************************* 
+{com}. 
+. ** HH level dataset
+. ********************************************* 
 . 
 . * gen goat revenue per member
 . cap drop goatrev_mem
@@ -5852,13 +5945,13 @@ or co-op un {c |}      Freq.     Percent        Cum.
 
 {com}. 
 . * revenue from co-op goats sold
-. replace co_opsalevalue = . if co_opgoatno_w == 0
-{txt}(1,097 real changes made, 1,097 to missing)
+. replace co_opsalevalue = . if LS8 == 0
+{txt}(66 real changes made, 66 to missing)
 
 {com}. 
 . * number of co-op goats sold
-. replace co_opgoatno_w = . if co_opgoatno_w ==0
-{txt}(2,503 real changes made, 2,503 to missing)
+. replace co_opgoatno_w = . if LS8 ==0
+{txt}(1,472 real changes made, 1,472 to missing)
 
 {com}. 
 . * price per co-op goat sold
@@ -5868,167 +5961,1586 @@ or co-op un {c |}      Freq.     Percent        Cum.
 {txt}(2,503 missing values generated)
 
 {com}. 
+. 
+. 
+. * goat revenue & loan amount index
+. local local_dTRN dTRN1 dTRN2 dTRN3 dTRN4 dTRN5 dTRN6 dTRN7
+{txt}
+{com}.         make_index_gr dTRN_r wgt stdgroup `local_dTRN' 
+{err}command {bf}make_index_gr{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. * loans
+. ttest co_opsalevalue, by(gr_pct_loan)   // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    651{col 22} 3844.318{col 34} 448.1151{col 46} 11433.52{col 58}  2964.39{col 70} 4724.246
+       {txt}1 {c |}{res}{col 12}    733{col 22} 6876.686{col 34} 504.0389{col 46} 13646.34{col 58} 5887.152{col 70}  7866.22
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-3032.368{col 34} 681.4734{col 58}-4369.202{col 70}-1695.534
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -4.4497
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. * loans
+. ttest co_opgoatno_w, by(gr_pct_loan)    // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    651{col 22} .3655914{col 34} .0343399{col 46} .8761711{col 58}  .298161{col 70} .4330218
+       {txt}1 {c |}{res}{col 12}    733{col 22} .6712142{col 34} .0432091{col 46} 1.169841{col 58} .5863857{col 70} .7560427
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.3056228{col 34} .0561211{col 58}-.4157145{col 70}-.1955311
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.4458
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. browse BR*
+
+. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. gen co_loan_amt = BR2_1 if BR4_1 == "C" & BR2_2 == .
+{txt}(2,251 missing values generated)
+
+{com}. 
+{txt}end of do-file
+
+{com}. drop co_loan_amt
+
+. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. gen co_loan_amt = (BR2_1 if BR4_1 == "C" & BR2_2 == .) + (BR2_2 if BR4_2 == "C" & BR2_3 == .)
+{err}BR2_1ifBR4_1 not found
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. forvalues i=1/10 {c -(}
+{txt}  2{com}.         gen co_loan_`i' = BR2_`i' if BR4_`i' == "C"
+{txt}  3{com}. {c )-}
+{txt}(2,056 missing values generated)
+(2,640 missing values generated)
+(2,812 missing values generated)
+(2,843 missing values generated)
+(2,849 missing values generated)
+(2,851 missing values generated)
+(2,854 missing values generated)
+(2,854 missing values generated)
+(2,855 missing values generated)
+(2,856 missing values generated)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. gen co_loan_amt = co_loan_1 + co_loan_2 + co_loan_3 + co_loan_4 + co_loan_5 + co_loan_6 + co_loan_7 + co_loan_8 + co_loan_9 + co_loan_10
+{txt}(2,856 missing values generated)
+
+{com}. drop co_loan_1-co_loan_10
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. * co-op loan amount
+. forvalues i=1/10 {c -(}
+{txt}  2{com}.         gen co_loan_`i' = BR2_`i' if BR4_`i' == "C"
+{txt}  3{com}.         replace co_loan_`i' = 0 if co_loan_`i' ==.
+{txt}  4{com}. {c )-}
+{txt}(2,056 missing values generated)
+(2,056 real changes made)
+(2,640 missing values generated)
+(2,640 real changes made)
+(2,812 missing values generated)
+(2,812 real changes made)
+(2,843 missing values generated)
+(2,843 real changes made)
+(2,849 missing values generated)
+(2,849 real changes made)
+(2,851 missing values generated)
+(2,851 real changes made)
+(2,854 missing values generated)
+(2,854 real changes made)
+(2,854 missing values generated)
+(2,854 real changes made)
+(2,855 missing values generated)
+(2,855 real changes made)
+(2,856 missing values generated)
+(2,856 real changes made)
+
+{com}. gen co_loan_amt = co_loan_1 + co_loan_2 + co_loan_3 + co_loan_4 + co_loan_5 + co_loan_6 + co_loan_7 + co_loan_8 + co_loan_9 + co_loan_10
+{err}variable {bf}co_loan_amt{sf} already defined
+{txt}{search r(110), local:r(110);}
+
+end of do-file
+
+{search r(110), local:r(110);}
+
+{com}. drop co_loan_amt
+
+. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. drop co_loan_1-co_loan_10
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. 
+. * co-op loan amount
+. forvalues i=1/10 {c -(}
+{txt}  2{com}.         gen co_loan_`i' = BR2_`i' if BR4_`i' == "C"
+{txt}  3{com}.         replace co_loan_`i' = 0 if co_loan_`i' ==.
+{txt}  4{com}. {c )-}
+{txt}(2,056 missing values generated)
+(2,056 real changes made)
+(2,640 missing values generated)
+(2,640 real changes made)
+(2,812 missing values generated)
+(2,812 real changes made)
+(2,843 missing values generated)
+(2,843 real changes made)
+(2,849 missing values generated)
+(2,849 real changes made)
+(2,851 missing values generated)
+(2,851 real changes made)
+(2,854 missing values generated)
+(2,854 real changes made)
+(2,854 missing values generated)
+(2,854 real changes made)
+(2,855 missing values generated)
+(2,855 real changes made)
+(2,856 missing values generated)
+(2,856 real changes made)
+
+{com}. gen co_loan_amt = co_loan_1 + co_loan_2 + co_loan_3 + co_loan_4 + co_loan_5 + co_loan_6 + co_loan_7 + co_loan_8 + co_loan_9 + co_loan_10
+{txt}
+{com}. drop co_loan_1-co_loan_10
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. tab BR1
+
+   {txt}BR1 Does {c |}
+       your {c |}
+  household {c |}
+    owe any {c |}
+      money {c |}
+  currently {c |}
+      (this {c |}
+   includes {c |}
+ formal and {c |}
+     inform {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        Yes {c |}{res}      1,572       55.04       55.04
+{txt}         No {c |}{res}      1,284       44.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      2,856      100.00
+
+{com}. count if BR1 == 1
+  {res}1,572
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. replace co_loan_amt =. if BR1 == 2
+{txt}(1,284 real changes made, 1,284 to missing)
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. * sale info
+. ttest co_loan_amt, by(gr_pct_COM3)      // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    639{col 22} 36050.39{col 34} 3428.497{col 46} 86667.08{col 58} 29317.89{col 70} 42782.89
+       {txt}1 {c |}{res}{col 12}    738{col 22} 38166.12{col 34} 3040.419{col 46} 82596.51{col 58} 32197.21{col 70} 44135.04
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,377{col 22} 37184.31{col 34}  2276.75{col 46} 84485.52{col 58} 32718.04{col 70} 41650.59
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2115.732{col 34} 4566.617{col 58}-11074.02{col 70} 6842.559
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.4633
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1375
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3216         {txt}Pr(|T| > |t|) = {res}0.6432          {txt}Pr(T > t) = {res}0.6784
+{txt}
+{com}. * non-sale info
+. ttest co_loan_amt, by(gr_pct_COM3)      // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    639{col 22} 36050.39{col 34} 3428.497{col 46} 86667.08{col 58} 29317.89{col 70} 42782.89
+       {txt}1 {c |}{res}{col 12}    738{col 22} 38166.12{col 34} 3040.419{col 46} 82596.51{col 58} 32197.21{col 70} 44135.04
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,377{col 22} 37184.31{col 34}  2276.75{col 46} 84485.52{col 58} 32718.04{col 70} 41650.59
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2115.732{col 34} 4566.617{col 58}-11074.02{col 70} 6842.559
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.4633
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1375
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3216         {txt}Pr(|T| > |t|) = {res}0.6432          {txt}Pr(T > t) = {res}0.6784
+{txt}
+{com}. * loans
+. ttest co_loan_amt, by(gr_pct_loan)      // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    675{col 22} 27418.81{col 34} 2809.911{col 46} 73003.63{col 58} 21901.58{col 70} 32936.05
+       {txt}1 {c |}{res}{col 12}    897{col 22} 42834.11{col 34}  2896.41{col 46} 86747.37{col 58} 37149.57{col 70} 48518.65
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} -15415.3{col 34} 4134.044{col 58}-23524.13{col 70}-7306.467
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -3.7289
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0001         {txt}Pr(|T| > |t|) = {res}0.0002          {txt}Pr(T > t) = {res}0.9999
+{txt}
+{com}. * membership fee
+. ttest co_loan_amt, by(gr_avg_MAN2)      // not significant -- ~ equal performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    846{col 22} 39002.96{col 34} 2986.321{col 46} 86860.37{col 58} 33141.48{col 70} 44864.43
+       {txt}1 {c |}{res}{col 12}    726{col 22} 32966.11{col 34} 2769.302{col 46} 74617.13{col 58} 27529.31{col 70} 38402.92
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 6036.842{col 34} 4119.909{col 58}-2044.262{col 70} 14117.95
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.4653
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9285         {txt}Pr(|T| > |t|) = {res}0.1430          {txt}Pr(T > t) = {res}0.0715
+{txt}
+{com}. * loan
+. ttest co_loan_amt, by(gr_pct_loan)      // significant -- most inclusive - higher performance                   
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    675{col 22} 27418.81{col 34} 2809.911{col 46} 73003.63{col 58} 21901.58{col 70} 32936.05
+       {txt}1 {c |}{res}{col 12}    897{col 22} 42834.11{col 34}  2896.41{col 46} 86747.37{col 58} 37149.57{col 70} 48518.65
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} -15415.3{col 34} 4134.044{col 58}-23524.13{col 70}-7306.467
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -3.7289
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0001         {txt}Pr(|T| > |t|) = {res}0.0002          {txt}Pr(T > t) = {res}0.9999
+{txt}
+{com}. * low goats
+. ttest co_loan_amt, by(gr_pct_low_goats) // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    802{col 22} 35191.64{col 34}  2488.61{col 46} 70476.46{col 58} 30306.68{col 70} 40076.61
+       {txt}1 {c |}{res}{col 12}    770{col 22} 37280.78{col 34} 3299.387{col 46} 91554.26{col 58} 30803.91{col 70} 43757.65
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2089.136{col 34}  4111.21{col 58}-10153.18{col 70} 5974.904
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.5082
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3057         {txt}Pr(|T| > |t|) = {res}0.6114          {txt}Pr(T > t) = {res}0.6943
 {txt}
 {com}. * cv goats
+. ttest co_loan_amt, by(gr_cv_goats)      // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    793{col 22} 34220.55{col 34} 2353.577{col 46} 66277.34{col 58} 29600.57{col 70} 38840.54
+       {txt}1 {c |}{res}{col 12}    779{col 22} 38245.19{col 34} 3384.112{col 46} 94452.51{col 58} 31602.11{col 70} 44888.26
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-4024.634{col 34} 4109.604{col 58}-12085.52{col 70} 4036.256
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.9793
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.1638         {txt}Pr(|T| > |t|) = {res}0.3276          {txt}Pr(T > t) = {res}0.8362
+{txt}
+{com}. * voting
+. ttest co_loan_amt, by(gr_pct_MEM14)     // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    850{col 22} 37458.12{col 34} 2753.531{col 46} 80278.54{col 58} 32053.59{col 70} 42862.64
+       {txt}1 {c |}{res}{col 12}    722{col 22} 34751.39{col 34} 3084.208{col 46} 82872.85{col 58} 28696.28{col 70} 40806.49
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}  2706.73{col 34} 4123.825{col 58}-5382.055{col 70} 10795.52
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.6564
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7442         {txt}Pr(|T| > |t|) = {res}0.5117          {txt}Pr(T > t) = {res}0.2558
+{txt}
+{com}. * literacy
+. ttest co_loan_amt, by(gr_pct_HHR14)     // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    835{col 22} 39047.54{col 34} 3057.601{col 46} 88353.56{col 58} 33046.04{col 70} 45049.04
+       {txt}1 {c |}{res}{col 12}    737{col 22}  33005.7{col 34} 2681.848{col 46} 72806.11{col 58} 27740.72{col 70} 38270.68
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 6041.844{col 34} 4115.884{col 58}-2031.364{col 70} 14115.05
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.4679
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9288         {txt}Pr(|T| > |t|) = {res}0.1423          {txt}Pr(T > t) = {res}0.0712
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. do "$d1/dis0_3.do"
+{txt}
+{com}. 
+. /*******************************************************************************
+> dis0_3.d0               
+>                                         
+> - Creates command for ICW Summary Indices
+>         (published by Cyrus Samii, NYU, December 2017) 
+>         
+> *******************************************************************************/
+. 
+. 
+. 
+. /***********************************************
+> *INVERSE COVARIANCE WEIGHTED INDEX V.0.2
+> *Cyrus Samii, NYU, December 2017
+> *(cds2083@nyu.edu)
+> *
+> *This ado file creates an index using inverse covariance weighting, 
+> *a la Anderson (2008, p. 1485).
+> 
+> ***********************************************/
+. 
+. 
+. capture program drop make_index_gr
+{txt}
+{com}. capture mata: mata drop icwxmata()
+{txt}
+{com}. program make_index_gr
+{txt}  1{com}. version 11.1
+{txt}  2{com}.     syntax anything [if]
+{txt}  3{com}.     gettoken newname anything: anything
+{txt}  4{com}.     gettoken wgt anything: anything
+{txt}  5{com}.         gettoken sgroup anything: anything
+{txt}  6{com}.     local Xvars `anything'
+{txt}  7{com}.         marksample touse
+{txt}  8{com}.         mata: icwxmata(("`Xvars'"),"`wgt'","`sgroup'", "index")
+{txt}  9{com}.         rename index index_`newname'
+{txt} 10{com}. end
+{txt}
+{com}.  
+. mata:
+{txt}{hline 49} mata (type {cmd:end} to exit) {hline}
+{com}:         function icwxmata(xvars, wgts, sgroups, indexname)
+>         {c -(}
+>                 st_view(X=0,.,tokens(xvars))
+>                 st_view(wgt=.,.,wgts)
+>                 st_view(sgroup=.,.,sgroups)
+>                 nr = rows(X)
+>                 nc = cols(X)    
+>                 sg_wgt = wgt:*sgroup
+>                 sg_wgtst = sg_wgt/sum(sg_wgt)
+>                 all_wgtst = wgt/sum(wgt)
+>                 sg_wgtstdM = J(1,nc,1) # sg_wgtst
+>                 all_wgtstdM = J(1,nc,1) # all_wgtst
+>                 sg_wgtdmeans = colsum(X:*sg_wgtstdM)
+>                 sgroup2 = sgroup
+>                 sgroupdM = J(1,nc,1) # sgroup2
+>                 sg_meandevs = ((X:*sgroupdM) - (J(nr,1,1) # sg_wgtdmeans):*sgroupdM)
+>                 all_wgtdmeandevs = X - (J(nr,1,1) # sg_wgtdmeans)
+>                 sg_wgtdstds = sqrt(colsum(sg_wgt:*(sg_meandevs:*sg_meandevs)):/(sum(sg_wgt)-1))
+>                 Xs = all_wgtdmeandevs:/(J(nr,1,1) # sg_wgtdstds)
+>                 S = variance(Xs, wgt)
+>                 invS = invsym(S)
+>                 ivec = J(nc,1,1)
+>                 indexout_sc = (invsym(ivec'*invS*ivec)*ivec'*invS*Xs')'
+>                 indexout = indexout_sc/sqrt(variance(indexout_sc, sg_wgt))
+>                 st_addvar("float",indexname)
+>                 st_store(.,indexname,indexout)
+>         {c )-}
+{txt}note: variable all_wgtstdM set but not used
+
+{com}: end
+{txt}{hline}
+
+{com}. 
+{txt}end of do-file
+
+{com}. local local_saleloan co_opsalevalue co_loan_amt
+{txt}
+{com}.         make_index_gr saleloan wgt stdgroup `local_saleloan' 
+{res}  1058
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. ttest index_saleloan, by(gr_pct_COM3)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    333{col 22} .1133934{col 34}  .047838{col 46} .8729617{col 58} .0192895{col 70} .2074972
+       {txt}1 {c |}{res}{col 12}    376{col 22} .5395555{col 34} .0568134{col 46} 1.101652{col 58} .4278428{col 70} .6512682
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    709{col 22} .3393975{col 34} .0384001{col 46} 1.022481{col 58} .2640059{col 70} .4147892
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.4261621{col 34} .0753096{col 58}-.5740194{col 70}-.2783049
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.6588
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     707
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * non-sale info
+. ttest index_saleloan, by(gr_pct_COM3)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    333{col 22} .1133934{col 34}  .047838{col 46} .8729617{col 58} .0192895{col 70} .2074972
+       {txt}1 {c |}{res}{col 12}    376{col 22} .5395555{col 34} .0568134{col 46} 1.101652{col 58} .4278428{col 70} .6512682
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    709{col 22} .3393975{col 34} .0384001{col 46} 1.022481{col 58} .2640059{col 70} .4147892
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.4261621{col 34} .0753096{col 58}-.5740194{col 70}-.2783049
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.6588
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     707
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * loans
+. ttest index_saleloan, by(gr_pct_loan)   // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    341{col 22} .1271507{col 34} .0485744{col 46} .8969838{col 58} .0316065{col 70} .2226948
+       {txt}1 {c |}{res}{col 12}    475{col 22} .4397859{col 34} .0481522{col 46} 1.049454{col 58} .3451676{col 70} .5344041
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.3126352{col 34} .0701707{col 58}-.4503721{col 70}-.1748984
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -4.4554
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * membership fee
+. ttest index_saleloan, by(gr_avg_MAN2)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    427{col 22} .3170319{col 34} .0457373{col 46} .9451146{col 58}  .227133{col 70} .4069308
+       {txt}1 {c |}{res}{col 12}    389{col 22} .3004732{col 34} .0536495{col 46} 1.058134{col 58}  .194993{col 70} .4059533
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0165587{col 34} .0701307{col 58}-.1210996{col 70}  .154217
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.2361
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.5933         {txt}Pr(|T| > |t|) = {res}0.8134          {txt}Pr(T > t) = {res}0.4067
+{txt}
+{com}. * low goats
+. ttest index_saleloan, by(gr_pct_low_goats)      // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    458{col 22} .4213777{col 34} .0497357{col 46}  1.06439{col 58} .3236387{col 70} .5191167
+       {txt}1 {c |}{res}{col 12}    358{col 22} .1655466{col 34} .0471477{col 46} .8920772{col 58} .0728244{col 70} .2582689
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}  .255831{col 34} .0700172{col 58} .1183955{col 70} .3932666
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  3.6538
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9999         {txt}Pr(|T| > |t|) = {res}0.0003          {txt}Pr(T > t) = {res}0.0001
+{txt}
+{com}. * cv goats
+. ttest index_saleloan, by(gr_cv_goats)   // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    411{col 22} .3357635{col 34} .0527843{col 46} 1.070103{col 58} .2320019{col 70} .4395251
+       {txt}1 {c |}{res}{col 12}    405{col 22} .2821182{col 34} .0459132{col 46} .9239844{col 58} .1918597{col 70} .3723767
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0536453{col 34} .0700337{col 58}-.0838225{col 70} .1911131
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.7660
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7780         {txt}Pr(|T| > |t|) = {res}0.4439          {txt}Pr(T > t) = {res}0.2220
+{txt}
+{com}. * voting
+. ttest index_saleloan, by(gr_pct_MEM14)  // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    482{col 22} .3280482{col 34} .0468989{col 46} 1.029642{col 58} .2358962{col 70} .4202003
+       {txt}1 {c |}{res}{col 12}    334{col 22} .2818486{col 34} .0523358{col 46} .9564709{col 58} .1788982{col 70}  .384799
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0461996{col 34} .0712201{col 58}-.0935971{col 70} .1859964
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.6487
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7416         {txt}Pr(|T| > |t|) = {res}0.5167          {txt}Pr(T > t) = {res}0.2584
+{txt}
+{com}. * literacy
+. ttest index_saleloan, by(gr_pct_HHR14)  // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    469{col 22} .4025198{col 34} .0506711{col 46} 1.097355{col 58} .3029487{col 70} .5020909
+       {txt}1 {c |}{res}{col 12}    347{col 22} .1829247{col 34} .0448793{col 46} .8360084{col 58} .0946542{col 70} .2711952
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .2195951{col 34} .0704341{col 58} .0813413{col 70}  .357849
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  3.1177
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9991         {txt}Pr(|T| > |t|) = {res}0.0019          {txt}Pr(T > t) = {res}0.0009
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. ** full gap
+. * outcome: revenue from co-op goats
+. * sale info
+. ttest co_opsalevalue, by(gr_pct_COM3)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    578{col 22} 2636.678{col 34} 423.1315{col 46} 10172.77{col 58} 1805.612{col 70} 3467.744
+       {txt}1 {c |}{res}{col 12}    626{col 22} 9098.457{col 34} 594.5919{col 46} 14876.68{col 58} 7930.817{col 70}  10266.1
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,204{col 22} 5996.374{col 34} 381.2976{col 46} 13230.53{col 58} 5248.292{col 70} 6744.456
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-6461.779{col 34} 740.4216{col 58}-7914.441{col 70}-5009.116
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -8.7272
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1202
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * non-sale info
+. ttest co_opsalevalue, by(gr_pct_COM3)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    578{col 22} 2636.678{col 34} 423.1315{col 46} 10172.77{col 58} 1805.612{col 70} 3467.744
+       {txt}1 {c |}{res}{col 12}    626{col 22} 9098.457{col 34} 594.5919{col 46} 14876.68{col 58} 7930.817{col 70}  10266.1
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,204{col 22} 5996.374{col 34} 381.2976{col 46} 13230.53{col 58} 5248.292{col 70} 6744.456
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-6461.779{col 34} 740.4216{col 58}-7914.441{col 70}-5009.116
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -8.7272
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1202
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * loans
+. ttest co_opsalevalue, by(gr_pct_loan)   // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    651{col 22} 3844.318{col 34} 448.1151{col 46} 11433.52{col 58}  2964.39{col 70} 4724.246
+       {txt}1 {c |}{res}{col 12}    733{col 22} 6876.686{col 34} 504.0389{col 46} 13646.34{col 58} 5887.152{col 70}  7866.22
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-3032.368{col 34} 681.4734{col 58}-4369.202{col 70}-1695.534
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -4.4497
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * membership fee
+. ttest co_opsalevalue, by(gr_avg_MAN2)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    730{col 22}  5001.86{col 34} 445.3526{col 46} 12032.77{col 58} 4127.534{col 70} 5876.187
+       {txt}1 {c |}{res}{col 12}    654{col 22} 5950.924{col 34} 526.9745{col 46} 13476.54{col 58} 4916.155{col 70} 6985.693
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-949.0633{col 34} 685.6923{col 58}-2294.174{col 70}  396.047
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.3841
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0833         {txt}Pr(|T| > |t|) = {res}0.1666          {txt}Pr(T > t) = {res}0.9167
+{txt}
+{com}. * low goats
+. ttest co_opsalevalue, by(gr_pct_low_goats)      // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    782{col 22} 7558.847{col 34} 538.0691{col 46} 15046.71{col 58} 6502.614{col 70}  8615.08
+       {txt}1 {c |}{res}{col 12}    602{col 22} 2711.369{col 34} 331.0148{col 46} 8121.677{col 58} 2061.282{col 70} 3361.455
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 4847.478{col 34} 678.5865{col 58} 3516.307{col 70} 6178.649
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  7.1435
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+{txt}
+{com}. * cv goats
+. ttest co_opsalevalue, by(gr_cv_goats)   // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    708{col 22} 5501.599{col 34} 477.9033{col 46} 12716.18{col 58} 4563.319{col 70} 6439.878
+       {txt}1 {c |}{res}{col 12}    676{col 22} 5396.642{col 34} 491.2787{col 46} 12773.25{col 58} 4432.024{col 70}  6361.26
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 104.9569{col 34} 685.3095{col 58}-1239.402{col 70} 1449.316
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.1532
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.5608         {txt}Pr(|T| > |t|) = {res}0.8783          {txt}Pr(T > t) = {res}0.4392
+{txt}
+{com}. * voting
+. ttest co_opsalevalue, by(gr_pct_MEM14)  // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    829{col 22} 4968.602{col 34} 411.3948{col 46} 11845.03{col 58} 4161.102{col 70} 5776.101
+       {txt}1 {c |}{res}{col 12}    555{col 22} 6169.894{col 34} 592.1307{col 46} 13949.67{col 58} 5006.798{col 70}  7332.99
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-1201.292{col 34} 698.2196{col 58}-2570.977{col 70}  168.393
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.7205
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0428         {txt}Pr(|T| > |t|) = {res}0.0856          {txt}Pr(T > t) = {res}0.9572
+{txt}
+{com}. * literacy
 . ttest co_opsalevalue, by(gr_pct_HHR14)  // not significant -- ~ equal performance
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}    221{col 22} 21493.16{col 34} 1134.062{col 46} 16859.04{col 58} 19258.15{col 70} 23728.18
-       {txt}1 {c |}{res}{col 12}    132{col 22} 21161.16{col 34} 1555.491{col 46} 17871.23{col 58} 18084.03{col 70} 24238.29
+       0 {c |}{res}{col 12}    803{col 22} 5890.397{col 34} 460.1504{col 46}  13039.4{col 58} 4987.156{col 70} 6793.639
+       {txt}1 {c |}{res}{col 12}    581{col 22} 4842.122{col 34} 510.2242{col 46} 12298.41{col 58}  3840.01{col 70} 5844.234
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}    353{col 22} 21369.01{col 34} 916.5282{col 46}    17220{col 58} 19566.45{col 70} 23171.57
+combined {c |}{res}{col 12}  1,384{col 22} 5450.334{col 34} 342.4422{col 46} 12739.58{col 58} 4778.572{col 70} 6122.096
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22} 332.0038{col 34} 1896.864{col 58}-3398.645{col 70} 4062.653
+    diff {c |}{res}{col 22} 1048.275{col 34}  693.547{col 58}-312.2436{col 70} 2408.794
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.1750
-{txt}Ho: diff = 0                                     degrees of freedom = {res}     351
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.5115
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.5694         {txt}Pr(|T| > |t|) = {res}0.8612          {txt}Pr(T > t) = {res}0.4306
+ Pr(T < t) = {res}0.9346         {txt}Pr(|T| > |t|) = {res}0.1309          {txt}Pr(T > t) = {res}0.0654
 {txt}
 {com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. ttest co_opgoatno_w, by(gr_pct_COM3)    // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    578{col 22} .2474048{col 34} .0313425{col 46} .7535256{col 58} .1858455{col 70} .3089642
+       {txt}1 {c |}{res}{col 12}    626{col 22} .8865815{col 34} .0498675{col 46} 1.247684{col 58} .7886534{col 70} .9845096
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,204{col 22} .5797342{col 34} .0313479{col 46} 1.087733{col 58} .5182315{col 70} .6412369
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.6391766{col 34} .0600035{col 58}-.7568998{col 70}-.5214534
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}-10.6523
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1202
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * non-sale info
+. ttest co_opgoatno_w, by(gr_pct_COM3)    // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    578{col 22} .2474048{col 34} .0313425{col 46} .7535256{col 58} .1858455{col 70} .3089642
+       {txt}1 {c |}{res}{col 12}    626{col 22} .8865815{col 34} .0498675{col 46} 1.247684{col 58} .7886534{col 70} .9845096
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,204{col 22} .5797342{col 34} .0313479{col 46} 1.087733{col 58} .5182315{col 70} .6412369
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.6391766{col 34} .0600035{col 58}-.7568998{col 70}-.5214534
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}-10.6523
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1202
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * loans
+. ttest co_opgoatno_w, by(gr_pct_loan)    // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    651{col 22} .3655914{col 34} .0343399{col 46} .8761711{col 58}  .298161{col 70} .4330218
+       {txt}1 {c |}{res}{col 12}    733{col 22} .6712142{col 34} .0432091{col 46} 1.169841{col 58} .5863857{col 70} .7560427
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.3056228{col 34} .0561211{col 58}-.4157145{col 70}-.1955311
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.4458
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * membership fee
+. ttest co_opgoatno_w, by(gr_avg_MAN2)    // not significant -- ~ equal performance               
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    730{col 22} .4890411{col 34} .0374009{col 46} 1.010516{col 58} .4156149{col 70} .5624673
+       {txt}1 {c |}{res}{col 12}    654{col 22} .5703364{col 34} .0429081{col 46} 1.097306{col 58}  .486082{col 70} .6545908
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.0812953{col 34} .0566638{col 58}-.1924516{col 70}  .029861
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.4347
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0758         {txt}Pr(|T| > |t|) = {res}0.1516          {txt}Pr(T > t) = {res}0.9242
+{txt}
+{com}. * low goats
+. ttest co_opgoatno_w, by(gr_pct_low_goats)       // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    782{col 22}  .730179{col 34} .0435074{col 46} 1.216651{col 58} .6447738{col 70} .8155842
+       {txt}1 {c |}{res}{col 12}    602{col 22} .2641196{col 34} .0289394{col 46} .7100479{col 58}  .207285{col 70} .3209542
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .4660594{col 34} .0557123{col 58} .3567697{col 70} .5753492
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  8.3655
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
 {txt}
 {com}. * cv goats
+. ttest co_opgoatno_w, by(gr_cv_goats)    // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    708{col 22}  .549435{col 34} .0394564{col 46} 1.049867{col 58} .4719693{col 70} .6269008
+       {txt}1 {c |}{res}{col 12}    676{col 22} .5044379{col 34} .0406227{col 46} 1.056189{col 58} .4246759{col 70} .5841999
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0449972{col 34} .0566226{col 58}-.0660784{col 70} .1560727
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.7947
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7865         {txt}Pr(|T| > |t|) = {res}0.4269          {txt}Pr(T > t) = {res}0.2135
+{txt}
+{com}. * voting
+. ttest co_opgoatno_w, by(gr_pct_MEM14)   // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    829{col 22}  .504222{col 34} .0359523{col 46} 1.035152{col 58} .4336535{col 70} .5747904
+       {txt}1 {c |}{res}{col 12}    555{col 22} .5621622{col 34} .0457874{col 46} 1.078679{col 58} .4722241{col 70} .6521002
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.0579402{col 34} .0577427{col 58} -.171213{col 70} .0553326
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.0034
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.1579         {txt}Pr(|T| > |t|) = {res}0.3158          {txt}Pr(T > t) = {res}0.8421
+{txt}
+{com}. * literacy
 . ttest co_opgoatno_w, by(gr_pct_HHR14)   // not significant -- ~ equal performance
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}    221{col 22} 2.122172{col 34} .0733661{col 46} 1.090666{col 58} 1.977582{col 70} 2.266762
-       {txt}1 {c |}{res}{col 12}    132{col 22} 1.977273{col 34} .0915502{col 46} 1.051832{col 58} 1.796165{col 70} 2.158381
+       0 {c |}{res}{col 12}    803{col 22} .5815691{col 34} .0390373{col 46}  1.10621{col 58} .5049418{col 70} .6581964
+       {txt}1 {c |}{res}{col 12}    581{col 22} .4526678{col 34} .0402507{col 46} .9702012{col 58} .3736129{col 70} .5317228
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}    353{col 22} 2.067989{col 34} .0573281{col 46} 1.077097{col 58}  1.95524{col 70} 2.180737
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22} .1448992{col 34} .1184001{col 58}-.0879637{col 70} .3777621
+    diff {c |}{res}{col 22} .1289013{col 34} .0572583{col 58} .0165788{col 70} .2412238
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.2238
-{txt}Ho: diff = 0                                     degrees of freedom = {res}     351
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  2.2512
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.8891         {txt}Pr(|T| > |t|) = {res}0.2218          {txt}Pr(T > t) = {res}0.1109
+ Pr(T < t) = {res}0.9877         {txt}Pr(|T| > |t|) = {res}0.0245          {txt}Pr(T > t) = {res}0.0123
 {txt}
 {com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+{com}. tab gr_pct_COM3 gr_pct_COM8
+
+{txt}gr_pct_COM {c |}      gr_pct_COM8
+         3 {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       960        288 {txt}{c |}{res}     1,248 
+{txt}         1 {c |}{res}       360        888 {txt}{c |}{res}     1,248 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}     1,320      1,176 {txt}{c |}{res}     2,496 
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. * outcome: co-op loan amount
+. * sale info
+. ttest co_loan_amt, by(gr_pct_COM3)      // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    639{col 22} 36050.39{col 34} 3428.497{col 46} 86667.08{col 58} 29317.89{col 70} 42782.89
+       {txt}1 {c |}{res}{col 12}    738{col 22} 38166.12{col 34} 3040.419{col 46} 82596.51{col 58} 32197.21{col 70} 44135.04
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,377{col 22} 37184.31{col 34}  2276.75{col 46} 84485.52{col 58} 32718.04{col 70} 41650.59
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2115.732{col 34} 4566.617{col 58}-11074.02{col 70} 6842.559
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.4633
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1375
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3216         {txt}Pr(|T| > |t|) = {res}0.6432          {txt}Pr(T > t) = {res}0.6784
+{txt}
+{com}. * non-sale info
+. ttest co_loan_amt, by(gr_pct_COM3)      // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    639{col 22} 36050.39{col 34} 3428.497{col 46} 86667.08{col 58} 29317.89{col 70} 42782.89
+       {txt}1 {c |}{res}{col 12}    738{col 22} 38166.12{col 34} 3040.419{col 46} 82596.51{col 58} 32197.21{col 70} 44135.04
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,377{col 22} 37184.31{col 34}  2276.75{col 46} 84485.52{col 58} 32718.04{col 70} 41650.59
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2115.732{col 34} 4566.617{col 58}-11074.02{col 70} 6842.559
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.4633
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1375
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3216         {txt}Pr(|T| > |t|) = {res}0.6432          {txt}Pr(T > t) = {res}0.6784
+{txt}
+{com}. * loans
+. ttest co_loan_amt, by(gr_pct_loan)      // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    675{col 22} 27418.81{col 34} 2809.911{col 46} 73003.63{col 58} 21901.58{col 70} 32936.05
+       {txt}1 {c |}{res}{col 12}    897{col 22} 42834.11{col 34}  2896.41{col 46} 86747.37{col 58} 37149.57{col 70} 48518.65
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} -15415.3{col 34} 4134.044{col 58}-23524.13{col 70}-7306.467
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -3.7289
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0001         {txt}Pr(|T| > |t|) = {res}0.0002          {txt}Pr(T > t) = {res}0.9999
+{txt}
+{com}. * membership fee
+. ttest co_loan_amt, by(gr_avg_MAN2)      // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    846{col 22} 39002.96{col 34} 2986.321{col 46} 86860.37{col 58} 33141.48{col 70} 44864.43
+       {txt}1 {c |}{res}{col 12}    726{col 22} 32966.11{col 34} 2769.302{col 46} 74617.13{col 58} 27529.31{col 70} 38402.92
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 6036.842{col 34} 4119.909{col 58}-2044.262{col 70} 14117.95
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.4653
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9285         {txt}Pr(|T| > |t|) = {res}0.1430          {txt}Pr(T > t) = {res}0.0715
+{txt}
+{com}. * low goats
+. ttest co_loan_amt, by(gr_pct_low_goats) // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    802{col 22} 35191.64{col 34}  2488.61{col 46} 70476.46{col 58} 30306.68{col 70} 40076.61
+       {txt}1 {c |}{res}{col 12}    770{col 22} 37280.78{col 34} 3299.387{col 46} 91554.26{col 58} 30803.91{col 70} 43757.65
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-2089.136{col 34}  4111.21{col 58}-10153.18{col 70} 5974.904
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.5082
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3057         {txt}Pr(|T| > |t|) = {res}0.6114          {txt}Pr(T > t) = {res}0.6943
 {txt}
 {com}. * cv goats
-. ttest co_opsaleprice, by(gr_pct_HHR14)  // not significant -- ~ equal performance
+. ttest co_loan_amt, by(gr_cv_goats)      // not significant -- ~ equal performance
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}    221{col 22} 9720.666{col 34} 257.5533{col 46} 3828.805{col 58} 9213.078{col 70} 10228.25
-       {txt}1 {c |}{res}{col 12}    132{col 22} 10165.08{col 34} 369.7025{col 46} 4247.559{col 58} 9433.722{col 70} 10896.44
+       0 {c |}{res}{col 12}    793{col 22} 34220.55{col 34} 2353.577{col 46} 66277.34{col 58} 29600.57{col 70} 38840.54
+       {txt}1 {c |}{res}{col 12}    779{col 22} 38245.19{col 34} 3384.112{col 46} 94452.51{col 58} 31602.11{col 70} 44888.26
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}    353{col 22}  9886.85{col 34} 212.3864{col 46} 3990.378{col 58} 9469.144{col 70} 10304.56
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22}-444.4162{col 34} 438.9376{col 58}-1307.695{col 70} 418.8624
+    diff {c |}{res}{col 22}-4024.634{col 34} 4109.604{col 58}-12085.52{col 70} 4036.256
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.0125
-{txt}Ho: diff = 0                                     degrees of freedom = {res}     351
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.9793
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.1560         {txt}Pr(|T| > |t|) = {res}0.3120          {txt}Pr(T > t) = {res}0.8440
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
-{txt}
-{com}. 
-. collapse (firstnm) totrev_member totcost_mem REC2 REV4 MAN3 MAN2 MAN4 MAN10 REC1 ///
->                  goatssold_mem goatrev_mem no_services ///
->                  gr_pct_COM3 gr_pct_COM8 gr_avg_MAN2 gr_pct_loan gr_pct_SER19 gr_pct_low_goats gr_pct_MEM14 gr_cv_goats gr_pct_HHR14  ///
->                  (mean) HHR14 HHR4 ID10 goats_owned mem_length travel_time, by(idx)
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+ Pr(T < t) = {res}0.1638         {txt}Pr(|T| > |t|) = {res}0.3276          {txt}Pr(T > t) = {res}0.8362
 {txt}
 {com}. * voting
-. ttest totrev_member, by(gr_pct_HHR14)   // not significant -- most inclusive - lower performance         
+. ttest co_loan_amt, by(gr_pct_MEM14)     // not significant -- ~ equal performance
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}     53{col 22} 853.6257{col 34} 149.0654{col 46} 1085.212{col 58} 554.5042{col 70} 1152.747
-       {txt}1 {c |}{res}{col 12}     52{col 22} 652.0643{col 34} 140.9702{col 46}  1016.55{col 58} 369.0549{col 70} 935.0738
+       0 {c |}{res}{col 12}    850{col 22} 37458.12{col 34} 2753.531{col 46} 80278.54{col 58} 32053.59{col 70} 42862.64
+       {txt}1 {c |}{res}{col 12}    722{col 22} 34751.39{col 34} 3084.208{col 46} 82872.85{col 58} 28696.28{col 70} 40806.49
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}    105{col 22} 753.8048{col 34} 102.6249{col 46} 1051.593{col 58} 550.2957{col 70} 957.3139
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22} 201.5614{col 34} 205.2948{col 58}-205.5924{col 70} 608.7151
+    diff {c |}{res}{col 22}  2706.73{col 34} 4123.825{col 58}-5382.055{col 70} 10795.52
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.9818
-{txt}Ho: diff = 0                                     degrees of freedom = {res}     103
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.6564
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.8358         {txt}Pr(|T| > |t|) = {res}0.3285          {txt}Pr(T > t) = {res}0.1642
-{txt}
-{com}. 
-{txt}end of do-file
-
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+ Pr(T < t) = {res}0.7442         {txt}Pr(|T| > |t|) = {res}0.5117          {txt}Pr(T > t) = {res}0.2558
 {txt}
 {com}. * literacy
-. ttest goatssold_mem, by(gr_pct_HHR14)   // not significant -- most inclusive - lower performance
+. ttest co_loan_amt, by(gr_pct_HHR14)     // not significant -- ~ equal performance
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}     53{col 22} .3222385{col 34} .0655623{col 46} .4773011{col 58}  .190678{col 70}  .453799
-       {txt}1 {c |}{res}{col 12}     52{col 22} 1.071182{col 34} .6950997{col 46} 5.012435{col 58}-.3242891{col 70} 2.466653
+       0 {c |}{res}{col 12}    835{col 22} 39047.54{col 34} 3057.601{col 46} 88353.56{col 58} 33046.04{col 70} 45049.04
+       {txt}1 {c |}{res}{col 12}    737{col 22}  33005.7{col 34} 2681.848{col 46} 72806.11{col 58} 27740.72{col 70} 38270.68
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}    105{col 22} .6931437{col 34} .3460821{col 46} 3.546286{col 58}   .00685{col 70} 1.379437
+combined {c |}{res}{col 12}  1,572{col 22} 36214.95{col 34} 2054.694{col 46} 81465.43{col 58} 32184.72{col 70} 40245.18
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22}-.7489433{col 34} .6916218{col 58}-2.120612{col 70} .6227254
+    diff {c |}{res}{col 22} 6041.844{col 34} 4115.884{col 58}-2031.364{col 70} 14115.05
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -1.0829
-{txt}Ho: diff = 0                                     degrees of freedom = {res}     103
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  1.4679
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1570
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.1407         {txt}Pr(|T| > |t|) = {res}0.2814          {txt}Pr(T > t) = {res}0.8593
+ Pr(T < t) = {res}0.9288         {txt}Pr(|T| > |t|) = {res}0.1423          {txt}Pr(T > t) = {res}0.0712
 {txt}
 {com}. 
 {txt}end of do-file
 
-{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD02534.000000"
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
 {txt}
-{com}. * voting
-. ttest goatrev_mem, by(gr_pct_HHR14)     // not significant -- most inclusive - higher performance       
+{com}. ** full gap
+. * outcome: co-op sale loan index
+. * sale info
+. ttest index_saleloan, by(gr_pct_COM3)   // significant -- most inclusive - higher performance           
 
 {txt}Two-sample t test with equal variances
 {hline 9}{c TT}{hline 68}
    Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
 {hline 9}{c +}{hline 68}
-       0 {c |}{res}{col 12}     46{col 22} 3288.489{col 34}  779.356{col 46}  5285.85{col 58} 1718.786{col 70} 4858.193
-       {txt}1 {c |}{res}{col 12}     47{col 22} 3944.364{col 34} 739.5445{col 46} 5070.061{col 58} 2455.738{col 70}  5432.99
+       0 {c |}{res}{col 12}    333{col 22} .1133934{col 34}  .047838{col 46} .8729617{col 58} .0192895{col 70} .2074972
+       {txt}1 {c |}{res}{col 12}    376{col 22} .5395555{col 34} .0568134{col 46} 1.101652{col 58} .4278428{col 70} .6512682
 {txt}{hline 9}{c +}{hline 68}
-combined {c |}{res}{col 12}     93{col 22} 3619.953{col 34} 535.0898{col 46} 5160.219{col 58} 2557.218{col 70} 4682.687
+combined {c |}{res}{col 12}    709{col 22} .3393975{col 34} .0384001{col 46} 1.022481{col 58} .2640059{col 70} .4147892
 {txt}{hline 9}{c +}{hline 68}
-    diff {c |}{res}{col 22} -655.875{col 34} 1073.907{col 58} -2789.06{col 70}  1477.31
+    diff {c |}{res}{col 22}-.4261621{col 34} .0753096{col 58}-.5740194{col 70}-.2783049
 {txt}{hline 9}{c BT}{hline 68}
-    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -0.6107
-{txt}Ho: diff = 0                                     degrees of freedom = {res}      91
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.6588
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     707
 
     {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
- Pr(T < t) = {res}0.2714         {txt}Pr(|T| > |t|) = {res}0.5429          {txt}Pr(T > t) = {res}0.7286
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * non-sale info
+. ttest index_saleloan, by(gr_pct_COM3)   // significant -- most inclusive - higher performance   
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    333{col 22} .1133934{col 34}  .047838{col 46} .8729617{col 58} .0192895{col 70} .2074972
+       {txt}1 {c |}{res}{col 12}    376{col 22} .5395555{col 34} .0568134{col 46} 1.101652{col 58} .4278428{col 70} .6512682
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    709{col 22} .3393975{col 34} .0384001{col 46} 1.022481{col 58} .2640059{col 70} .4147892
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.4261621{col 34} .0753096{col 58}-.5740194{col 70}-.2783049
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.6588
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     707
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * loans
+. ttest index_saleloan, by(gr_pct_loan)   // significant -- most inclusive - higher performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    341{col 22} .1271507{col 34} .0485744{col 46} .8969838{col 58} .0316065{col 70} .2226948
+       {txt}1 {c |}{res}{col 12}    475{col 22} .4397859{col 34} .0481522{col 46} 1.049454{col 58} .3451676{col 70} .5344041
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.3126352{col 34} .0701707{col 58}-.4503721{col 70}-.1748984
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -4.4554
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. * membership fee
+. ttest index_saleloan, by(gr_avg_MAN2)   // not significant -- ~ equal performance       
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    427{col 22} .3170319{col 34} .0457373{col 46} .9451146{col 58}  .227133{col 70} .4069308
+       {txt}1 {c |}{res}{col 12}    389{col 22} .3004732{col 34} .0536495{col 46} 1.058134{col 58}  .194993{col 70} .4059533
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0165587{col 34} .0701307{col 58}-.1210996{col 70}  .154217
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.2361
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.5933         {txt}Pr(|T| > |t|) = {res}0.8134          {txt}Pr(T > t) = {res}0.4067
+{txt}
+{com}. * low goats
+. ttest index_saleloan, by(gr_pct_low_goats)      // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    458{col 22} .4213777{col 34} .0497357{col 46}  1.06439{col 58} .3236387{col 70} .5191167
+       {txt}1 {c |}{res}{col 12}    358{col 22} .1655466{col 34} .0471477{col 46} .8920772{col 58} .0728244{col 70} .2582689
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}  .255831{col 34} .0700172{col 58} .1183955{col 70} .3932666
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  3.6538
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9999         {txt}Pr(|T| > |t|) = {res}0.0003          {txt}Pr(T > t) = {res}0.0001
+{txt}
+{com}. * cv goats
+. ttest index_saleloan, by(gr_cv_goats)   // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    411{col 22} .3357635{col 34} .0527843{col 46} 1.070103{col 58} .2320019{col 70} .4395251
+       {txt}1 {c |}{res}{col 12}    405{col 22} .2821182{col 34} .0459132{col 46} .9239844{col 58} .1918597{col 70} .3723767
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0536453{col 34} .0700337{col 58}-.0838225{col 70} .1911131
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.7660
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7780         {txt}Pr(|T| > |t|) = {res}0.4439          {txt}Pr(T > t) = {res}0.2220
+{txt}
+{com}. * voting
+. ttest index_saleloan, by(gr_pct_MEM14)  // not significant -- ~ equal performance
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    482{col 22} .3280482{col 34} .0468989{col 46} 1.029642{col 58} .2358962{col 70} .4202003
+       {txt}1 {c |}{res}{col 12}    334{col 22} .2818486{col 34} .0523358{col 46} .9564709{col 58} .1788982{col 70}  .384799
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0461996{col 34} .0712201{col 58}-.0935971{col 70} .1859964
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  0.6487
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.7416         {txt}Pr(|T| > |t|) = {res}0.5167          {txt}Pr(T > t) = {res}0.2584
+{txt}
+{com}. * literacy
+. ttest index_saleloan, by(gr_pct_HHR14)  // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    469{col 22} .4025198{col 34} .0506711{col 46} 1.097355{col 58} .3029487{col 70} .5020909
+       {txt}1 {c |}{res}{col 12}    347{col 22} .1829247{col 34} .0448793{col 46} .8360084{col 58} .0946542{col 70} .2711952
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    816{col 22} .3091381{col 34}  .035007{col 46}        1{col 58} .2404236{col 70} .3778526
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .2195951{col 34} .0704341{col 58} .0813413{col 70}  .357849
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  3.1177
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     814
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9991         {txt}Pr(|T| > |t|) = {res}0.0019          {txt}Pr(T > t) = {res}0.0009
 {txt}
 {com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. reg index_saleloan HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services, vce(cluster idx)
+
+{txt}Linear regression                               Number of obs     = {res}       761
+                                                {txt}F(10, 98)         =  {res}     7.11
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.0522
+                                                {txt}Root MSE          =    {res} .97738
+
+{txt}{ralign 78:(Std. Err. adjusted for {res:99} clusters in idx)}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}index_sale~n{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} .2685772{col 26}{space 2} .0787086{col 37}{space 1}    3.41{col 46}{space 3}0.001{col 54}{space 4} .1123826{col 67}{space 3} .4247719
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} .0033202{col 26}{space 2} .0032944{col 37}{space 1}    1.01{col 46}{space 3}0.316{col 54}{space 4}-.0032174{col 67}{space 3} .0098578
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} .0123267{col 26}{space 2} .0183476{col 37}{space 1}    0.67{col 46}{space 3}0.503{col 54}{space 4}-.0240834{col 67}{space 3} .0487369
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} .0130625{col 26}{space 2} .0073348{col 37}{space 1}    1.78{col 46}{space 3}0.078{col 54}{space 4}-.0014933{col 67}{space 3} .0276182
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2} .0071206{col 26}{space 2} .0271378{col 37}{space 1}    0.26{col 46}{space 3}0.794{col 54}{space 4}-.0467336{col 67}{space 3} .0609748
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-.0010286{col 26}{space 2} .0005986{col 37}{space 1}   -1.72{col 46}{space 3}0.089{col 54}{space 4}-.0022165{col 67}{space 3} .0001592
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2} -.000249{col 26}{space 2} .0000566{col 37}{space 1}   -4.40{col 46}{space 3}0.000{col 54}{space 4}-.0003612{col 67}{space 3}-.0001368
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} -.035928{col 26}{space 2} .0218804{col 37}{space 1}   -1.64{col 46}{space 3}0.104{col 54}{space 4}-.0793489{col 67}{space 3}  .007493
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-.0001612{col 26}{space 2} .0002121{col 37}{space 1}   -0.76{col 46}{space 3}0.449{col 54}{space 4} -.000582{col 67}{space 3} .0002596
+{txt}{space 1}no_services {c |}{col 14}{res}{space 2}  .058822{col 26}{space 2} .0216083{col 37}{space 1}    2.72{col 46}{space 3}0.008{col 54}{space 4} .0159411{col 67}{space 3} .1017029
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.1310895{col 26}{space 2} .3503503{col 37}{space 1}   -0.37{col 46}{space 3}0.709{col 54}{space 4}-.8263482{col 67}{space 3} .5641693
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10, by(co_opgoatno_w) vce(cluster idx)
+{err}more than 2 groups found, only 2 groups allowed
+{txt}{search r(420), local:r(420);}
+
+end of do-file
+
+{search r(420), local:r(420);}
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10, by(gr_pct_HHR14) vce(cluster idx)
+{res}
+{txt}Blinder-Oaxaca decomposition{col 49}Number of obs{col 67}= {res}     1,283
+{txt}{col 51}Model           =     {res}linear
+{txt}Group 1: gr_pct_HHR14 = {res}0{txt}{col 51}N of obs 1      = {res}       772
+{txt}Group 2: gr_pct_HHR14 = {res}1{txt}{col 51}N of obs 2      = {res}       511
+
+{txt}{ralign 78:(Std. Err. adjusted for {res:99} clusters in idx)}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}co_opgoatn~w{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}overall      {txt}{c |}
+{space 5}group_1 {c |}{col 14}{res}{space 2} .5738342{col 26}{space 2} .0927755{col 37}{space 1}    6.19{col 46}{space 3}0.000{col 54}{space 4} .3919976{col 67}{space 3} .7556708
+{txt}{space 5}group_2 {c |}{col 14}{res}{space 2} .5048924{col 26}{space 2} .0821458{col 37}{space 1}    6.15{col 46}{space 3}0.000{col 54}{space 4} .3438897{col 67}{space 3} .6658951
+{txt}{space 2}difference {c |}{col 14}{res}{space 2} .0689418{col 26}{space 2} .1239162{col 37}{space 1}    0.56{col 46}{space 3}0.578{col 54}{space 4}-.1739294{col 67}{space 3}  .311813
+{txt}{space 2}endowments {c |}{col 14}{res}{space 2} .0628728{col 26}{space 2} .0657476{col 37}{space 1}    0.96{col 46}{space 3}0.339{col 54}{space 4}-.0659901{col 67}{space 3} .1917357
+{txt}coefficients {c |}{col 14}{res}{space 2} .0319585{col 26}{space 2} .1268862{col 37}{space 1}    0.25{col 46}{space 3}0.801{col 54}{space 4} -.216734{col 67}{space 3} .2806509
+{txt}{space 1}interaction {c |}{col 14}{res}{space 2}-.0258894{col 26}{space 2} .0598524{col 37}{space 1}   -0.43{col 46}{space 3}0.665{col 54}{space 4} -.143198{col 67}{space 3} .0914192
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}endowments   {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} .0385042{col 26}{space 2} .0259894{col 37}{space 1}    1.48{col 46}{space 3}0.138{col 54}{space 4}-.0124342{col 67}{space 3} .0894425
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-.0010664{col 26}{space 2} .0029006{col 37}{space 1}   -0.37{col 46}{space 3}0.713{col 54}{space 4}-.0067515{col 67}{space 3} .0046188
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} .0001279{col 26}{space 2} .0008227{col 37}{space 1}    0.16{col 46}{space 3}0.876{col 54}{space 4}-.0014845{col 67}{space 3} .0017403
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2}  .008688{col 26}{space 2} .0247661{col 37}{space 1}    0.35{col 46}{space 3}0.726{col 54}{space 4}-.0398526{col 67}{space 3} .0572287
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2} .0023646{col 26}{space 2} .0179169{col 37}{space 1}    0.13{col 46}{space 3}0.895{col 54}{space 4}-.0327518{col 67}{space 3}  .037481
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-.0089807{col 26}{space 2} .0095515{col 37}{space 1}   -0.94{col 46}{space 3}0.347{col 54}{space 4}-.0277013{col 67}{space 3} .0097399
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0045348{col 26}{space 2} .0112394{col 37}{space 1}   -0.40{col 46}{space 3}0.687{col 54}{space 4}-.0265636{col 67}{space 3} .0174939
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} .0116065{col 26}{space 2} .0337397{col 37}{space 1}    0.34{col 46}{space 3}0.731{col 54}{space 4}-.0545221{col 67}{space 3}  .077735
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2} .0161635{col 26}{space 2} .0252455{col 37}{space 1}    0.64{col 46}{space 3}0.522{col 54}{space 4}-.0333167{col 67}{space 3} .0656437
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}coefficients {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} .0158628{col 26}{space 2} .1113474{col 37}{space 1}    0.14{col 46}{space 3}0.887{col 54}{space 4}-.2023741{col 67}{space 3} .2340996
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} -.067123{col 26}{space 2} .2580003{col 37}{space 1}   -0.26{col 46}{space 3}0.795{col 54}{space 4}-.5727944{col 67}{space 3} .4385484
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2}-.0737345{col 26}{space 2} .1137673{col 37}{space 1}   -0.65{col 46}{space 3}0.517{col 54}{space 4}-.2967144{col 67}{space 3} .1492454
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2}-.0618572{col 26}{space 2} .1385804{col 37}{space 1}   -0.45{col 46}{space 3}0.655{col 54}{space 4}-.3334698{col 67}{space 3} .2097554
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-.0140311{col 26}{space 2} .1426382{col 37}{space 1}   -0.10{col 46}{space 3}0.922{col 54}{space 4}-.2935968{col 67}{space 3} .2655347
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2} .0063355{col 26}{space 2} .0580224{col 37}{space 1}    0.11{col 46}{space 3}0.913{col 54}{space 4}-.1073863{col 67}{space 3} .1200573
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0190818{col 26}{space 2} .0458974{col 37}{space 1}   -0.42{col 46}{space 3}0.678{col 54}{space 4}-.1090391{col 67}{space 3} .0708755
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} 1.022303{col 26}{space 2} .6624684{col 37}{space 1}    1.54{col 46}{space 3}0.123{col 54}{space 4} -.276111{col 67}{space 3} 2.320718
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-.1357178{col 26}{space 2} .1296288{col 37}{space 1}   -1.05{col 46}{space 3}0.295{col 54}{space 4}-.3897855{col 67}{space 3}   .11835
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.6409977{col 26}{space 2} .8167672{col 37}{space 1}   -0.78{col 46}{space 3}0.433{col 54}{space 4}-2.241832{col 67}{space 3} .9598365
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}interaction  {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} .0052918{col 26}{space 2} .0371493{col 37}{space 1}    0.14{col 46}{space 3}0.887{col 54}{space 4}-.0675195{col 67}{space 3}  .078103
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} .0005992{col 26}{space 2} .0026654{col 37}{space 1}    0.22{col 46}{space 3}0.822{col 54}{space 4}-.0046248{col 67}{space 3} .0058233
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} .0004837{col 26}{space 2} .0026025{col 37}{space 1}    0.19{col 46}{space 3}0.853{col 54}{space 4}-.0046172{col 67}{space 3} .0055845
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2}-.0019613{col 26}{space 2} .0070695{col 37}{space 1}   -0.28{col 46}{space 3}0.781{col 54}{space 4}-.0158172{col 67}{space 3} .0118947
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2} .0001696{col 26}{space 2} .0021485{col 37}{space 1}    0.08{col 46}{space 3}0.937{col 54}{space 4}-.0040414{col 67}{space 3} .0043806
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2} .0010873{col 26}{space 2} .0099837{col 37}{space 1}    0.11{col 46}{space 3}0.913{col 54}{space 4}-.0184804{col 67}{space 3}  .020655
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0038566{col 26}{space 2} .0109826{col 37}{space 1}   -0.35{col 46}{space 3}0.725{col 54}{space 4} -.025382{col 67}{space 3} .0176688
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2}-.0123799{col 26}{space 2} .0365317{col 37}{space 1}   -0.34{col 46}{space 3}0.735{col 54}{space 4}-.0839808{col 67}{space 3} .0592209
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-.0153232{col 26}{space 2} .0263554{col 37}{space 1}   -0.58{col 46}{space 3}0.561{col 54}{space 4}-.0669788{col 67}{space 3} .0363325
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. ttest co_opgoatno_w, by(gr_pct_HHR14)   // ** significant -- most inclusive - lower performance 
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    803{col 22} .5815691{col 34} .0390373{col 46}  1.10621{col 58} .5049418{col 70} .6581964
+       {txt}1 {c |}{res}{col 12}    581{col 22} .4526678{col 34} .0402507{col 46} .9702012{col 58} .3736129{col 70} .5317228
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}  1,384{col 22} .5274566{col 34}    .0283{col 46} 1.052819{col 58} .4719412{col 70} .5829721
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .1289013{col 34} .0572583{col 58} .0165788{col 70} .2412238
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res}  2.2512
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1382
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.9877         {txt}Pr(|T| > |t|) = {res}0.0245          {txt}Pr(T > t) = {res}0.0123
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10, by(gr_pct_low_goats) vce(cluster idx)
+{res}
+{txt}Blinder-Oaxaca decomposition{col 49}Number of obs{col 67}= {res}     1,283
+{txt}{col 51}Model           =     {res}linear
+{txt}Group 1: gr_pct_low_goats = {res}0{txt}{col 51}N of obs 1      = {res}       714
+{txt}Group 2: gr_pct_low_goats = {res}1{txt}{col 51}N of obs 2      = {res}       569
+
+{txt}{ralign 78:(Std. Err. adjusted for {res:99} clusters in idx)}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}co_opgoatn~w{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}overall      {txt}{c |}
+{space 5}group_1 {c |}{col 14}{res}{space 2} .7591036{col 26}{space 2} .0973588{col 37}{space 1}    7.80{col 46}{space 3}0.000{col 54}{space 4} .5682839{col 67}{space 3} .9499234
+{txt}{space 5}group_2 {c |}{col 14}{res}{space 2} .2794376{col 26}{space 2}   .04642{col 37}{space 1}    6.02{col 46}{space 3}0.000{col 54}{space 4} .1884561{col 67}{space 3} .3704192
+{txt}{space 2}difference {c |}{col 14}{res}{space 2}  .479666{col 26}{space 2} .1078589{col 37}{space 1}    4.45{col 46}{space 3}0.000{col 54}{space 4} .2682664{col 67}{space 3} .6910657
+{txt}{space 2}endowments {c |}{col 14}{res}{space 2} .0433889{col 26}{space 2} .0281013{col 37}{space 1}    1.54{col 46}{space 3}0.123{col 54}{space 4}-.0116886{col 67}{space 3} .0984664
+{txt}coefficients {c |}{col 14}{res}{space 2} .3895992{col 26}{space 2} .1174814{col 37}{space 1}    3.32{col 46}{space 3}0.001{col 54}{space 4} .1593398{col 67}{space 3} .6198586
+{txt}{space 1}interaction {c |}{col 14}{res}{space 2} .0466779{col 26}{space 2} .0729328{col 37}{space 1}    0.64{col 46}{space 3}0.522{col 54}{space 4}-.0962677{col 67}{space 3} .1896235
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}endowments   {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} .0124911{col 26}{space 2} .0075755{col 37}{space 1}    1.65{col 46}{space 3}0.099{col 54}{space 4}-.0023565{col 67}{space 3} .0273387
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-.0007407{col 26}{space 2} .0058981{col 37}{space 1}   -0.13{col 46}{space 3}0.900{col 54}{space 4}-.0123006{col 67}{space 3} .0108193
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} .0007118{col 26}{space 2}  .003515{col 37}{space 1}    0.20{col 46}{space 3}0.840{col 54}{space 4}-.0061776{col 67}{space 3} .0076011
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} .0311937{col 26}{space 2} .0183982{col 37}{space 1}    1.70{col 46}{space 3}0.090{col 54}{space 4}-.0048662{col 67}{space 3} .0672536
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2} .0066079{col 26}{space 2} .0094081{col 37}{space 1}    0.70{col 46}{space 3}0.482{col 54}{space 4}-.0118316{col 67}{space 3} .0250473
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-.0221655{col 26}{space 2} .0108061{col 37}{space 1}   -2.05{col 46}{space 3}0.040{col 54}{space 4} -.043345{col 67}{space 3}-.0009859
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0026261{col 26}{space 2} .0089594{col 37}{space 1}   -0.29{col 46}{space 3}0.769{col 54}{space 4}-.0201862{col 67}{space 3}  .014934
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} .0183028{col 26}{space 2} .0154849{col 37}{space 1}    1.18{col 46}{space 3}0.237{col 54}{space 4}-.0120469{col 67}{space 3} .0486526
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-.0003862{col 26}{space 2} .0043804{col 37}{space 1}   -0.09{col 46}{space 3}0.930{col 54}{space 4}-.0089715{col 67}{space 3} .0081992
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}coefficients {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2}-.0605513{col 26}{space 2} .1055946{col 37}{space 1}   -0.57{col 46}{space 3}0.566{col 54}{space 4} -.267513{col 67}{space 3} .1464104
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-.4308259{col 26}{space 2} .2364689{col 37}{space 1}   -1.82{col 46}{space 3}0.068{col 54}{space 4}-.8942965{col 67}{space 3} .0326448
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} .0932083{col 26}{space 2} .1063069{col 37}{space 1}    0.88{col 46}{space 3}0.381{col 54}{space 4}-.1151494{col 67}{space 3} .3015661
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} .1386766{col 26}{space 2} .0757864{col 37}{space 1}    1.83{col 46}{space 3}0.067{col 54}{space 4}-.0098621{col 67}{space 3} .2872153
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-.1746607{col 26}{space 2}  .135596{col 37}{space 1}   -1.29{col 46}{space 3}0.198{col 54}{space 4} -.440424{col 67}{space 3} .0911026
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-.0079133{col 26}{space 2}  .044192{col 37}{space 1}   -0.18{col 46}{space 3}0.858{col 54}{space 4} -.094528{col 67}{space 3} .0787013
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0434626{col 26}{space 2} .0374825{col 37}{space 1}   -1.16{col 46}{space 3}0.246{col 54}{space 4} -.116927{col 67}{space 3} .0300018
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} -.015619{col 26}{space 2} .5663967{col 37}{space 1}   -0.03{col 46}{space 3}0.978{col 54}{space 4}-1.125736{col 67}{space 3} 1.094498
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2} .2064282{col 26}{space 2} .1761198{col 37}{space 1}    1.17{col 46}{space 3}0.241{col 54}{space 4}-.1387603{col 67}{space 3} .5516167
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .6843189{col 26}{space 2} .6596181{col 37}{space 1}    1.04{col 46}{space 3}0.300{col 54}{space 4}-.6085089{col 67}{space 3} 1.977147
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}interaction  {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2}-.0056167{col 26}{space 2}  .010161{col 37}{space 1}   -0.55{col 46}{space 3}0.580{col 54}{space 4}-.0255319{col 67}{space 3} .0142985
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} .0010795{col 26}{space 2} .0086003{col 37}{space 1}    0.13{col 46}{space 3}0.900{col 54}{space 4}-.0157767{col 67}{space 3} .0179358
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2}-.0005868{col 26}{space 2} .0029536{col 37}{space 1}   -0.20{col 46}{space 3}0.843{col 54}{space 4}-.0063757{col 67}{space 3}  .005202
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} .0691032{col 26}{space 2} .0409241{col 37}{space 1}    1.69{col 46}{space 3}0.091{col 54}{space 4}-.0111065{col 67}{space 3} .1493128
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}  .012412{col 26}{space 2} .0183815{col 37}{space 1}    0.68{col 46}{space 3}0.500{col 54}{space 4} -.023615{col 67}{space 3} .0484391
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-.0027497{col 26}{space 2} .0153839{col 37}{space 1}   -0.18{col 46}{space 3}0.858{col 54}{space 4}-.0329017{col 67}{space 3} .0274023
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-.0104114{col 26}{space 2} .0167876{col 37}{space 1}   -0.62{col 46}{space 3}0.535{col 54}{space 4}-.0433146{col 67}{space 3} .0224917
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} .0008557{col 26}{space 2} .0310328{col 37}{space 1}    0.03{col 46}{space 3}0.978{col 54}{space 4}-.0599676{col 67}{space 3} .0616789
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-.0174079{col 26}{space 2} .0357419{col 37}{space 1}   -0.49{col 46}{space 3}0.626{col 54}{space 4}-.0874608{col 67}{space 3}  .052645
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/_d/jk4yrpt11pbc34dyw8cg5kjm0000gn/T//SD01845.000000"
+{txt}
+{com}. oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10, by(gr_pct_loan) vce(cluster idx)
+{res}
+{txt}Blinder-Oaxaca decomposition{col 49}Number of obs{col 67}= {res}     1,467
+{txt}{col 51}Model           =     {res}linear
+{txt}Group 1: gr_pct_loan = {res}0{txt}{col 51}N of obs 1      = {res}       634
+{txt}Group 2: gr_pct_loan = {res}1{txt}{col 51}N of obs 2      = {res}       833
+
+{txt}{ralign 78:(Std. Err. adjusted for {res:99} clusters in idx)}
+{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1} co_loan_amt{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}overall      {txt}{c |}
+{space 5}group_1 {c |}{col 14}{res}{space 2} 27890.69{col 26}{space 2} 2989.745{col 37}{space 1}    9.33{col 46}{space 3}0.000{col 54}{space 4}  22030.9{col 67}{space 3} 33750.49
+{txt}{space 5}group_2 {c |}{col 14}{res}{space 2}  42164.7{col 26}{space 2} 5155.829{col 37}{space 1}    8.18{col 46}{space 3}0.000{col 54}{space 4} 32059.46{col 67}{space 3} 52269.94
+{txt}{space 2}difference {c |}{col 14}{res}{space 2}-14274.01{col 26}{space 2} 5959.962{col 37}{space 1}   -2.39{col 46}{space 3}0.017{col 54}{space 4}-25955.32{col 67}{space 3}-2592.698
+{txt}{space 2}endowments {c |}{col 14}{res}{space 2}-3757.369{col 26}{space 2}  4833.02{col 37}{space 1}   -0.78{col 46}{space 3}0.437{col 54}{space 4}-13229.91{col 67}{space 3} 5715.177
+{txt}coefficients {c |}{col 14}{res}{space 2}-13909.66{col 26}{space 2} 6211.469{col 37}{space 1}   -2.24{col 46}{space 3}0.025{col 54}{space 4}-26083.91{col 67}{space 3}  -1735.4
+{txt}{space 1}interaction {c |}{col 14}{res}{space 2} 3393.014{col 26}{space 2}  5081.15{col 37}{space 1}    0.67{col 46}{space 3}0.504{col 54}{space 4}-6565.857{col 67}{space 3} 13351.89
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}endowments   {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} 9.638726{col 26}{space 2} 182.7567{col 37}{space 1}    0.05{col 46}{space 3}0.958{col 54}{space 4}-348.5578{col 67}{space 3} 367.8353
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2}-145.6635{col 26}{space 2} 256.5997{col 37}{space 1}   -0.57{col 46}{space 3}0.570{col 54}{space 4}-648.5897{col 67}{space 3} 357.2628
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} -83.1408{col 26}{space 2} 202.3289{col 37}{space 1}   -0.41{col 46}{space 3}0.681{col 54}{space 4}-479.6981{col 67}{space 3} 313.4165
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} 26.38773{col 26}{space 2}  143.066{col 37}{space 1}    0.18{col 46}{space 3}0.854{col 54}{space 4}-254.0165{col 67}{space 3} 306.7919
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-185.9242{col 26}{space 2} 1192.609{col 37}{space 1}   -0.16{col 46}{space 3}0.876{col 54}{space 4}-2523.394{col 67}{space 3} 2151.546
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2}-1131.899{col 26}{space 2} 1158.947{col 37}{space 1}   -0.98{col 46}{space 3}0.329{col 54}{space 4}-3403.394{col 67}{space 3} 1139.596
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2}-1331.211{col 26}{space 2} 3003.198{col 37}{space 1}   -0.44{col 46}{space 3}0.658{col 54}{space 4}-7217.372{col 67}{space 3} 4554.949
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2}-1498.245{col 26}{space 2} 1383.019{col 37}{space 1}   -1.08{col 46}{space 3}0.279{col 54}{space 4}-4208.913{col 67}{space 3} 1212.424
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2} 582.6885{col 26}{space 2} 1374.386{col 37}{space 1}    0.42{col 46}{space 3}0.672{col 54}{space 4}-2111.059{col 67}{space 3} 3276.436
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}coefficients {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2} 28.58547{col 26}{space 2} 9924.875{col 37}{space 1}    0.00{col 46}{space 3}0.998{col 54}{space 4}-19423.81{col 67}{space 3} 19480.98
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} 8550.216{col 26}{space 2} 13235.28{col 37}{space 1}    0.65{col 46}{space 3}0.518{col 54}{space 4}-17390.46{col 67}{space 3} 34490.89
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2}-2739.208{col 26}{space 2} 10318.97{col 37}{space 1}   -0.27{col 46}{space 3}0.791{col 54}{space 4}-22964.02{col 67}{space 3} 17485.61
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2}-1391.818{col 26}{space 2} 3825.191{col 37}{space 1}   -0.36{col 46}{space 3}0.716{col 54}{space 4}-8889.056{col 67}{space 3} 6105.419
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2} 4776.187{col 26}{space 2} 9435.372{col 37}{space 1}    0.51{col 46}{space 3}0.613{col 54}{space 4} -13716.8{col 67}{space 3} 23269.18
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2} 7962.016{col 26}{space 2} 3477.604{col 37}{space 1}    2.29{col 46}{space 3}0.022{col 54}{space 4} 1146.037{col 67}{space 3}    14778
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2} 838.7474{col 26}{space 2} 4096.296{col 37}{space 1}    0.20{col 46}{space 3}0.838{col 54}{space 4}-7189.846{col 67}{space 3} 8867.341
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} 41945.13{col 26}{space 2} 22366.42{col 37}{space 1}    1.88{col 46}{space 3}0.061{col 54}{space 4} -1892.24{col 67}{space 3}  85782.5
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2} 1910.505{col 26}{space 2} 8888.419{col 37}{space 1}    0.21{col 46}{space 3}0.830{col 54}{space 4}-15510.48{col 67}{space 3} 19331.49
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-75790.02{col 26}{space 2} 36879.84{col 37}{space 1}   -2.06{col 46}{space 3}0.040{col 54}{space 4}-148073.2{col 67}{space 3}-3506.859
+{txt}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}interaction  {txt}{c |}
+{space 7}HHR14 {c |}{col 14}{res}{space 2}-.8655549{col 26}{space 2}  300.523{col 37}{space 1}   -0.00{col 46}{space 3}0.998{col 54}{space 4}-589.8798{col 67}{space 3} 588.1487
+{txt}{space 8}HHR4 {c |}{col 14}{res}{space 2} 102.9685{col 26}{space 2} 229.4426{col 37}{space 1}    0.45{col 46}{space 3}0.654{col 54}{space 4}-346.7306{col 67}{space 3} 552.6677
+{txt}{space 8}ID10 {c |}{col 14}{res}{space 2} 38.07217{col 26}{space 2} 162.2354{col 37}{space 1}    0.23{col 46}{space 3}0.814{col 54}{space 4}-279.9033{col 67}{space 3} 356.0477
+{txt}{space 1}goats_owned {c |}{col 14}{res}{space 2} 98.40607{col 26}{space 2}  289.006{col 37}{space 1}    0.34{col 46}{space 3}0.733{col 54}{space 4}-468.0352{col 67}{space 3} 664.8474
+{txt}{space 2}mem_length {c |}{col 14}{res}{space 2}-706.9831{col 26}{space 2} 1454.329{col 37}{space 1}   -0.49{col 46}{space 3}0.627{col 54}{space 4}-3557.415{col 67}{space 3} 2143.449
+{txt}{space 1}travel_time {c |}{col 14}{res}{space 2} 856.6105{col 26}{space 2} 927.7154{col 37}{space 1}    0.92{col 46}{space 3}0.356{col 54}{space 4}-961.6782{col 67}{space 3} 2674.899
+{txt}{space 8}MAN2 {c |}{col 14}{res}{space 2} 585.4453{col 26}{space 2} 2889.651{col 37}{space 1}    0.20{col 46}{space 3}0.839{col 54}{space 4}-5078.167{col 67}{space 3} 6249.058
+{txt}{space 8}MAN4 {c |}{col 14}{res}{space 2} 2719.749{col 26}{space 2} 2054.196{col 37}{space 1}    1.32{col 46}{space 3}0.186{col 54}{space 4}-1306.401{col 67}{space 3} 6745.899
+{txt}{space 7}MAN10 {c |}{col 14}{res}{space 2}-300.3883{col 26}{space 2} 1422.591{col 37}{space 1}   -0.21{col 46}{space 3}0.833{col 54}{space 4}-3088.615{col 67}{space 3} 2487.839
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. 
+.                  
+. 
 {txt}end of do-file
 
 {com}. 

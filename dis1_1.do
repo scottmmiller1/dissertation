@@ -198,7 +198,10 @@ forv i = 2/`listsize' { // appends into single matrix
 * members using services
 gen bSER33 = (SER33 > 0)
 
-gen co_loan = (BR4 == "C")
+gen co_loan = (BR4_1 == "C") | (BR4_2 == "C") | (BR4_3 == "C") | (BR4_4 == "C") | (BR4_5 == "C") ///
+				| (BR4_6 == "C") | (BR4_7 == "C") | (BR4_8 == "C") | (BR4_9 == "C") | (BR4_10 == "C")
+
+
 replace co_loan =. if CO_SER2 == 0
 gen co_sale = (co_opgoatno > 0)
 replace co_sale =. if CO_SER15 == 0
