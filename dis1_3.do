@@ -42,7 +42,7 @@ local local_benefits co_opsalevalue co_opgoatno_w co_loan_amt
 * ----------------------------------------------------
 ** Gap analysis
 
-gl gap_1 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_avg_MAN2 gr_pct_low_goats gr_cv_goats gr_pct_MEM14 gr_pct_HHR14
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -114,12 +114,14 @@ matrix stars``m''=J(`listsize',2,0)
 * Table
 frmttable using avg_gap.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Average Gap") annotate(starsA) asymbol(*,**,***) ///
 ctitle("Group Definition","Cooperative goat"\"","revenue (USD)") ///
-rtitle("Percentage of members receiving sale information"\""\"Percentage of members receiving non-sale information"\""\ ///
-		"Percentage of members receiving loans"\""\"Size of membership fee"\""\ ///
+rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Percentage of members who voted in cooperative elections"\""\ ///
-		"Percentage of non-literate members"\"") replace	
+		"Size of membership fee"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\"") replace	
 frmttable using avg_gap.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Cooperative goats"\"sold (count)") merge
 frmttable using avg_gap.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -128,32 +130,12 @@ frmttable using avg_gap.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) 
 ctitle("Cooperative benefits"\"index") merge
 
 
-
-
-
-* ----------------------------------------------------
-** OLS regressions	  
-
-encode district, gen(n_district)		 
-		 
-* total revenue per member
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services i.n_district, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) addtext(District FE: Yes) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
-
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services i.n_district if gr_pct_COM3 == 1, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
-
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services i.n_district if gr_pct_COM3 == 0, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
-
-
-
 * ----------------------------------------------------
 ** Oaxaca decomposition
 
 
 * cooperative goat revenue
-gl gap_1 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_low_goats gr_pct_MEM14
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -161,7 +143,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_opsalevalue HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_opsalevalue HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -222,9 +204,13 @@ matrix stars``m''=J(`listsize',1,0)
 * Table
 frmttable using E1_decomp_1.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
 ctitle("Cooperative goat revenue","Difference") ///
-rtitle("Percentage of members receiving sale information"\""\"Percentage of members receiving non-sale information"\""\ ///
-		"Percentage of members receiving loans"\""\ ///
+rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
 		"Percentage of members who voted in cooperative elections"\"") replace	
 frmttable using E1_decomp_1.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
@@ -236,7 +222,7 @@ ctitle("Interaction") merge
 
 
 * cooperative goats sold
-gl gap_1 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_low_goats gr_pct_HHR14
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -244,7 +230,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -305,10 +291,14 @@ matrix stars``m''=J(`listsize',1,0)
 * Table
 frmttable using E1_decomp_2.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
 ctitle("Cooperative goats sold","Difference") ///
-rtitle("Percentage of members receiving sale information"\""\"Percentage of members receiving non-sale information"\""\ ///
-		"Percentage of members receiving loans"\""\ ///
+rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
-		"Percentage of non-literate members"\"") replace	
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\"") replace	
 frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -318,7 +308,7 @@ ctitle("Interaction") merge
 
 
 * cooperative loan amount
-gl gap_1 gr_pct_loan
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -326,7 +316,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -387,7 +377,14 @@ matrix stars``m''=J(`listsize',1,0)
 * Table
 frmttable using E1_decomp_3.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
 ctitle("Cooperative loan amount","Difference") ///
-rtitle("Percentage of members receiving loans"\"") replace	
+rtitle("Percentage of non-literate members"\""\ ///
+		"Percentage of members below the median number of goats owned"\""\ ///
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\"") replace	
 frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -397,7 +394,7 @@ ctitle("Interaction") merge
 
 
 * cooperative benefits index
-gl gap_1 gr_pct_COM3 gr_pct_loan gr_pct_low_goats gr_pct_HHR14
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -405,7 +402,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -464,12 +461,16 @@ matrix stars``m''=J(`listsize',1,0)
 
 
 * Table
-frmttable using E1_decomp_1.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
+frmttable using E1_decomp_4.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
 ctitle("Benefits Index","Difference") ///
-rtitle("Percentage of members receiving sale information"\""\ ///
-		"Percentage of members receiving loans"\""\ ///
+rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
-		"Percentage of non-literate members"\"") replace	
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\"") replace	
 frmttable using E1_decomp_4.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_4.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -477,5 +478,41 @@ ctitle("Returns") merge
 frmttable using E1_decomp_4.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
 ctitle("Interaction") merge
 
+
+
+* ----------------------------------------------------
+** OLS regressions	  
+
+encode district, gen(n_district)
+
+lab var HHR14 "Literacy (0/1)"
+lab var HHR4 "Age (years)"
+lab var ID10 "Number of household members (count)"
+lab var goats_owned "Total number of goats owned (count)"
+lab var mem_length "Length of membership (years)"
+lab var travel_time "Round-trip travel time to cooperative meetings (minutes)"
+lab var MAN2 "Membership fee (USD)"
+lab var MAN3 "Number of cooperative members (count)"
+lab var MAN4 "Size of management committee (count)"
+lab var no_services "Number of servcies offered (count)"
+
+* total revenue per member
+reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district, vce(cluster idx)
+outreg2 using E1_ols.tex, drop(i.n_district) addtext(District FE: Yes) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
+
+reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district if gr_pct_COM3 == 1, vce(cluster idx)
+outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
+reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district if gr_pct_COM3 == 0, vce(cluster idx)
+outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+
 		 
+		
+		
+
+* oaxaca regression model
+* benefits index by literacy
+oaxaca index_benefits HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(gr_pct_HHR14) vce(cluster idx) swap
+		
+		
 		
