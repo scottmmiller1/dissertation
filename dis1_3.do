@@ -130,8 +130,13 @@ frmttable using avg_gap.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) 
 ctitle("Cooperative benefits"\"index") merge
 
 
+
+
 * ----------------------------------------------------
 ** Oaxaca decomposition
+
+* generate district dummies
+quietly tab district, gen(dist_)
 
 
 * cooperative goat revenue
@@ -143,7 +148,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_opsalevalue HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_opsalevalue HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -153,40 +158,40 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
 		
-		scalar par_e_``i'' = _b[endowments] // mean
-		scalar se_e_``i'' = _se[endowments]  // sd
+		scalar par_e_``i'' = _b[explained] // mean
+		scalar se_e_``i'' = _se[explained]  // sd
 		scalar p_`i'_2 = p1[4,4]
 		* matrix for table
 		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
 		
-		scalar par_c_``i'' = _b[coefficients] // mean
-		scalar se_c_``i'' = _se[coefficients]  // sd
+		scalar par_c_``i'' = _b[unexplained] // mean
+		scalar se_c_``i'' = _se[unexplained]  // sd
 		scalar p_`i'_3 = p1[4,5]
 		* matrix for table
 		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		
+		/*
 		scalar par_i_``i'' = _b[interaction] // mean
 		scalar se_i_``i'' = _se[interaction]  // sd
 		scalar p_`i'_4 = p1[4,6]
 		* matrix for table
 		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		
+		*/
 		
 		}
 }
 matrix A = mat_1_1
 matrix B = mat_2_1
 matrix C = mat_3_1
-matrix D = mat_4_1
+*matrix D = mat_4_1
 
 forv i = 2/`listsize' { // appends into single matrix
 	matrix A = A \ mat_1_`i'
 	matrix B = B \ mat_2_`i'
 	matrix C = C \ mat_3_`i'
-	matrix D = D \ mat_4_`i'
+	*matrix D = D \ mat_4_`i'
 }
 
-gl mat A B C D
+gl mat A B C
 local mlistsize : list sizeof global(mat)
 tokenize $mat
 
@@ -216,8 +221,8 @@ frmttable using E1_decomp_1.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_1.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-frmttable using E1_decomp_1.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-ctitle("Interaction") merge
+*frmttable using E1_decomp_1.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
+*ctitle("Interaction") merge
 
 
 
@@ -230,7 +235,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -240,40 +245,40 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
 		
-		scalar par_e_``i'' = _b[endowments] // mean
-		scalar se_e_``i'' = _se[endowments]  // sd
+		scalar par_e_``i'' = _b[explained] // mean
+		scalar se_e_``i'' = _se[explained]  // sd
 		scalar p_`i'_2 = p1[4,4]
 		* matrix for table
 		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
 		
-		scalar par_c_``i'' = _b[coefficients] // mean
-		scalar se_c_``i'' = _se[coefficients]  // sd
+		scalar par_c_``i'' = _b[unexplained] // mean
+		scalar se_c_``i'' = _se[unexplained]  // sd
 		scalar p_`i'_3 = p1[4,5]
 		* matrix for table
 		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		
+		/*
 		scalar par_i_``i'' = _b[interaction] // mean
 		scalar se_i_``i'' = _se[interaction]  // sd
 		scalar p_`i'_4 = p1[4,6]
 		* matrix for table
 		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		
+		*/
 		
 		}
 }
 matrix A = mat_1_1
 matrix B = mat_2_1
 matrix C = mat_3_1
-matrix D = mat_4_1
+*matrix D = mat_4_1
 
 forv i = 2/`listsize' { // appends into single matrix
 	matrix A = A \ mat_1_`i'
 	matrix B = B \ mat_2_`i'
 	matrix C = C \ mat_3_`i'
-	matrix D = D \ mat_4_`i'
+	*matrix D = D \ mat_4_`i'
 }
 
-gl mat A B C D
+gl mat A B C
 local mlistsize : list sizeof global(mat)
 tokenize $mat
 
@@ -303,8 +308,8 @@ frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-frmttable using E1_decomp_2.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-ctitle("Interaction") merge
+*frmttable using E1_decomp_2.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
+*ctitle("Interaction") merge
 
 
 * cooperative loan amount
@@ -316,7 +321,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -326,40 +331,40 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
 		
-		scalar par_e_``i'' = _b[endowments] // mean
-		scalar se_e_``i'' = _se[endowments]  // sd
+		scalar par_e_``i'' = _b[explained] // mean
+		scalar se_e_``i'' = _se[explained]  // sd
 		scalar p_`i'_2 = p1[4,4]
 		* matrix for table
 		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
 		
-		scalar par_c_``i'' = _b[coefficients] // mean
-		scalar se_c_``i'' = _se[coefficients]  // sd
+		scalar par_c_``i'' = _b[unexplained] // mean
+		scalar se_c_``i'' = _se[unexplained]  // sd
 		scalar p_`i'_3 = p1[4,5]
 		* matrix for table
 		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		
+		/*
 		scalar par_i_``i'' = _b[interaction] // mean
 		scalar se_i_``i'' = _se[interaction]  // sd
 		scalar p_`i'_4 = p1[4,6]
 		* matrix for table
 		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		
+		*/
 		
 		}
 }
 matrix A = mat_1_1
 matrix B = mat_2_1
 matrix C = mat_3_1
-matrix D = mat_4_1
+*matrix D = mat_4_1
 
 forv i = 2/`listsize' { // appends into single matrix
 	matrix A = A \ mat_1_`i'
 	matrix B = B \ mat_2_`i'
 	matrix C = C \ mat_3_`i'
-	matrix D = D \ mat_4_`i'
+	*matrix D = D \ mat_4_`i'
 }
 
-gl mat A B C D
+gl mat A B C
 local mlistsize : list sizeof global(mat)
 tokenize $mat
 
@@ -372,6 +377,8 @@ matrix stars``m''=J(`listsize',1,0)
 			(.01 > p_`k'_`m')
 		}
 }
+
+
 
 
 * Table
@@ -389,8 +396,8 @@ frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-frmttable using E1_decomp_3.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-ctitle("Interaction") merge
+*frmttable using E1_decomp_3.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
+*ctitle("Interaction") merge
 
 
 * cooperative benefits index
@@ -402,7 +409,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		oaxaca index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap
+		oaxaca index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_``i'' = _b[difference] // mean
 		scalar se_d_``i'' = _se[difference]  // sd
@@ -412,40 +419,40 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
 		
-		scalar par_e_``i'' = _b[endowments] // mean
-		scalar se_e_``i'' = _se[endowments]  // sd
+		scalar par_e_``i'' = _b[explained] // mean
+		scalar se_e_``i'' = _se[explained]  // sd
 		scalar p_`i'_2 = p1[4,4]
 		* matrix for table
 		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
 		
-		scalar par_c_``i'' = _b[coefficients] // mean
-		scalar se_c_``i'' = _se[coefficients]  // sd
+		scalar par_c_``i'' = _b[unexplained] // mean
+		scalar se_c_``i'' = _se[unexplained]  // sd
 		scalar p_`i'_3 = p1[4,5]
 		* matrix for table
 		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		
+		/*
 		scalar par_i_``i'' = _b[interaction] // mean
 		scalar se_i_``i'' = _se[interaction]  // sd
 		scalar p_`i'_4 = p1[4,6]
 		* matrix for table
 		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		
+		*/
 		
 		}
 }
 matrix A = mat_1_1
 matrix B = mat_2_1
 matrix C = mat_3_1
-matrix D = mat_4_1
+*matrix D = mat_4_1
 
 forv i = 2/`listsize' { // appends into single matrix
 	matrix A = A \ mat_1_`i'
 	matrix B = B \ mat_2_`i'
 	matrix C = C \ mat_3_`i'
-	matrix D = D \ mat_4_`i'
+	*matrix D = D \ mat_4_`i'
 }
 
-gl mat A B C D
+gl mat A B C
 local mlistsize : list sizeof global(mat)
 tokenize $mat
 
@@ -475,8 +482,8 @@ frmttable using E1_decomp_4.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_4.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-frmttable using E1_decomp_4.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-ctitle("Interaction") merge
+*frmttable using E1_decomp_4.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
+*ctitle("Interaction") merge
 
 
 
