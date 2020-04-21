@@ -28,16 +28,12 @@ cd "$d2"
 clear
 use "$d3/HH_Final.dta"
 
+* leadership role
+gen bMEM4 = (MEM4 > 1 & MEM4 !=.)
+replace bMEM4 = . if MEM4 ==.
 
-* why don't you attend co-op meetings
-tab MEM9
-
-	forvalues i=1/7 {
-		cap drop MEM9_`i'
-		gen MEM9_`i' = (MEM9 == `i')
-		replace MEM9_`i' =. if MEM9 == .
-	}
-
+* primary activitiy is agriculture
+gen bHHR16 = (HHR16=="1")
 
 * Participate in annual general meeting
 tab MEM12
@@ -50,7 +46,6 @@ tab MEM13
 		replace MEM13_`i' =. if MEM13 == .
 	}
 
-	
 * Services offered	
 sum SER1-SER4 SER6-SER19	
 

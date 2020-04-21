@@ -18,21 +18,16 @@ cd "$d2"
 clear
 use "$d3/CO_Final.dta"
 
-
-*replace MAN2 = MAN2*(0.0099)
-*replace MAN2 = 0 if MAN2 ==.
-*gen assembly_pct = MAN10 / MAN3
-*replace assembly_pct = 1 if assembly_pct > 1
-*replace CO_SER15 = 1 if CO_SER15 > 0
-*replace CO_SER2 = 1 if CO_SER2 > 0
-*replace CO_SER1 = 1 if CO_SER1 > 0
-*replace CO_SERV2 = 1 if CO_SERV2 > 0
-*replace CO_SER18 = 1 if CO_SER18 > 0
+replace REV4 = REV4*(0.0099)
+cap drop no_services
+gen no_services = CO_SER1 + CO_SER2 + CO_SER3 + CO_SER4 + CO_SER5 + CO_SER6 + CO_SER7 ///
+				+ CO_SER8 + CO_SER9 + CO_SER10 + CO_SER11a + CO_SER12 + CO_SER13 + CO_SER14 ///
+				+ CO_SER15 + CO_SERV2 + CO_SER18
 
 
 ** Co-op variables **
 
-gl co_summ MAN3 revenue MAN1 MAN2 MAN4 assembly_pct CO_SER15 CO_SER1 CO_SER2 CO_SERV2 CO_SER18
+gl co_summ MAN3 REV4 MAN1 MAN2 assembly_pct MAN4 no_services SER15 SER2
 
 local listsize : list sizeof global(co_summ)
 tokenize $co_summ
@@ -60,11 +55,10 @@ forv i = 2/`listsize' { // appends into single matrix
 * Table
 frmttable using E1_CO_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title("Cooperative Indicators - Summmary Statistics") ///
 ctitle("","N","Mean","sd","Min","Max") ///
-rtitle("Number of members (count)"\"Annual revenue (USD)"\"Cooperative has an initial membership fee (0/1)"\"Size of initial membership fee (USD)"\ ///
-		"Size of current management committee (count)"\"Share of members the attending last general assembly (count)"\ ///
-		"Cooperative organizes goat sales (0/1)"\"Cooperative accepts savings deposits (0/1)"\ ///
-		"Cooperative Offers loans (0/1)"\"Cooperative provides goat price information (0/1)"\ ///
-		"Cooperative pays dividends to share owners (0/1)")replace
+rtitle("Number of members (count)"\"Total revenue over last 6-months (USD)"\"Cooperative has an initial membership fee (0/1)"\"Size of initial membership fee (USD)"\ ///
+		"Share of members the attending last general assembly (count)"\ ///
+		"Size of management committee (count)"\"Number of services offered (count)"\ ///
+		"Coordinates goat sales (0/1)"\"Offers loans to members  (0/1)")replace
  
 
 
@@ -88,11 +82,13 @@ replace bCOM8 = 0 if COM8 ==0
 replace MEM7 = 0 if MEM7 ==.
 */
 gen bLS8 = (LS8 > 0)
+gen bHHR16 = (HHR16=="1")
+
 
 
 ** HH indicators **
 
-gl hh_summ HHR4 HHR14 mem_length travel_time MEM14 MEM16 SER33 bCOM3 bCOM8 goats_owned bLS8 LS8_w rev_goat
+gl hh_summ HHR4 HHR14 mem_length travel_time MEM14 bCOM3 bCOM8 bHHR16 goats_owned bLS8 LS8_w rev_goat
 	
 
 local listsize : list sizeof global(hh_summ)
@@ -123,11 +119,12 @@ frmttable using E1_HH_summary.tex, tex statmat(A) sdec(2) coljust(l;c;l;l) title
 ctitle("","N","Mean","sd","Min","Max") ///
 rtitle("Age (years)"\"Literacy (0/1)"\"Length of membership (years)"\"Round-trip travel time to cooperative meetings (minutes)"\ ///
 		"Voted in elections in last 2-years (0/1)"\ ///
-		"Voted on policies in last 2-years (0/1)"\ "Value of dividend payments received (USD)"\ ///
 		"Contacted about cooperative sales in last 6-months (0/1)"\ ///
-		"Contacted about cooperative activities in last 6-months (0/1)"\"Total number of goats owned (count)"\ ///
-		"Household sold goats in the last 12-months (0/1)"\"Annual number of goats sold (count)"\ ///
+		"Contacted about cooperative activities in last 6-months (0/1)"\"Primary activity is agriculture (0/1)"\ ///
+		"Total number of goats owned (count)"\ ///
+		"Sold goats in the last 12-months (0/1)"\"Annual number of goats sold (count)"\ ///
 		"Annual revenue per goat (USD)") replace
+ 
  
 
 * Cooperative services

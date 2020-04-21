@@ -11,6 +11,8 @@ dis1_3.d0
 * run group definitions code 
 do "$d1/dis1_2.do"
 
+cd "$d2"
+
 ** HH level dataset
 ********************************************* 
 
@@ -491,29 +493,135 @@ ctitle("Returns") merge
 ** OLS regressions	  
 
 encode district, gen(n_district)
+replace REV4 = REV4*(0.0099)
 
 lab var HHR14 "Literacy (0/1)"
 lab var HHR4 "Age (years)"
 lab var ID10 "Number of household members (count)"
 lab var goats_owned "Total number of goats owned (count)"
+lab var bHHR16 "Primary activity is agriculture (0/1)"
 lab var mem_length "Length of membership (years)"
+lab var bMEM4 "Cooperative leadership role (0/1)"
 lab var travel_time "Round-trip travel time to cooperative meetings (minutes)"
+lab var MEM7 "SHG meetings attended in last 6-months (count)"
+
 lab var MAN2 "Membership fee (USD)"
 lab var MAN3 "Number of cooperative members (count)"
-lab var MAN4 "Size of management committee (count)"
 lab var no_services "Number of servcies offered (count)"
+lab var REV4 "Total revenue in last 6-months (USD)"
+lab var CO_SER15 "Cooperative organizes goat sales (0/1)"
+lab var CO_SER2 "Cooperative offers loans to members (0/1)"
+lab var MAN4 "Size of management committee (count)"
 
-* total revenue per member
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) addtext(District FE: Yes) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
 
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district if gr_pct_COM3 == 1, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+* goat revenue (extensive inclusion)
+* ------------------------------------------
+	* by literacy
+reg co_opsalevalue HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_HHR14 == 1, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+		addtext(District dummies, Yes) 
 
-reg index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 no_services i.n_district if gr_pct_COM3 == 0, vce(cluster idx)
-outreg2 using E1_ols.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
+reg co_opsalevalue HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_HHR14 == 0, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+		
+* by low goats
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_low_goats == 1, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
 
-		 
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_low_goats == 0, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 		
+		
+* by CV goats
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_cv_goats == 1, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_cv_goats == 0, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 				
+		
+* by size of membership fee
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_avg_MAN2 == 1, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_avg_MAN2 == 0, vce(cluster idx)
+outreg2 using E1_ols_1_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 					
+
+
+* goat revenue (intensive inclusion)
+* ------------------------------------------
+	* by sale info
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_COM3 == 1, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_COM3 == 0, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+		
+* by non-sale info
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_COM8 == 1, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_COM8 == 0, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 		
+		
+* by pct loan 
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_loan == 1, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_loan == 0, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 				
+		
+* by voting
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_MEM14 == 1, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 
+
+reg co_opsalevalue HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_pct_MEM14 == 0, vce(cluster idx)
+outreg2 using E1_ols_1_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 					
 		
 		
 
