@@ -24,7 +24,7 @@ use "$d3/Cooperative.dta"
 ** Clean Co-op data **
 
 * drop data collection notes & time stamps
-drop *start* *end* *note* consent *GPS* ____version metainstanceID ///
+drop *start* *end* *note* consent GPS ____version metainstanceID ///
 		___id ___parent* ___tags ___uuid ___sub*
 		
 * rename variables with invalid names	
@@ -33,6 +33,10 @@ rename role_CPSerLiv_rel_serLive_rel_se role_CPSerLiv_rel_serLive_rel
 * rename co-op variable to match HH & Co-op dataset
 rename IDX idx
 
+* rename GPS variables
+foreach v of varlist GPS_* {
+	rename `v' CO_`v'
+}	
 
 ** Assign district & region names
 destring ID1, replace
@@ -171,11 +175,11 @@ quietly foreach v in `r(varlist)' {
 	
 ** Collapse to 1-row per co-op
 * strings
-ds *ID* *MEM* *role* *IND* *REC* *REV* *EQP* *FAL* PNG* *EAA* *COMM* *GTT* *MAN* *SER* *GPR* CO_TRN* region district ___index, has(type string)
+ds *ID* *MEM* *role* *IND* *REC* *REV* *EQP* *FAL* PNG* *EAA* *COMM* *GTT* *MAN* *SER* *GPR* CO_TRN* CO_GPS_* region district ___index, has(type string)
 local Co_opstrings = "`r(varlist)'"
 
 * numerics
-ds *ID* *MEM* *role* *IND* *REC* *REV* *EQP* *FAL* PNG* *EAA* *COMM* *GTT* *MAN* *SER* *GPR* CO_TRN* region district ___index, has(type numeric)
+ds *ID* *MEM* *role* *IND* *REC* *REV* *EQP* *FAL* PNG* *EAA* *COMM* *GTT* *MAN* *SER* *GPR* CO_TRN* CO_GPS_* region district ___index, has(type numeric)
 local Co_opnumeric = "`r(varlist)'"
 
 * collapse
