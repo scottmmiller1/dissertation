@@ -141,76 +141,256 @@ ctitle("Cooperative benefits"\"index") merge
 quietly tab district, gen(dist_)
 
 
-* cooperative goat revenue
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
+* extensive (drop certain controls)
+gl outcomes co_opsalevalue co_opgoatno_w co_loan_amt index_benefits
 	
-local listsize : list sizeof global(gap_1)
-tokenize $gap_1
+local listsize : list sizeof global(outcomes)
+tokenize $outcomes	
 
 forv i = 1/`listsize' {
-		
 	quietly {
-		oaxaca co_opsalevalue HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
+	* by literacy
+		oaxaca ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax
 		ereturn list
-		scalar par_d_``i'' = _b[difference] // mean
-		scalar se_d_``i'' = _se[difference]  // sd
+		scalar par_d_`i'_1 = _b[difference] // mean
+		scalar se_d_`i'_1 = _se[difference]  // sd
 		return list 
 		matrix p1 = r(table)
-		scalar p_`i'_1 = p1[4,3]
+		scalar p_`i'_1_d = p1[4,3]
 		* matrix for table
-		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
+		matrix mat_`i'_1_d = (par_d_`i'_1, se_d_`i'_1)
 		
-		scalar par_e_``i'' = _b[explained] // mean
-		scalar se_e_``i'' = _se[explained]  // sd
-		scalar p_`i'_2 = p1[4,4]
+		scalar par_e_`i'_1 = _b[explained] // mean
+		scalar se_e_`i'_1 = _se[explained]  // sd
+		scalar p_`i'_1_e = p1[4,4]
 		* matrix for table
-		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
+		matrix mat_`i'_1_e = (par_e_`i'_1, se_e_`i'_1)
 		
-		scalar par_c_``i'' = _b[unexplained] // mean
-		scalar se_c_``i'' = _se[unexplained]  // sd
-		scalar p_`i'_3 = p1[4,5]
+		scalar par_u_`i'_1 = _b[unexplained] // mean
+		scalar se_u_`i'_1 = _se[unexplained]  // sd
+		scalar p_`i'_1_u = p1[4,5]
 		* matrix for table
-		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		/*
-		scalar par_i_``i'' = _b[interaction] // mean
-		scalar se_i_``i'' = _se[interaction]  // sd
-		scalar p_`i'_4 = p1[4,6]
+		matrix mat_`i'_1_u = (par_u_`i'_1, se_u_`i'_1)
+		
+	* by low goats
+		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_2 = _b[difference] // mean
+		scalar se_d_`i'_2 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_2_d = p1[4,3]
 		* matrix for table
-		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		*/
+		matrix mat_`i'_2_d = (par_d_`i'_2, se_d_`i'_2)
+		
+		scalar par_e_`i'_2 = _b[explained] // mean
+		scalar se_e_`i'_2 = _se[explained]  // sd
+		scalar p_`i'_2_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_2_e = (par_e_`i'_2, se_e_`i'_2)
+		
+		scalar par_u_`i'_2 = _b[unexplained] // mean
+		scalar se_u_`i'_2 = _se[unexplained]  // sd
+		scalar p_`i'_2_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_2_u = (par_u_`i'_2, se_u_`i'_2)
+		
+	* by cv goats
+		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_3 = _b[difference] // mean
+		scalar se_d_`i'_3 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_3_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_3_d = (par_d_`i'_3, se_d_`i'_3)
+		
+		scalar par_e_`i'_3 = _b[explained] // mean
+		scalar se_e_`i'_3 = _se[explained]  // sd
+		scalar p_`i'_3_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_3_e = (par_e_`i'_3, se_e_`i'_3)
+		
+		scalar par_u_`i'_3 = _b[unexplained] // mean
+		scalar se_u_`i'_3 = _se[unexplained]  // sd
+		scalar p_`i'_3_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_3_u = (par_u_`i'_3, se_u_`i'_3)	
+
+	* by membership fee
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_4 = _b[difference] // mean
+		scalar se_d_`i'_4 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_4_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_4_d = (par_d_`i'_4, se_d_`i'_4)
+		
+		scalar par_e_`i'_4 = _b[explained] // mean
+		scalar se_e_`i'_4 = _se[explained]  // sd
+		scalar p_`i'_4_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_4_e = (par_e_`i'_4, se_e_`i'_4)
+		
+		scalar par_u_`i'_4 = _b[unexplained] // mean
+		scalar se_u_`i'_4 = _se[unexplained]  // sd
+		scalar p_`i'_4_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_4_u = (par_u_`i'_4, se_u_`i'_4)			
+		
+
+* extensive (drop certain controls)
+
+	* by sale info
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_5 = _b[difference] // mean
+		scalar se_d_`i'_5 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_5_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_5_d = (par_d_`i'_5, se_d_`i'_5)
+		
+		scalar par_e_`i'_5 = _b[explained] // mean
+		scalar se_e_`i'_5 = _se[explained]  // sd
+		scalar p_`i'_5_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_5_e = (par_e_`i'_5, se_e_`i'_5)
+		
+		scalar par_u_`i'_5 = _b[unexplained] // mean
+		scalar se_u_`i'_5 = _se[unexplained]  // sd
+		scalar p_`i'_5_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_5_u = (par_u_`i'_5, se_u_`i'_5)
+		
+	* by non-sale info
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_6 = _b[difference] // mean
+		scalar se_d_`i'_6 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_6_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_6_d = (par_d_`i'_6, se_d_`i'_6)
+		
+		scalar par_e_`i'_6 = _b[explained] // mean
+		scalar se_e_`i'_6 = _se[explained]  // sd
+		scalar p_`i'_6_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_6_e = (par_e_`i'_6, se_e_`i'_6)
+		
+		scalar par_u_`i'_6 = _b[unexplained] // mean
+		scalar se_u_`i'_6 = _se[unexplained]  // sd
+		scalar p_`i'_6_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_6_u = (par_u_`i'_6, se_u_`i'_6)
+		
+	* by pct loans
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_7 = _b[difference] // mean
+		scalar se_d_`i'_7 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_7_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_7_d = (par_d_`i'_7, se_d_`i'_7)
+		
+		scalar par_e_`i'_7 = _b[explained] // mean
+		scalar se_e_`i'_7 = _se[explained]  // sd
+		scalar p_`i'_7_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_7_e = (par_e_`i'_7, se_e_`i'_7)
+		
+		scalar par_u_`i'_7 = _b[unexplained] // mean
+		scalar se_u_`i'_7 = _se[unexplained]  // sd
+		scalar p_`i'_7_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_7_u = (par_u_`i'_7, se_u_`i'_7)	
+
+	* by voting
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_8 = _b[difference] // mean
+		scalar se_d_`i'_8 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_8_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_8_d = (par_d_`i'_8, se_d_`i'_8)
+		
+		scalar par_e_`i'_8 = _b[explained] // mean
+		scalar se_e_`i'_8 = _se[explained]  // sd
+		scalar p_`i'_8_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_8_e = (par_e_`i'_8, se_e_`i'_8)
+		
+		scalar par_u_`i'_8 = _b[unexplained] // mean
+		scalar se_u_`i'_8 = _se[unexplained]  // sd
+		scalar p_`i'_8_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_8_u = (par_u_`i'_8, se_u_`i'_8)			
 		
 		}
 }
-matrix A = mat_1_1
-matrix B = mat_2_1
-matrix C = mat_3_1
-*matrix D = mat_4_1
+	
 
-forv i = 2/`listsize' { // appends into single matrix
-	matrix A = A \ mat_1_`i'
-	matrix B = B \ mat_2_`i'
-	matrix C = C \ mat_3_`i'
-	*matrix D = D \ mat_4_`i'
+** goat revenue	
+* -----------------------------------------------------
+matrix A = mat_1_1_d
+matrix B = mat_1_1_e
+matrix C = mat_1_1_u
+
+
+forv i = 2/8 { // appends into single matrix
+	matrix A = A \ mat_1_`i'_d
+	matrix B = B \ mat_1_`i'_e
+	matrix C = C \ mat_1_`i'_u
 }
 
-gl mat A B C
-local mlistsize : list sizeof global(mat)
-tokenize $mat
-
-forv m = 1/`mlistsize' {
-matrix stars``m''=J(`listsize',1,0)
-		forvalues k = 1/`listsize'{
-			matrix stars``m''[`k',1] =   ///
-			(.1 > p_`k'_`m') +  ///
-			(.05 > p_`k'_`m') +  ///
-			(.01 > p_`k'_`m')
+matrix starsA=J(8,1,0)
+matrix starsB=J(8,1,0)
+matrix starsC=J(8,1,0)
+	forvalues i = 1/8 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_1_`i'_d) +  ///
+			(.05 > p_1_`i'_d) +  ///
+			(.01 > p_1_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_1_`i'_e) +  ///
+			(.05 > p_1_`i'_e) +  ///
+			(.01 > p_1_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_1_`i'_u) +  ///
+			(.05 > p_1_`i'_u) +  ///
+			(.01 > p_1_`i'_u)	
 		}
-}
 
 
 * Table
 frmttable using E1_decomp_1.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative goat revenue","Difference") ///
+ctitle("Cooperative goat revenue (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -223,81 +403,44 @@ frmttable using E1_decomp_1.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_1.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-*frmttable using E1_decomp_1.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-*ctitle("Interaction") merge
 
 
 
-* cooperative goats sold
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
-	
-local listsize : list sizeof global(gap_1)
-tokenize $gap_1
+** goats sold
+* -----------------------------------------------------
+matrix A = mat_2_1_d
+matrix B = mat_2_1_e
+matrix C = mat_2_1_u
 
-forv i = 1/`listsize' {
-		
-	quietly {
-		oaxaca co_opgoatno_w HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
-		ereturn list
-		scalar par_d_``i'' = _b[difference] // mean
-		scalar se_d_``i'' = _se[difference]  // sd
-		return list 
-		matrix p1 = r(table)
-		scalar p_`i'_1 = p1[4,3]
-		* matrix for table
-		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
-		
-		scalar par_e_``i'' = _b[explained] // mean
-		scalar se_e_``i'' = _se[explained]  // sd
-		scalar p_`i'_2 = p1[4,4]
-		* matrix for table
-		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
-		
-		scalar par_c_``i'' = _b[unexplained] // mean
-		scalar se_c_``i'' = _se[unexplained]  // sd
-		scalar p_`i'_3 = p1[4,5]
-		* matrix for table
-		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		/*
-		scalar par_i_``i'' = _b[interaction] // mean
-		scalar se_i_``i'' = _se[interaction]  // sd
-		scalar p_`i'_4 = p1[4,6]
-		* matrix for table
-		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		*/
-		
+
+forv i = 2/8 { // appends into single matrix
+	matrix A = A \ mat_2_`i'_d
+	matrix B = B \ mat_2_`i'_e
+	matrix C = C \ mat_2_`i'_u
+}
+
+matrix starsA=J(8,1,0)
+matrix starsB=J(8,1,0)
+matrix starsC=J(8,1,0)
+	forvalues i = 1/8 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_2_`i'_d) +  ///
+			(.05 > p_2_`i'_d) +  ///
+			(.01 > p_2_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_2_`i'_e) +  ///
+			(.05 > p_2_`i'_e) +  ///
+			(.01 > p_2_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_2_`i'_u) +  ///
+			(.05 > p_2_`i'_u) +  ///
+			(.01 > p_2_`i'_u)	
 		}
-}
-matrix A = mat_1_1
-matrix B = mat_2_1
-matrix C = mat_3_1
-*matrix D = mat_4_1
-
-forv i = 2/`listsize' { // appends into single matrix
-	matrix A = A \ mat_1_`i'
-	matrix B = B \ mat_2_`i'
-	matrix C = C \ mat_3_`i'
-	*matrix D = D \ mat_4_`i'
-}
-
-gl mat A B C
-local mlistsize : list sizeof global(mat)
-tokenize $mat
-
-forv m = 1/`mlistsize' {
-matrix stars``m''=J(`listsize',1,0)
-		forvalues k = 1/`listsize'{
-			matrix stars``m''[`k',1] =   ///
-			(.1 > p_`k'_`m') +  ///
-			(.05 > p_`k'_`m') +  ///
-			(.01 > p_`k'_`m')
-		}
-}
 
 
 * Table
 frmttable using E1_decomp_2.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative goats sold","Difference") ///
+ctitle("Number of goats sold through the cooperative (count)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -310,82 +453,43 @@ frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-*frmttable using E1_decomp_2.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-*ctitle("Interaction") merge
 
 
-* cooperative loan amount
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
-	
-local listsize : list sizeof global(gap_1)
-tokenize $gap_1
+** loan amount
+* -----------------------------------------------------
+matrix A = mat_3_1_d
+matrix B = mat_3_1_e
+matrix C = mat_3_1_u
 
-forv i = 1/`listsize' {
-		
-	quietly {
-		oaxaca co_loan_amt HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
-		ereturn list
-		scalar par_d_``i'' = _b[difference] // mean
-		scalar se_d_``i'' = _se[difference]  // sd
-		return list 
-		matrix p1 = r(table)
-		scalar p_`i'_1 = p1[4,3]
-		* matrix for table
-		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
-		
-		scalar par_e_``i'' = _b[explained] // mean
-		scalar se_e_``i'' = _se[explained]  // sd
-		scalar p_`i'_2 = p1[4,4]
-		* matrix for table
-		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
-		
-		scalar par_c_``i'' = _b[unexplained] // mean
-		scalar se_c_``i'' = _se[unexplained]  // sd
-		scalar p_`i'_3 = p1[4,5]
-		* matrix for table
-		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		/*
-		scalar par_i_``i'' = _b[interaction] // mean
-		scalar se_i_``i'' = _se[interaction]  // sd
-		scalar p_`i'_4 = p1[4,6]
-		* matrix for table
-		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		*/
-		
+
+forv i = 2/8 { // appends into single matrix
+	matrix A = A \ mat_3_`i'_d
+	matrix B = B \ mat_3_`i'_e
+	matrix C = C \ mat_3_`i'_u
+}
+
+matrix starsA=J(8,1,0)
+matrix starsB=J(8,1,0)
+matrix starsC=J(8,1,0)
+	forvalues i = 1/8 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_3_`i'_d) +  ///
+			(.05 > p_3_`i'_d) +  ///
+			(.01 > p_3_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_3_`i'_e) +  ///
+			(.05 > p_3_`i'_e) +  ///
+			(.01 > p_3_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_3_`i'_u) +  ///
+			(.05 > p_3_`i'_u) +  ///
+			(.01 > p_3_`i'_u)	
 		}
-}
-matrix A = mat_1_1
-matrix B = mat_2_1
-matrix C = mat_3_1
-*matrix D = mat_4_1
-
-forv i = 2/`listsize' { // appends into single matrix
-	matrix A = A \ mat_1_`i'
-	matrix B = B \ mat_2_`i'
-	matrix C = C \ mat_3_`i'
-	*matrix D = D \ mat_4_`i'
-}
-
-gl mat A B C
-local mlistsize : list sizeof global(mat)
-tokenize $mat
-
-forv m = 1/`mlistsize' {
-matrix stars``m''=J(`listsize',1,0)
-		forvalues k = 1/`listsize'{
-			matrix stars``m''[`k',1] =   ///
-			(.1 > p_`k'_`m') +  ///
-			(.05 > p_`k'_`m') +  ///
-			(.01 > p_`k'_`m')
-		}
-}
-
-
 
 
 * Table
 frmttable using E1_decomp_3.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative loan amount","Difference") ///
+ctitle("Cooperative loan amount (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -398,80 +502,43 @@ frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-*frmttable using E1_decomp_3.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-*ctitle("Interaction") merge
 
 
-* cooperative benefits index
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
-	
-local listsize : list sizeof global(gap_1)
-tokenize $gap_1
+** benefits index
+* -----------------------------------------------------
+matrix A = mat_4_1_d
+matrix B = mat_4_1_e
+matrix C = mat_4_1_u
 
-forv i = 1/`listsize' {
-		
-	quietly {
-		oaxaca index_benefits HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(``i'') vce(cluster idx) swap weight(0) relax
-		ereturn list
-		scalar par_d_``i'' = _b[difference] // mean
-		scalar se_d_``i'' = _se[difference]  // sd
-		return list 
-		matrix p1 = r(table)
-		scalar p_`i'_1 = p1[4,3]
-		* matrix for table
-		matrix mat_1_`i' = (par_d_``i'', se_d_``i'')
-		
-		scalar par_e_``i'' = _b[explained] // mean
-		scalar se_e_``i'' = _se[explained]  // sd
-		scalar p_`i'_2 = p1[4,4]
-		* matrix for table
-		matrix mat_2_`i' = (par_e_``i'', se_e_``i'')
-		
-		scalar par_c_``i'' = _b[unexplained] // mean
-		scalar se_c_``i'' = _se[unexplained]  // sd
-		scalar p_`i'_3 = p1[4,5]
-		* matrix for table
-		matrix mat_3_`i' = (par_c_``i'', se_c_``i'')
-		/*
-		scalar par_i_``i'' = _b[interaction] // mean
-		scalar se_i_``i'' = _se[interaction]  // sd
-		scalar p_`i'_4 = p1[4,6]
-		* matrix for table
-		matrix mat_4_`i' = (par_i_``i'', se_i_``i'')
-		*/
-		
+
+forv i = 2/8 { // appends into single matrix
+	matrix A = A \ mat_4_`i'_d
+	matrix B = B \ mat_4_`i'_e
+	matrix C = C \ mat_4_`i'_u
+}
+
+matrix starsA=J(8,1,0)
+matrix starsB=J(8,1,0)
+matrix starsC=J(8,1,0)
+	forvalues i = 1/8 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_4_`i'_d) +  ///
+			(.05 > p_4_`i'_d) +  ///
+			(.01 > p_4_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_4_`i'_e) +  ///
+			(.05 > p_4_`i'_e) +  ///
+			(.01 > p_4_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_4_`i'_u) +  ///
+			(.05 > p_4_`i'_u) +  ///
+			(.01 > p_4_`i'_u)	
 		}
-}
-matrix A = mat_1_1
-matrix B = mat_2_1
-matrix C = mat_3_1
-*matrix D = mat_4_1
-
-forv i = 2/`listsize' { // appends into single matrix
-	matrix A = A \ mat_1_`i'
-	matrix B = B \ mat_2_`i'
-	matrix C = C \ mat_3_`i'
-	*matrix D = D \ mat_4_`i'
-}
-
-gl mat A B C
-local mlistsize : list sizeof global(mat)
-tokenize $mat
-
-forv m = 1/`mlistsize' {
-matrix stars``m''=J(`listsize',1,0)
-		forvalues k = 1/`listsize'{
-			matrix stars``m''[`k',1] =   ///
-			(.1 > p_`k'_`m') +  ///
-			(.05 > p_`k'_`m') +  ///
-			(.01 > p_`k'_`m')
-		}
-}
 
 
 * Table
 frmttable using E1_decomp_4.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Benefits Index","Difference") ///
+ctitle("Cooperative benefits index","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -484,8 +551,8 @@ frmttable using E1_decomp_4.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l
 ctitle("Characteristics") merge
 frmttable using E1_decomp_4.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
-*frmttable using E1_decomp_4.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///
-*ctitle("Interaction") merge
+
+
 
 
 
@@ -537,27 +604,27 @@ reg ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 		
-* by low goats
-reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+* by low goats (remove goats owned)
+reg ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_low_goats == 1, vce(cluster idx)
 outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 
-reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+reg ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_low_goats == 0, vce(cluster idx)
 outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 		
 		
-* by CV goats
-reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+* by CV goats (remove goats owned)
+reg ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_cv_goats == 1, vce(cluster idx)
 outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 
-reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+reg ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_cv_goats == 0, vce(cluster idx)
 outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
