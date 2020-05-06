@@ -3,7 +3,7 @@
 ** Create dataset with all sales
 ********************************************* 
 clear
-use "$d3/HH_Final.dta"
+use "$d0/HH_Final.dta"
 
 drop LS1* LS2* LS3* LS4* LS6* LS7* LS8* LS9*
 
@@ -11,7 +11,7 @@ rename ___index ___parent_index
 
 drop _merge
 
-merge 1:m ___parent_index using "$d3/Livestocksales.dta"
+merge 1:m ___parent_index using "$d0/Livestocksales.dta"
 
 
 * fix outliers and incorrect data
@@ -47,28 +47,22 @@ sum price
 replace LS8 = LS9 / 8622.859 if ___parent_index == "1054" | ___parent_index == "118B" | ___parent_index == "2035" | ///
 					___parent_index == "74"				
 
-drop price 
 					
-* winsorize if price is above 99th percentile
-/*
-	this is to account for the fact that some of the high revenue numbers are from people that sold
-	a large number of goats. We don't want to remove variation if the price per goat is reasonable
-*/
-gen price = LS9 / LS8
+* winsorize quantity, revenue and price
 sum price, d
-scalar price_99 = `r(p99)'
-
+replace price = `r(p99)' if price > `r(p99)' & price !=.
 sum LS8, d
-replace LS8 = `r(p99)' if LS8 > `r(p99)' & price > price_99 & price !=.
+replace LS8 = `r(p99)' if LS8 > `r(p99)' & LS8 !=.
 sum LS9, d
-replace LS9 = `r(p99)' if LS9 > `r(p99)' & price > price_99 & price !=.
+replace LS9 = `r(p99)' if LS9 > `r(p99)' & LS9 !=.
 	
 
-save "$d3/sales_final.dta", replace
+save "$d0/sales_final.dta", replace
 
 
 * district FE
 encode district, gen(n_district)
+
 
 * calculate geographic distance with GPS coordinates
 * -------------------------------	
@@ -81,8 +75,9 @@ count if geo_dist_mi > 40 & LS8 !=.
 
 gen dist_outlier = (geo_dist_mi > 40) // above 90th percentile
 
-
+* distance outliers by sale type
 tab LS3 dist_outlier
+* distance outliers by enumerator ID
 tab HH_IDEID dist_outlier
 
 
@@ -130,7 +125,7 @@ reg co_sale c.geo_dist_mi##c.GPS_altitude
 * -------------------------------	
 ** distance
 * # of goats sold ~ instrument + month of sale
-reg LS8 geo_dist_mi				// Full sample
+reg LS8 geo_dist_mi						// Full sample
 	* insignificant
 reg LS8 geo_dist_mi if CO_SER15 == 1	// Co-op sells goats
 	* insignificant
@@ -138,15 +133,15 @@ reg LS8 geo_dist_mi if CO_SER15 == 0	// Co-op does not sell goats
 	* insignificant
 	
 * goat revenue ~ instrument 								
-reg LS9 geo_dist_mi // Full sample
-	* significant at 5%-level (+)
+reg LS9 geo_dist_mi 					// Full sample
+	* insignificant
 reg LS9 geo_dist_mi if CO_SER15 == 1	// Co-op sells goats
-	* significant at 5%-level (+)
+	* significant at 10%-level (+)
 reg LS9 geo_dist_mi if CO_SER15 == 0	// Co-op does not sell goats
 	* insignificant
 
 * revenue per goat sold	~ instrument 	
-reg price geo_dist_mi		// Full sample
+reg price geo_dist_mi					// Full sample
 	* significant at 1%-level (+)
 reg price geo_dist_mi if CO_SER15 == 1	// Co-op sells goats
 	* significant at 0%-level (+)
@@ -155,7 +150,7 @@ reg price geo_dist_mi if CO_SER15 == 0	// Co-op does not sell goats
 
 ** distanceXaltitude	
 * # of goats sold ~ instrument + month of sale
-reg LS8 c.geo_dist_mi#c.GPS_altitude 			// Full sample
+reg LS8 c.geo_dist_mi#c.GPS_altitude 					// Full sample
 	* insignificant
 reg LS8 c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 1	// Co-op sells goats
 	* insignificant
@@ -163,7 +158,7 @@ reg LS8 c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 0	// Co-op does not sell goa
 	* insignificant
 	
 * goat revenue ~ instrument 								
-reg LS9 c.geo_dist_mi#c.GPS_altitude				// Full sample
+reg LS9 c.geo_dist_mi#c.GPS_altitude					// Full sample
 	* insignificant
 reg LS9 c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 1	// Co-op sells goats
 	* insignificant
@@ -171,12 +166,12 @@ reg LS9 c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 0	// Co-op does not sell goa
 	* insignificant
 
 * revenue per goat sold	~ instrument 	
-reg price c.geo_dist_mi#c.GPS_altitude		// Full sample
+reg price c.geo_dist_mi#c.GPS_altitude					// Full sample
 	* insignificant
 reg price c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 1	// Co-op sells goats
 	* insignificant
 reg price c.geo_dist_mi#c.GPS_altitude if CO_SER15 == 0	// Co-op does not sell goats
-	* insignificant	
+	* significant at 10%-level (-)
 	
 	
 
@@ -216,7 +211,7 @@ gl covariates HHR4 HHR14 ID10 goats_owned bHHR16 mem_length bMEM4 MEM7
 
 ** Goats sold - OLS vs. 2sls
 reg LS8 co_sale $covariates i.LS2 i.n_district
-	* insignificant
+	* significant at ~1%-level
 ivregress 2sls LS8 i.LS2 $covariates i.n_district (co_sale = geo_dist_mi)
 	* insignificant
 
@@ -237,13 +232,13 @@ ivregress 2sls price $covariates i.LS2 i.n_district (co_sale = geo_dist_mi)
 
 ** Goats sold - OLS vs. 2sls
 reg LS8 co_sale $covariates i.LS2 i.n_district
-	* insignificant
+	* significant at ~1%-level
 ivregress 2sls LS8 $covariates i.LS2 i.n_district (co_sale = c.geo_dist_mi#c.GPS_altitude)
 	* insignificant
 
 ** Goat revenue - OLS vs. 2sls
 reg LS9 co_sale $covariates i.LS2 i.n_district
-	* insignificant
+	* significant at 0%-level (+)
 ivregress 2sls LS9 $covariates i.LS2 i.n_district (co_sale = c.geo_dist_mi#c.GPS_altitude)
 	* insignificant
 	
@@ -252,7 +247,6 @@ reg price co_sale $covariates i.LS2 i.n_district
 	* significant at 0%-level (+)
 ivregress 2sls price $covariates i.LS2 i.n_district (co_sale = c.geo_dist_mi#c.GPS_altitude)
 	* insignificant	
-
 	
 
 
