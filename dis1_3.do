@@ -44,7 +44,7 @@ local local_benefits co_opsalevalue co_opgoatno_w co_loan_amt
 * ----------------------------------------------------
 ** Gap analysis
 
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
+gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_extensive_index gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 gr_intensive_index
 	
 local listsize : list sizeof global(gap_1)
 tokenize $gap_1
@@ -52,7 +52,7 @@ tokenize $gap_1
 forv i = 1/`listsize' {
 		
 	quietly {
-		reg co_opsalevalue ``i''
+		reg co_opsalevalue ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -60,7 +60,7 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_``i'', se_``i'')
 		
-		reg co_opgoatno_w ``i''
+		reg co_opgoatno_w ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -68,7 +68,7 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_2_`i' = (par_``i'', se_``i'')
 		
-		reg co_loan_amt ``i''
+		reg co_loan_amt ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -76,7 +76,7 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_3_`i' = (par_``i'', se_``i'')
 		
-		reg index_benefits ``i''
+		reg index_benefits ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -119,11 +119,11 @@ ctitle("Group Definition","Cooperative goat"\"","revenue (USD)") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\ ///
+		"Size of membership fee"\""\"Extensive inclusion index"\""\ ///
 		"Percentage of members receiving sale information"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\"") replace	
+		"Percentage of members who voted in cooperative elections"\""\"Intensive inclusion index"\"") replace	
 frmttable using avg_gap.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Cooperative goats"\"sold (count)") merge
 frmttable using avg_gap.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -247,15 +247,12 @@ forv i = 1/`listsize' {
 		scalar se_u_`i'_4 = _se[unexplained]  // sd
 		scalar p_`i'_4_u = p1[4,5]
 		* matrix for table
-		matrix mat_`i'_4_u = (par_u_`i'_4, se_u_`i'_4)			
+		matrix mat_`i'_4_u = (par_u_`i'_4, se_u_`i'_4)	
 		
-
-* extensive (drop certain controls)
-
-	* by sale info
-		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
-					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
+	* by extensive index
+		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_`i'_5 = _b[difference] // mean
 		scalar se_d_`i'_5 = _se[difference]  // sd
@@ -275,12 +272,16 @@ forv i = 1/`listsize' {
 		scalar se_u_`i'_5 = _se[unexplained]  // sd
 		scalar p_`i'_5_u = p1[4,5]
 		* matrix for table
-		matrix mat_`i'_5_u = (par_u_`i'_5, se_u_`i'_5)
+		matrix mat_`i'_5_u = (par_u_`i'_5, se_u_`i'_5)		
 		
-	* by non-sale info
+		
+
+* extensive (drop certain controls)
+
+	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_`i'_6 = _b[difference] // mean
 		scalar se_d_`i'_6 = _se[difference]  // sd
@@ -302,10 +303,10 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_`i'_6_u = (par_u_`i'_6, se_u_`i'_6)
 		
-	* by pct loans
+	* by non-sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_`i'_7 = _b[difference] // mean
 		scalar se_d_`i'_7 = _se[difference]  // sd
@@ -325,12 +326,12 @@ forv i = 1/`listsize' {
 		scalar se_u_`i'_7 = _se[unexplained]  // sd
 		scalar p_`i'_7_u = p1[4,5]
 		* matrix for table
-		matrix mat_`i'_7_u = (par_u_`i'_7, se_u_`i'_7)	
-
-	* by voting
+		matrix mat_`i'_7_u = (par_u_`i'_7, se_u_`i'_7)
+		
+	* by pct loans
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_`i'_8 = _b[difference] // mean
 		scalar se_d_`i'_8 = _se[difference]  // sd
@@ -350,7 +351,57 @@ forv i = 1/`listsize' {
 		scalar se_u_`i'_8 = _se[unexplained]  // sd
 		scalar p_`i'_8_u = p1[4,5]
 		* matrix for table
-		matrix mat_`i'_8_u = (par_u_`i'_8, se_u_`i'_8)			
+		matrix mat_`i'_8_u = (par_u_`i'_8, se_u_`i'_8)	
+
+	* by voting
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_9 = _b[difference] // mean
+		scalar se_d_`i'_9 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_9_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_9_d = (par_d_`i'_9, se_d_`i'_9)
+		
+		scalar par_e_`i'_9 = _b[explained] // mean
+		scalar se_e_`i'_9 = _se[explained]  // sd
+		scalar p_`i'_9_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_9_e = (par_e_`i'_9, se_e_`i'_9)
+		
+		scalar par_u_`i'_9 = _b[unexplained] // mean
+		scalar se_u_`i'_9 = _se[unexplained]  // sd
+		scalar p_`i'_9_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_9_u = (par_u_`i'_9, se_u_`i'_9)	
+		
+	* by intensive index
+		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		scalar par_d_`i'_10 = _b[difference] // mean
+		scalar se_d_`i'_10 = _se[difference]  // sd
+		return list 
+		matrix p1 = r(table)
+		scalar p_`i'_10_d = p1[4,3]
+		* matrix for table
+		matrix mat_`i'_10_d = (par_d_`i'_10, se_d_`i'_10)
+		
+		scalar par_e_`i'_10 = _b[explained] // mean
+		scalar se_e_`i'_10 = _se[explained]  // sd
+		scalar p_`i'_10_e = p1[4,4]
+		* matrix for table
+		matrix mat_`i'_10_e = (par_e_`i'_10, se_e_`i'_10)
+		
+		scalar par_u_`i'_10 = _b[unexplained] // mean
+		scalar se_u_`i'_10 = _se[unexplained]  // sd
+		scalar p_`i'_10_u = p1[4,5]
+		* matrix for table
+		matrix mat_`i'_10_u = (par_u_`i'_10, se_u_`i'_10)		
 		
 		}
 }
@@ -363,16 +414,16 @@ matrix B = mat_1_1_e
 matrix C = mat_1_1_u
 
 
-forv i = 2/8 { // appends into single matrix
+forv i = 2/10 { // appends into single matrix
 	matrix A = A \ mat_1_`i'_d
 	matrix B = B \ mat_1_`i'_e
 	matrix C = C \ mat_1_`i'_u
 }
 
-matrix starsA=J(8,1,0)
-matrix starsB=J(8,1,0)
-matrix starsC=J(8,1,0)
-	forvalues i = 1/8 {
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
 		matrix starsA[`i',1] =   ///
 			(.1 > p_1_`i'_d) +  ///
 			(.05 > p_1_`i'_d) +  ///
@@ -394,11 +445,11 @@ ctitle("Cooperative goat revenue (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
 		"Percentage of members receiving sale information"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\"") replace	
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
 frmttable using E1_decomp_1.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_1.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -413,16 +464,16 @@ matrix B = mat_2_1_e
 matrix C = mat_2_1_u
 
 
-forv i = 2/8 { // appends into single matrix
+forv i = 2/10 { // appends into single matrix
 	matrix A = A \ mat_2_`i'_d
 	matrix B = B \ mat_2_`i'_e
 	matrix C = C \ mat_2_`i'_u
 }
 
-matrix starsA=J(8,1,0)
-matrix starsB=J(8,1,0)
-matrix starsC=J(8,1,0)
-	forvalues i = 1/8 {
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
 		matrix starsA[`i',1] =   ///
 			(.1 > p_2_`i'_d) +  ///
 			(.05 > p_2_`i'_d) +  ///
@@ -444,11 +495,11 @@ ctitle("Number of goats sold through the cooperative (count)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
 		"Percentage of members receiving sale information"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\"") replace	
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
 frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -462,16 +513,16 @@ matrix B = mat_3_1_e
 matrix C = mat_3_1_u
 
 
-forv i = 2/8 { // appends into single matrix
+forv i = 2/10 { // appends into single matrix
 	matrix A = A \ mat_3_`i'_d
 	matrix B = B \ mat_3_`i'_e
 	matrix C = C \ mat_3_`i'_u
 }
 
-matrix starsA=J(8,1,0)
-matrix starsB=J(8,1,0)
-matrix starsC=J(8,1,0)
-	forvalues i = 1/8 {
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
 		matrix starsA[`i',1] =   ///
 			(.1 > p_3_`i'_d) +  ///
 			(.05 > p_3_`i'_d) +  ///
@@ -493,11 +544,11 @@ ctitle("Cooperative loan amount (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
 		"Percentage of members receiving sale information"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\"") replace	
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
 frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
@@ -511,16 +562,16 @@ matrix B = mat_4_1_e
 matrix C = mat_4_1_u
 
 
-forv i = 2/8 { // appends into single matrix
+forv i = 2/10 { // appends into single matrix
 	matrix A = A \ mat_4_`i'_d
 	matrix B = B \ mat_4_`i'_e
 	matrix C = C \ mat_4_`i'_u
 }
 
-matrix starsA=J(8,1,0)
-matrix starsB=J(8,1,0)
-matrix starsC=J(8,1,0)
-	forvalues i = 1/8 {
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
 		matrix starsA[`i',1] =   ///
 			(.1 > p_4_`i'_d) +  ///
 			(.05 > p_4_`i'_d) +  ///
@@ -542,11 +593,11 @@ ctitle("Cooperative benefits index","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
 		"Percentage of members receiving sale information"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\"") replace	
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
 frmttable using E1_decomp_4.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
 frmttable using E1_decomp_4.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///

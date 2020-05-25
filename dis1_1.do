@@ -280,22 +280,22 @@ lab var co_loan "Received a cooperative loan (0/1)"
 
 * leadership role
 logit bMEM4 HHR14 HHR4 ID10 goats_owned mem_length travel_time MAN3 
-margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3)
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label
 
 * receive sale information
 logit bCOM3 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
-margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3)
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 
 * receive activity information
 logit bCOM8 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3 
-margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3)
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 
 * Voted in co-op elections
 logit MEM14 HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
-margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3)
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 
 /*
@@ -307,6 +307,6 @@ outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex ap
 
 * received co-op loan
 logit co_loan HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3
-margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3) atmeans
+margins, dydx(HHR14 ID10 HHR4 goats_owned mem_length travel_time MAN3)
 outreg2 using mem_predict.tex, stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label
 

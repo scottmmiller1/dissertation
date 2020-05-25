@@ -176,19 +176,28 @@ forv i = 1/`listsize' {
 		matrix d_`i'_4 = (_b[difference], p[5,3], p[6,3])
 		matrix e_`i'_4 = (_b[explained], p[5,4], p[6,4])
 		matrix u_`i'_4 = (_b[unexplained], p[5,5], p[6,5])		
+
+	* Extensive index
+		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_5 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_5 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_5 = (_b[unexplained], p[5,5], p[6,5])		
 		
 
-* extensive (drop certain controls)
-
+* Intensive
 	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
 					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_5 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_5 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_5 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_6 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_6 = (_b[unexplained], p[5,5], p[6,5])
 		
 	* by non-sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -196,9 +205,9 @@ forv i = 1/`listsize' {
 					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_6 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_6 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_7 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_7 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_7 = (_b[unexplained], p[5,5], p[6,5])
 		
 	* by pct loans
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -206,9 +215,9 @@ forv i = 1/`listsize' {
 					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_7 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_7 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_7 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_8 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_8 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_8 = (_b[unexplained], p[5,5], p[6,5])
 
 	* by voting
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -216,45 +225,56 @@ forv i = 1/`listsize' {
 					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_8 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_8 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_8 = (_b[unexplained], p[5,5], p[6,5])		
+		matrix d_`i'_9 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_9 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_9 = (_b[unexplained], p[5,5], p[6,5])		
+		
+	* by intensive index
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_10 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_10 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_10 = (_b[unexplained], p[5,5], p[6,5])	 	
 		
 		}
 }		
 
-* revenue
+* outcome matrices
 forv j = 1/4 {
 	matrix d_`j'_ex = d_`j'_1
 	matrix e_`j'_ex = e_`j'_1
 	matrix u_`j'_ex = u_`j'_1
-	matrix d_`j'_in = d_`j'_5
-	matrix e_`j'_in = e_`j'_5
-	matrix u_`j'_in = u_`j'_5
-	
-	forv i = 2/4 {
+	matrix d_`j'_in = d_`j'_6
+	matrix e_`j'_in = e_`j'_6
+	matrix u_`j'_in = u_`j'_6
+	* extensive groups
+	forv i = 2/5 {
 		matrix d_`j'_ex = d_`j'_ex \ d_`j'_`i'
 		matrix e_`j'_ex = e_`j'_ex \ e_`j'_`i'
 		matrix u_`j'_ex = u_`j'_ex \ u_`j'_`i'
 	}
-	forv i = 6/8 {
+	* intensive groups
+	forv i = 7/10 {
 		matrix d_`j'_in = d_`j'_in \ d_`j'_`i'
 		matrix e_`j'_in = e_`j'_in \ e_`j'_`i'
 		matrix u_`j'_in = u_`j'_in \ u_`j'_`i'
 	}
 
 	matrix rownames d_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee"	
+					"Size of membership fee" "Extensive index"		
 	matrix rownames e_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee"	
+					"Size of membership fee" "Extensive index"	
 	matrix rownames u_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee"	
+					"Size of membership fee" "Extensive index"	
 	matrix rownames d_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections"	
+					"% receiving loans" "% voted in elections" "Intensive index"	
 	matrix rownames e_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections"	
+					"% receiving loans" "% voted in elections" "Intensive index"		
 	matrix rownames u_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections"					
+					"% receiving loans" "% voted in elections" "Intensive index"						
 }	
 	
 
@@ -262,56 +282,56 @@ forv j = 1/4 {
 coefplot (matrix(d_1_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_1_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_1_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_1_ex.png", replace
 coefplot (matrix(d_1_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_1_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_1_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_1_in.png", replace
 
 * Goats sold
 coefplot (matrix(d_2_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_2_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_2_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_2_ex.png", replace
 coefplot (matrix(d_2_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_2_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_2_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_2_in.png", replace
 
 * Loan amount
 coefplot (matrix(d_3_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_3_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_3_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_3_ex.png", replace
 coefplot (matrix(d_3_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_3_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_3_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_3_in.png", replace
 
-* Loan amount
+* Benefits index
 coefplot (matrix(d_4_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_4_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_4_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_4_ex.png", replace
 coefplot (matrix(d_4_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_4_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
 		 (matrix(u_4_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.15) coeflabels(, wrap(15))
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_4_in.png", replace
 
 

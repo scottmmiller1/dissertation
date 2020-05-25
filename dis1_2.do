@@ -13,16 +13,6 @@ set more off, perm
 cd "$d2"
 
 
-** Co-op level dataset
-********************************************* 
-*clear
-*use "$d3/CO_Final.dta"
-
-
-
-
-
-
 ** HH level dataset
 ********************************************* 
 clear
@@ -62,6 +52,67 @@ gen no_services = CO_SER1 + CO_SER2 + CO_SER3 + CO_SER4 + CO_SER5 + CO_SER6 + CO
 
 ** Group variable definitons
 
+
+** Extensive
+* ----------------------------------
+* Pct literate
+	* 
+	cap drop pct_HHR14 gr_pct_HHR14
+	bysort idx: egen pct_HHR14 = mean(HHR14)
+	
+	* group var
+	sum pct_HHR14, d
+	gen gr_pct_HHR14 = (pct_HHR14 < `r(p50)')		
+	
+* members below median number of goats
+	* 
+	cap drop low_goats pct_low_goats gr_pct_low_goats
+	sum goats_owned, d 
+	gen low_goats = (goats_owned < `r(p50)')
+	bysort idx: egen pct_low_goats = mean(low_goats)
+	
+	* group var
+	sum pct_low_goats, d
+	gen gr_pct_low_goats = (pct_low_goats > `r(p50)')
+	
+	
+* Coefficient of variation on member assets
+	* 
+	cap drop goats_mean goats_sd cv_goats gr_cv_goats
+	bysort idx: egen goats_mean = mean(goats_owned)
+	bysort idx: egen goats_sd = sd(goats_owned)
+	gen cv_goats = goats_sd / goats_mean
+	
+	* group var
+	sum cv_goats, d
+	gen gr_cv_goats = (cv_goats > `r(p50)')	
+
+* size of membership fee
+sum MAN2, d	
+
+	* average variable
+	cap drop avg_MAN2 gr_avg_MAN2
+	bysort idx: egen avg_MAN2 = mean(MAN2)
+	
+	* group var
+	sum avg_MAN2, d
+	replace avg_MAN2 = `r(p50)' if avg_MAN2 ==.
+	gen gr_avg_MAN2 = (avg_MAN2 < `r(p50)')
+
+	
+* Extensive summary index (PCA)
+gen neg_avg_MAN2 = -1*avg_MAN2
+
+pca pct_HHR14 pct_low_goats cv_goats neg_avg_MAN2
+predict pc1, score	
+rename pc1 extensive_index
+sum extensive_index, d
+
+gen gr_extensive_index = (extensive_index > `r(p50)')	
+
+
+** Intensive
+* ----------------------------------
 * pct of members receiving co-op sale info
 sum COM3, d
 sum bCOM3 
@@ -90,18 +141,6 @@ sum bCOM8
 	sum pct_COM8, d
 	gen gr_pct_COM8 = (pct_COM8 > `r(p50)')	
 	
-
-* size of membership fee
-sum MAN2, d	
-
-	* average variable
-	cap drop avg_MAN2 gr_avg_MAN2
-	bysort idx: egen avg_MAN2 = mean(MAN2)
-	
-	* group var
-	sum avg_MAN2, d
-	gen gr_avg_MAN2 = (avg_MAN2 < `r(p50)')
-	
 	
 * received co-op loans	
 cap drop co_loan
@@ -116,41 +155,7 @@ replace co_loan =. if CO_SER2 == 0
 	* group var
 	sum pct_loan, d
 	gen gr_pct_loan = (pct_loan > `r(p50)')
-
-
-* aware that co-op provides price info
-	* average variable
-	cap drop pct_SER19 gr_pct_SER19
-	bysort idx: egen pct_SER19 = mean(SER19)
-		replace pct_SER19 =. if CO_SERV2 == 0
 	
-	* group var
-	sum pct_SER19, d
-	gen gr_pct_SER19 = (pct_SER19 > `r(p50)')
-	
-
-* members without goats
-	* 
-	cap drop low_goats pct_low_goats gr_pct_low_goats
-	sum goats_owned, d 
-	gen low_goats = (goats_owned < `r(p50)')
-	bysort idx: egen pct_low_goats = mean(low_goats)
-	
-	* group var
-	sum pct_low_goats, d
-	gen gr_pct_low_goats = (pct_low_goats > `r(p50)')
-	
-	
-* Coefficient of variation on member assets
-	* 
-	cap drop goats_mean goats_sd cv_goats gr_cv_goats
-	bysort idx: egen goats_mean = mean(goats_owned)
-	bysort idx: egen goats_sd = sd(goats_owned)
-	gen cv_goats = goats_sd / goats_mean
-	
-	* group var
-	sum cv_goats, d
-	gen gr_cv_goats = (cv_goats > `r(p50)')	
 	
 * Pct voting in co-op elections
 	* 
@@ -162,16 +167,16 @@ replace co_loan =. if CO_SER2 == 0
 	gen gr_pct_MEM14 = (pct_MEM14 > `r(p50)')		
 	
 	
-* Pct literate
-	* 
-	cap drop pct_HHR14 gr_pct_HHR14
-	bysort idx: egen pct_HHR14 = mean(HHR14)
-	
-	* group var
-	sum pct_HHR14, d
-	gen gr_pct_HHR14 = (pct_HHR14 < `r(p50)')		
-	
+* Intensive summary index (PCA)
 
+pca pct_COM3 pct_COM8 pct_loan pct_MEM14
+predict pc1, score	
+rename pc1 intensive_index
+sum intensive_index, d
+
+gen gr_intensive_index = (intensive_index > `r(p50)')			
+	
+	
 
 
 *keep idx gr_pct_COM3 gr_pct_COM8
