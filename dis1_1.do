@@ -68,7 +68,7 @@ clear
 use "$d3/HH_Final.dta"
 
 /*
-gen travel_time = MEM10_a*60 + MEM10_b
+*gen travel_time = MEM10_a*60 + MEM10_b
 sum travel_time, d
 replace travel_time = `r(p99)' if travel_time > `r(p99)'
 replace SER33 = SER33*(0.0099)
@@ -83,7 +83,7 @@ replace MEM7 = 0 if MEM7 ==.
 */
 gen bLS8 = (LS8 > 0)
 gen bHHR16 = (HHR16=="1")
-
+sum trave_time, d
 
 
 ** HH indicators **

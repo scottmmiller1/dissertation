@@ -175,9 +175,9 @@ rename pc1 intensive_index
 sum intensive_index, d
 
 gen gr_intensive_index = (intensive_index > `r(p50)')			
-	
-	
 
+
+	
 
 *keep idx gr_pct_COM3 gr_pct_COM8
 
