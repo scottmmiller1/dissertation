@@ -1,6 +1,6 @@
 
 /*******************************************************************************
-dis1_3.d0		
+dis1_4.d0		
 					
 - Decomposition Charts					
 	
@@ -38,90 +38,6 @@ do "$d1/dis0_3.do"
 local local_benefits co_opsalevalue co_opgoatno_w co_loan_amt
 	make_index_gr benefits wgt stdgroup `local_benefits' 
 
-
-* ----------------------------------------------------
-** Gap analysis
-
-gl gap_1 gr_pct_HHR14 gr_pct_low_goats gr_cv_goats gr_avg_MAN2 gr_pct_COM3 gr_pct_COM8 gr_pct_loan gr_pct_MEM14 
-	
-local listsize : list sizeof global(gap_1)
-tokenize $gap_1
-
-forv i = 1/`listsize' {
-		
-	quietly {
-		reg co_opsalevalue ``i''
-		ereturn list
-		scalar par_1_``i'' = _b[``i''] // mean
-		matrix p = r(table)
-		scalar ll_1_``i'' = p[5,1]
-		scalar ul_1_``i'' = p[6,1]
-		
-		reg co_opgoatno_w ``i''
-		ereturn list
-		scalar par_2_``i'' = _b[``i''] // mean
-		matrix p = r(table)
-		scalar ll_2_``i'' = p[5,1]
-		scalar ul_2_``i'' = p[6,1]
-		
-		
-		reg co_loan_amt ``i''
-		ereturn list
-		scalar par_3_``i'' = _b[``i''] // mean
-		matrix p = r(table)
-		scalar ll_3_``i'' = p[5,1]
-		scalar ul_3_``i'' = p[6,1]
-		
-		reg index_benefits ``i''
-		ereturn list
-		scalar par_4_``i'' = _b[``i''] // mean
-		matrix p = r(table)
-		scalar ll_4_``i'' = p[5,1]
-		scalar ul_4_``i'' = p[6,1]
-		
-		}
-}
-
-matrix A = (par_1_gr_pct_HHR14)
-matrix B = (par_2_gr_pct_HHR14)
-
-
-forv i = 2/`listsize' {
-	matrix A = A \ par_1_``i''
-	matrix B = B \ par_2_``i''
-}
-
-matrix A = A'
-matrix B = B'
-matrix colnames A = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee" "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections"
-matrix colnames B = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee" "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections"					
-
-matrix A_ci = (ll_1_gr_pct_HHR14, ul_1_gr_pct_HHR14)
-matrix B_ci = (ll_2_gr_pct_HHR14, ul_2_gr_pct_HHR14)
-
-forv i = 2/`listsize' {
-	matrix A_ci = A_ci \ (ll_1_``i'', ul_1_``i'')
-	matrix B_ci = B_ci \ (ll_1_``i'', ul_1_``i'')
-}
-matrix A_ci = A_ci'
-matrix B_ci = B_ci'
-
-
-
-
-* graph with confidence intervals
-coefplot matrix(A), ci(A_ci) xline(0)
-
-
-coefplot (matrix(A), ci(A_ci)), bylabel(Revenue from cooperative goat sales)   ///
-      || (matrix(B), ci(B_ci)), bylabel(Cooperative goats sold) ///
-	  ||, xline(0) byopts(xrescale)
-    
-	   
 	   
 * ------------------------------------	   
 quietly tab district, gen(dist_)
@@ -136,15 +52,25 @@ tokenize $outcomes
 
 forv i = 1/`listsize' {
 	quietly {
+	* Extensive index
+		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_1 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_1 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_1 = (_b[unexplained], p[5,5], p[6,5])			
+		
 	* by literacy
 		oaxaca ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
 					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_1 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_1 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_1 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_2 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_2 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_2 = (_b[unexplained], p[5,5], p[6,5])
 		
 		
 	* by low goats
@@ -153,9 +79,9 @@ forv i = 1/`listsize' {
 					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_2 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_2 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_2 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_3 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_3 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_3 = (_b[unexplained], p[5,5], p[6,5])
 		
 	* by cv goats
 		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -163,24 +89,14 @@ forv i = 1/`listsize' {
 					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_3 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_3 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_3 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_4 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_4 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_4 = (_b[unexplained], p[5,5], p[6,5])
 
 	* by membership fee
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
 					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax
-		ereturn list
-		matrix p = r(table)
-		matrix d_`i'_4 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_4 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_4 = (_b[unexplained], p[5,5], p[6,5])		
-
-	* Extensive index
-		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
-					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_5 = (_b[difference], p[5,3], p[6,3])
@@ -189,15 +105,25 @@ forv i = 1/`listsize' {
 		
 
 * Intensive
+	* by intensive index
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_6 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_6 = (_b[unexplained], p[5,5], p[6,5])	 	
+
 	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
 					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_6 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_6 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_7 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_7 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_7 = (_b[unexplained], p[5,5], p[6,5])
 		
 	* by non-sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -205,9 +131,9 @@ forv i = 1/`listsize' {
 					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_7 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_7 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_7 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_8 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_8 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_8 = (_b[unexplained], p[5,5], p[6,5])
 		
 	* by pct loans
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -215,9 +141,9 @@ forv i = 1/`listsize' {
 					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_8 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_8 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_8 = (_b[unexplained], p[5,5], p[6,5])
+		matrix d_`i'_9 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_9 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_9 = (_b[unexplained], p[5,5], p[6,5])
 
 	* by voting
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -225,19 +151,10 @@ forv i = 1/`listsize' {
 					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		matrix p = r(table)
-		matrix d_`i'_9 = (_b[difference], p[5,3], p[6,3])
-		matrix e_`i'_9 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_9 = (_b[unexplained], p[5,5], p[6,5])		
-		
-	* by intensive index
-		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
-					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
-		ereturn list
-		matrix p = r(table)
 		matrix d_`i'_10 = (_b[difference], p[5,3], p[6,3])
 		matrix e_`i'_10 = (_b[explained], p[5,4], p[6,4])
-		matrix u_`i'_10 = (_b[unexplained], p[5,5], p[6,5])	 	
+		matrix u_`i'_10 = (_b[unexplained], p[5,5], p[6,5])		
+		
 		
 		}
 }		
@@ -263,18 +180,12 @@ forv j = 1/4 {
 		matrix u_`j'_in = u_`j'_in \ u_`j'_`i'
 	}
 
-	matrix rownames d_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee" "Extensive index"		
-	matrix rownames e_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee" "Extensive index"	
-	matrix rownames u_`j'_ex = "% non-literate" "% below median number of goats" "CV on goats owned" ///
-					"Size of membership fee" "Extensive index"	
-	matrix rownames d_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections" "Intensive index"	
-	matrix rownames e_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections" "Intensive index"		
-	matrix rownames u_`j'_in = "% receiving sale information" "% receiving non-sale information" ///
-					"% receiving loans" "% voted in elections" "Intensive index"						
+	matrix rownames d_`j'_ex = "Extensive index" "% non-literate" "% below median number of goats" "CV on goats owned" "Size of membership fee"		
+	matrix rownames e_`j'_ex = "Extensive index" "% non-literate" "% below median number of goats" "CV on goats owned" "Size of membership fee"	
+	matrix rownames u_`j'_ex = "Extensive index" "% non-literate" "% below median number of goats" "CV on goats owned" "Size of membership fee"	
+	matrix rownames d_`j'_in = "Intensive index" "% receiving sale information" "% receiving non-sale information" "% receiving loans" "% voted in elections"	
+	matrix rownames e_`j'_in = "Intensive index" "% receiving sale information" "% receiving non-sale information" "% receiving loans" "% voted in elections"		
+	matrix rownames u_`j'_in = "Intensive index" "% receiving sale information" "% receiving non-sale information" "% receiving loans" "% voted in elections"							
 }	
 	
 
