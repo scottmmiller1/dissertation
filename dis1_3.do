@@ -276,7 +276,7 @@ forv i = 1/`listsize' {
 		
 		
 
-* extensive (drop certain controls)
+* intensive (drop certain controls)
 
 	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -379,8 +379,8 @@ forv i = 1/`listsize' {
 		matrix mat_`i'_9_u = (par_u_`i'_9, se_u_`i'_9)	
 		
 	* by intensive index
-		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
-					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+		oaxaca ``i''  HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
 					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
 		ereturn list
 		scalar par_d_`i'_10 = _b[difference] // mean
@@ -641,12 +641,25 @@ tokenize $outcomes
 
 forv i = 1/`listsize' {
 	quietly {
+		
+	* by extensive index
+reg ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_extensive_index == 1, vce(cluster idx)
+outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+		addtext(District dummies, Yes) 			
+		
+reg ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_extensive_index == 0, vce(cluster idx)
+outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 			
 
 	* by literacy (remove literacy control)
 reg ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_HHR14 == 1, vce(cluster idx)
-outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 
 reg ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -706,11 +719,25 @@ tokenize $outcomes
 forv i = 1/`listsize' {
 	quietly {
 
-* by sale info
+	* by intensive index
+reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_intensive_index == 1, vce(cluster idx)
+outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+		addtext(District dummies, Yes) 
+		
+reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
+					if gr_intensive_index == 0, vce(cluster idx)
+outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
+		addtext(District dummies, Yes) 		
+		
+	
+	* by sale info
 reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_COM3 == 1, vce(cluster idx)
-outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex replace label ///
+outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 
 reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
@@ -719,7 +746,7 @@ reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 /
 outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 
 		
-* by nonsale info
+	* by nonsale info
 reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_COM8 == 1, vce(cluster idx)
@@ -732,7 +759,7 @@ reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 /
 outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 		
 		
-* by loan pct
+	* by loan pct
 reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_loan == 1, vce(cluster idx)
@@ -745,7 +772,7 @@ reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 /
 outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0.01,0.05,0.1) tex append label ///
 		addtext(District dummies, Yes) 				
 		
-* by voting
+	* by voting
 reg ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 i.n_district ///
 					if gr_pct_MEM14 == 1, vce(cluster idx)
