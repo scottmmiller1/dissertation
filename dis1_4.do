@@ -6,6 +6,7 @@ dis1_4.d0
 	
 *******************************************************************************/
 
+*ssc install sensemakr, replace
 
 * run group definitions code 
 do "$d1/dis1_2.do"

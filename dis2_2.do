@@ -4,7 +4,7 @@
 clear
 use "$d3/HH_Final.dta"
 
-drop if LS8 == 0
+*drop if LS8 == 0
 
 * binary side selling
 gen side_sell = outsidegoatno > 0
@@ -131,7 +131,9 @@ rtitle("Delayed payment with cooperative"\"Cooperative sale point is too far awa
 
 * LS45 - Ever traveled to sales point but failed to sell? 
 
-
+sum HH_GTT1, d
+sum HH_GTT2, d
+sum HH_GTT3, d
 
 
 * Shocks : 

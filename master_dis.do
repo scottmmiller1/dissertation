@@ -41,15 +41,12 @@ cd "$d0"
 * To run all do files
 
 
-
+/*
 
 * Data cleaning & dataset creating
 forv i = 1/6 {
 	do "$d1/dis0_`i'.do"
 }
-
-
-/*
 
 * Essay 1
 forv i = 1/ {
