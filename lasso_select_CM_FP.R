@@ -61,7 +61,7 @@ fit_LS8 <- glmnet(X,dta$LS8, family=c("gaussian"), alpha=1, nlambda=100)
   write.csv(coef_LS8, file="lasso output/coef_LS8.csv")  
   
 #net goat income  
-  fit_netinc <- glmnet(X,dta$LS8, family=c("gaussian"), alpha=1, nlambda=100)
+fit_netinc <- glmnet(X,dta$LS8, family=c("gaussian"), alpha=1, nlambda=100)
   
   # save lambdas to csv
   lambda_netinc <- as.matrix(fit_netinc$lambda)

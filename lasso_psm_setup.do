@@ -11,8 +11,8 @@ use "/Users/scottmiller/Dropbox (UFL)/LSIL 2/Work Spaces/Scott/Side-Selling/Data
 				
 
 * keep relevant variables				 
-keep co_sale price LS8 LS9 idx district HHR4 HHR14 ID10 pre_goats_owned bHHR16 mem_length ///
-		bMEM4 MEM7 n_services index_emp nfloors dirt_floor geo_dist_mi GPS_altitude net_goat_income_w 
+keep co_sale price LS8 LS9 net_goat_income_w idx district HHR4 HHR14 ID10 pre_goats_owned bHHR16 mem_length ///
+		bMEM4 MEM7 n_services index_emp nfloors dirt_floor geo_dist_mi GPS_altitude 
 				 
 
 * full set of interactions	

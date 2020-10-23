@@ -33,13 +33,32 @@ replace co_loan_amt =. if BR1 == 2
 replace co_loan_amt = co_loan_amt*(0.0099)
 drop co_loan_1-co_loan_10
 
+* Pre-sales herd size
+gen pre_goats_owned = goats_owned + LS8_w - LSE11_A + LSE13_A + LSE14_A	
+replace pre_goats_owned = 0 if pre_goats_owned < 0 	
+
+* return on goat assets
+	gen return_assets = co_opsalevalue / pre_goats_owned if pre_goats_owned > 0
+	replace return_assets = . if pre_goats_owned == 0
+	
+	gen return_assets_all = LS9_w / pre_goats_owned if pre_goats_owned > 0
+	replace return_assets = . if pre_goats_owned == 0
+	
+
+replace LS9_w = . if LS8_w == 0		
+replace LS8_w = . if LS8_w == 0		
 
 * goat revenue & loan amount index
 do "$d1/dis0_3.do"
-local local_benefits co_opsalevalue co_opgoatno_w co_loan_amt
+local local_benefits LS9_w LS8_w co_loan_amt
 	make_index_gr benefits wgt stdgroup `local_benefits' 
 
-	
+
+sum co_opsalevalue, d
+sum co_opgoatno_w, d
+sum co_loan_amt, d
+sum index_benefits, d
+
 	
 * ----------------------------------------------------
 ** Gap analysis
@@ -51,8 +70,10 @@ tokenize $gap_1
 
 forv i = 1/`listsize' {
 		
+		reg LS9_w gr_pct_HHR14, vce(cluster idx)
+		
 	quietly {
-		reg co_opsalevalue ``i'', vce(cluster idx)
+		reg LS9_w ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -60,7 +81,7 @@ forv i = 1/`listsize' {
 		* matrix for table
 		matrix mat_1_`i' = (par_``i'', se_``i'')
 		
-		reg co_opgoatno_w ``i'', vce(cluster idx)
+		reg LS8_w ``i'', vce(cluster idx)
 		ereturn list
 		scalar par_``i'' = _b[``i''] // mean
 		scalar se_``i'' = _se[``i'']  // sd
@@ -115,7 +136,7 @@ matrix stars``m''=J(`listsize',2,0)
 
 * Table
 frmttable using avg_gap.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Average Gap") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Group Definition","Cooperative goat"\"","revenue (USD)") ///
+ctitle("Group Definition","Total goat"\"","revenue (USD)") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -125,7 +146,7 @@ rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
 		"Percentage of members who voted in cooperative elections"\""\"Intensive inclusion index"\"") replace	
 frmttable using avg_gap.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
-ctitle("Cooperative goats"\"sold (count)") merge
+ctitle("Total goats"\"sold (count)") merge	
 frmttable using avg_gap.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Cooperative loan"\"amount (USD)") merge
 frmttable using avg_gap.tex, tex statmat(D) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsD) asymbol(*,**,***) ///

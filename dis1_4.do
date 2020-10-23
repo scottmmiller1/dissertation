@@ -44,9 +44,104 @@ local local_benefits co_opsalevalue co_opgoatno_w co_loan_amt
 quietly tab district, gen(dist_)
 
 
+** Standardized outcome plots
+* ---------------------------------------------------------------------------------------
+
+gen bLS8 = (LS8_w > 0 & LS8_w !=.)
+gen bco_goat = (co_opgoatno_w > 0 & co_opgoatno_w !=.)
+
+replace LS8_w = . if LS8_w == 0
+replace LS9_w = . if LS9_w == 0
+
+* standardized variables
+foreach v of varlist bLS8 LS8_w LS9_w bco_goat co_opgoatno_w co_opsalevalue co_loan_amt MEM7 {
+	quietly sum `v', d
+	gen `v'_st = (`v' - `r(mean)') / `r(sd)'
+	sum `v'_st
+}
 
 * extensive (drop certain controls)
-gl outcomes co_opsalevalue co_opgoatno_w co_loan_amt index_benefits
+gl outcomes bLS8_st LS8_w_st LS9_w_st bco_goat_st co_opgoatno_w_st co_opsalevalue_st co_loan_amt_st
+	
+local listsize : list sizeof global(outcomes)
+tokenize $outcomes	
+
+forv i = 1/`listsize' {
+	quietly {
+	* Extensive index
+		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_1 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_1 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_1 = (_b[unexplained], p[5,5], p[6,5])			
+		
+
+* Intensive
+	* by intensive index
+		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
+					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+		ereturn list
+		matrix p = r(table)
+		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
+		matrix e_`i'_6 = (_b[explained], p[5,4], p[6,4])
+		matrix u_`i'_6 = (_b[unexplained], p[5,5], p[6,5])	 	
+		
+		
+		}
+}		
+
+* outcome matrices
+	matrix d_ex = d_1_1
+	matrix e_ex = e_1_1
+	matrix u_ex = u_1_1
+	matrix d_in = d_1_6
+	matrix e_in = e_1_6
+	matrix u_in = u_1_6
+	* groups
+	forv i = 2/7 {
+		matrix d_ex = d_ex \ d_`i'_1
+		matrix e_ex = e_ex \ e_`i'_1
+		matrix u_ex = u_ex \ u_`i'_1
+		
+		matrix d_in = d_in \ d_`i'_6
+		matrix e_in = e_in \ e_`i'_6
+		matrix u_in = u_in \ u_`i'_6
+		
+	}
+	
+matrix rownames d_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames e_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames u_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+
+matrix rownames d_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames e_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames u_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+	
+
+* Revenue
+coefplot (matrix(d_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_ex[,1]), ci((2 3)) label(Returns) msymbol(D) msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-0.75(0.25)0.5) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_1_ex_st.png", replace
+
+coefplot (matrix(d_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_in[,1]), ci((2 3)) label(Returns) msymbol(D) msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-0.5(0.25)0.75) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_1_in_st.png", replace
+* ---------------------------------------------------------------------------------------
+
+
+
+* extensive (drop certain controls)
+gl outcomes bLS8 LS8_w LS9_w bco_goat co_opgoatno_w co_opsalevalue co_loan_amt
 	
 local listsize : list sizeof global(outcomes)
 tokenize $outcomes	
@@ -161,7 +256,7 @@ forv i = 1/`listsize' {
 }		
 
 * outcome matrices
-forv j = 1/4 {
+forv j = 1/7 {
 	matrix d_`j'_ex = d_`j'_1
 	matrix e_`j'_ex = e_`j'_1
 	matrix u_`j'_ex = u_`j'_1
@@ -190,48 +285,105 @@ forv j = 1/4 {
 }	
 	
 
-* Revenue
-coefplot (matrix(d_1_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_1_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_1_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+* Sells goats
+coefplot (matrix(d_1_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_1_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_1_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_1_ex.png", replace
-coefplot (matrix(d_1_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_1_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_1_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+coefplot (matrix(d_1_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_1_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_1_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_1_in.png", replace
 
-* Goats sold
-coefplot (matrix(d_2_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_2_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_2_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+* Total goats sold
+coefplot (matrix(d_2_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_2_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_2_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-1(0.5)1) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_2_ex.png", replace
-coefplot (matrix(d_2_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_2_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_2_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+coefplot (matrix(d_2_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_2_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_2_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_2_in.png", replace
 
-* Loan amount
-coefplot (matrix(d_3_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_3_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_3_ex[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+* Total goat revenue
+coefplot (matrix(d_3_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_3_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_3_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-150(50)100) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_3_ex.png", replace
-coefplot (matrix(d_3_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
-		 (matrix(e_3_in[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
-		 (matrix(u_3_in[,1]), ci((2 3)) label(Returns) msymbol(D)), bylabel(Revenue) ///
+coefplot (matrix(d_3_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_3_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_3_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_3_in.png", replace
 
+* Sells co-op goats
+coefplot (matrix(d_4_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_4_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_4_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_4_ex.png", replace
+coefplot (matrix(d_4_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_4_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_4_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_4_in.png", replace
+
+* Co-op goats sold
+coefplot (matrix(d_5_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_5_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_5_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_5_ex.png", replace
+coefplot (matrix(d_5_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_5_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_5_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_5_in.png", replace
+
+* Co-op goat revenue
+coefplot (matrix(d_6_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_6_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_6_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-100(50)100) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_6_ex.png", replace
+coefplot (matrix(d_6_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_6_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_6_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_6_in.png", replace
+
+* Loan amount
+coefplot (matrix(d_7_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_7_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_7_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_7_ex.png", replace
+coefplot (matrix(d_7_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
+		 (matrix(e_7_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
+		 (matrix(u_7_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
+		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
+graph export "$d2/decomp_7_in.png", replace
+
+/*
 * Benefits index
 coefplot (matrix(d_4_ex[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 (matrix(e_4_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T)) /// 
@@ -245,6 +397,6 @@ coefplot (matrix(d_4_in[,1]), ci((2 3)) label(Difference) msymbol(S)) ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_4_in.png", replace
-
+*/
 
 

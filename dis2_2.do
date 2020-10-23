@@ -4,7 +4,7 @@
 clear
 use "$d3/HH_Final.dta"
 
-*drop if LS8 == 0
+drop if LS8 == 0
 
 * binary side selling
 gen side_sell = outsidegoatno > 0
@@ -145,3 +145,40 @@ sum HH_GTT3, d
 * 10 - return to previous home, 11 - inadequate cultivable land, 12 - poor land quality, 
 * 13 - Health problems, 14 - Drought, 15 - Floods, 16 - Earthquake, 17 - inadequate social protection, 
 * 18 - Childs education, 19 - security/crime
+
+gen memlength = (MEM2_1*12) + MEM2_2
+
+bysort side_sell: sum memlength
+bysort side_sell: sum MEM7
+
+ttest memlength, by(side_sell)
+ttest MEM7, by(side_sell)
+
+
+geodist GPS_latitude GPS_longitude CO_GPS_latitude CO_GPS_longitude, generate(geo_dist_mi) miles
+
+* co-ops with significant distance outliers. 
+preserve
+drop if idx == "Digopan SEWC 1" | idx == "Lagansil SEWC 1" | idx == "Sakriya SEWC 1" | idx == "Sundhara SEWC 1" | idx == "Upahar SEWC 1"
+
+ttest geo_dist_mi, by(side_sell)
+
+restore
+
+ttest HH_GTT2, by(side_sell)
+
+gen pre_goats_owned = goats_owned + LS8_w - LSE11_A + LSE13_A + LSE14_A	
+replace pre_goats_owned = 0 if pre_goats_owned < 0 	
+
+ttest pre_goats_owned, by(side_sell)
+
+ttest COM3, by(side_sell)
+
+ttest index_emp, by(side_sell)
+
+gen bHHR16 = (HHR16=="1")
+ttest bHHR16, by(side_sell)
+
+ttest HHR4, by(side_sell)
+
+ttest HHR14, by(side_sell)
