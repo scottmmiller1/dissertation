@@ -54,14 +54,14 @@ replace LS8_w = . if LS8_w == 0
 replace LS9_w = . if LS9_w == 0
 
 * standardized variables
-foreach v of varlist bLS8 LS8_w LS9_w bco_goat co_opgoatno_w co_opsalevalue co_loan_amt MEM7 {
+foreach v of varlist bLS8 LS9_w bco_goat co_opsalevalue co_loan_amt MEM7 {
 	quietly sum `v', d
 	gen `v'_st = (`v' - `r(mean)') / `r(sd)'
 	sum `v'_st
 }
 
 * extensive (drop certain controls)
-gl outcomes bLS8_st LS8_w_st LS9_w_st bco_goat_st co_opgoatno_w_st co_opsalevalue_st co_loan_amt_st
+gl outcomes bLS8_st LS9_w_st bco_goat_st co_opsalevalue_st co_loan_amt_st
 	
 local listsize : list sizeof global(outcomes)
 tokenize $outcomes	
@@ -71,7 +71,7 @@ forv i = 1/`listsize' {
 	* Extensive index
 		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_1 = (_b[difference], p[5,3], p[6,3])
@@ -83,7 +83,7 @@ forv i = 1/`listsize' {
 	* by intensive index
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
@@ -102,7 +102,7 @@ forv i = 1/`listsize' {
 	matrix e_in = e_1_6
 	matrix u_in = u_1_6
 	* groups
-	forv i = 2/7 {
+	forv i = 2/5 {
 		matrix d_ex = d_ex \ d_`i'_1
 		matrix e_ex = e_ex \ e_`i'_1
 		matrix u_ex = u_ex \ u_`i'_1
@@ -113,13 +113,13 @@ forv i = 1/`listsize' {
 		
 	}
 	
-matrix rownames d_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
-matrix rownames e_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
-matrix rownames u_ex = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames d_ex = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames e_ex = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames u_ex = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
 
-matrix rownames d_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
-matrix rownames e_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
-matrix rownames u_in = "Sells goats" "Total goats sold" "Total goat revenue" "Sells goats through cooperative" "Cooperative goats sold" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames d_in = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames e_in = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
+matrix rownames u_in = "Sells goats" "Total goat revenue" "Sells goats through cooperative" "Cooperative goat revenue" "Cooperative loan amount"
 	
 
 * Revenue
@@ -151,7 +151,7 @@ forv i = 1/`listsize' {
 	* Extensive index
 		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_1 = (_b[difference], p[5,3], p[6,3])
@@ -161,7 +161,7 @@ forv i = 1/`listsize' {
 	* by literacy
 		oaxaca ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_2 = (_b[difference], p[5,3], p[6,3])
@@ -172,7 +172,7 @@ forv i = 1/`listsize' {
 	* by low goats
 		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_3 = (_b[difference], p[5,3], p[6,3])
@@ -182,7 +182,7 @@ forv i = 1/`listsize' {
 	* by cv goats
 		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax
+					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_4 = (_b[difference], p[5,3], p[6,3])
@@ -192,7 +192,7 @@ forv i = 1/`listsize' {
 	* by membership fee
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax
+					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_5 = (_b[difference], p[5,3], p[6,3])
@@ -204,7 +204,7 @@ forv i = 1/`listsize' {
 	* by intensive index
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_6 = (_b[difference], p[5,3], p[6,3])
@@ -214,7 +214,7 @@ forv i = 1/`listsize' {
 	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_7 = (_b[difference], p[5,3], p[6,3])
@@ -224,7 +224,7 @@ forv i = 1/`listsize' {
 	* by non-sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_8 = (_b[difference], p[5,3], p[6,3])
@@ -234,7 +234,7 @@ forv i = 1/`listsize' {
 	* by pct loans
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_9 = (_b[difference], p[5,3], p[6,3])
@@ -244,7 +244,7 @@ forv i = 1/`listsize' {
 	* by voting
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		matrix p = r(table)
 		matrix d_`i'_10 = (_b[difference], p[5,3], p[6,3])
@@ -299,26 +299,13 @@ coefplot (matrix(d_1_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) 
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_1_in.png", replace
 
-* Total goats sold
-coefplot (matrix(d_2_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
-		 (matrix(e_2_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
-		 (matrix(u_2_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-1(0.5)1) aspectratio(1.2) coeflabels(, wrap(15))
-graph export "$d2/decomp_2_ex.png", replace
-coefplot (matrix(d_2_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
-		 (matrix(e_2_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
-		 (matrix(u_2_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
-graph export "$d2/decomp_2_in.png", replace
 
 * Total goat revenue
 coefplot (matrix(d_3_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
 		 (matrix(e_3_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
 		 (matrix(u_3_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-150(50)100) aspectratio(1.2) coeflabels(, wrap(15))
+		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) xlabel(-100(50)100) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_3_ex.png", replace
 coefplot (matrix(d_3_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
 		 (matrix(e_3_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
@@ -340,20 +327,6 @@ coefplot (matrix(d_4_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) 
 		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
 		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
 graph export "$d2/decomp_4_in.png", replace
-
-* Co-op goats sold
-coefplot (matrix(d_5_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
-		 (matrix(e_5_ex[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
-		 (matrix(u_5_ex[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
-graph export "$d2/decomp_5_ex.png", replace
-coefplot (matrix(d_5_in[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///
-		 (matrix(e_5_in[,1]), ci((2 3)) label(Characteristics) msymbol(T) msize(2pt) ciopts(lwidth(0.15))) /// 
-		 (matrix(u_5_in[,1]), ci((2 3)) label(Returns) msymbol(D)msize(2pt) ciopts(lwidth(0.15)) offset(-0.15)), ///
-		 xline(0) ylab(, labs(small)) legend(rows(1) size(small) pos(6)) ///
-		 graphregion(color(white) ilcolor(white)) plotregion(margin(zero)) aspectratio(1.2) coeflabels(, wrap(15))
-graph export "$d2/decomp_5_in.png", replace
 
 * Co-op goat revenue
 coefplot (matrix(d_6_ex[,1]), ci((2 3)) label(Difference) msymbol(S) msize(5pt) ciopts(recast(rcap) lwidth(0.65)) citop offset(0.25)) ///

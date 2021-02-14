@@ -162,8 +162,15 @@ ctitle("Cooperative benefits"\"index") merge
 quietly tab district, gen(dist_)
 
 
+gen bLS8 = (LS8_w > 0 & LS8_w !=.)
+gen bco_goat = (co_opgoatno_w > 0 & co_opgoatno_w !=.)
+
+replace LS8_w = . if LS8_w == 0
+replace LS9_w = . if LS9_w == 0
+
+
 * extensive (drop certain controls)
-gl outcomes co_opsalevalue co_opgoatno_w co_loan_amt index_benefits
+gl outcomes bLS8 LS8_w LS9_w bco_goat co_opgoatno_w co_opsalevalue co_loan_amt
 	
 local listsize : list sizeof global(outcomes)
 tokenize $outcomes	
@@ -173,7 +180,7 @@ forv i = 1/`listsize' {
 	* by literacy
 		oaxaca ``i'' HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_HHR14) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_1 = _b[difference] // mean
 		scalar se_d_`i'_1 = _se[difference]  // sd
@@ -198,7 +205,7 @@ forv i = 1/`listsize' {
 	* by low goats
 		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_low_goats) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_2 = _b[difference] // mean
 		scalar se_d_`i'_2 = _se[difference]  // sd
@@ -223,7 +230,7 @@ forv i = 1/`listsize' {
 	* by cv goats
 		oaxaca ``i'' HHR14 HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax
+					by(gr_cv_goats) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_3 = _b[difference] // mean
 		scalar se_d_`i'_3 = _se[difference]  // sd
@@ -248,7 +255,7 @@ forv i = 1/`listsize' {
 	* by membership fee
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax
+					by(gr_avg_MAN2) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_4 = _b[difference] // mean
 		scalar se_d_`i'_4 = _se[difference]  // sd
@@ -273,7 +280,7 @@ forv i = 1/`listsize' {
 	* by extensive index
 		oaxaca ``i'' HHR4 ID10 bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_extensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_5 = _b[difference] // mean
 		scalar se_d_`i'_5 = _se[difference]  // sd
@@ -302,7 +309,7 @@ forv i = 1/`listsize' {
 	* by sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM3) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_6 = _b[difference] // mean
 		scalar se_d_`i'_6 = _se[difference]  // sd
@@ -327,7 +334,7 @@ forv i = 1/`listsize' {
 	* by non-sale info
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_COM8) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_7 = _b[difference] // mean
 		scalar se_d_`i'_7 = _se[difference]  // sd
@@ -352,7 +359,7 @@ forv i = 1/`listsize' {
 	* by pct loans
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_loan) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_8 = _b[difference] // mean
 		scalar se_d_`i'_8 = _se[difference]  // sd
@@ -377,7 +384,7 @@ forv i = 1/`listsize' {
 	* by voting
 		oaxaca ``i'' HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax
+					by(gr_pct_MEM14) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_9 = _b[difference] // mean
 		scalar se_d_`i'_9 = _se[difference]  // sd
@@ -402,7 +409,7 @@ forv i = 1/`listsize' {
 	* by intensive index
 		oaxaca ``i''  HHR14 HHR4 ID10 goats_owned bHHR16 mem_length bMEM4 travel_time MEM7 ///
 					MAN2 MAN3 no_services REV4 CO_SER15 CO_SER2 MAN4 dist_*, ///
-					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax
+					by(gr_intensive_index) vce(cluster idx) swap weight(0) relax level(90)
 		ereturn list
 		scalar par_d_`i'_10 = _b[difference] // mean
 		scalar se_d_`i'_10 = _se[difference]  // sd
@@ -428,7 +435,7 @@ forv i = 1/`listsize' {
 }
 	
 
-** goat revenue	
+** sells goats
 * -----------------------------------------------------
 matrix A = mat_1_1_d
 matrix B = mat_1_1_e
@@ -462,7 +469,7 @@ matrix starsC=J(10,1,0)
 
 * Table
 frmttable using E1_decomp_1.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative goat revenue (USD)","Difference") ///
+ctitle("Member sells goats (0/1)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -478,56 +485,7 @@ ctitle("Returns") merge
 
 
 
-** goats sold
-* -----------------------------------------------------
-matrix A = mat_2_1_d
-matrix B = mat_2_1_e
-matrix C = mat_2_1_u
-
-
-forv i = 2/10 { // appends into single matrix
-	matrix A = A \ mat_2_`i'_d
-	matrix B = B \ mat_2_`i'_e
-	matrix C = C \ mat_2_`i'_u
-}
-
-matrix starsA=J(10,1,0)
-matrix starsB=J(10,1,0)
-matrix starsC=J(10,1,0)
-	forvalues i = 1/10 {
-		matrix starsA[`i',1] =   ///
-			(.1 > p_2_`i'_d) +  ///
-			(.05 > p_2_`i'_d) +  ///
-			(.01 > p_2_`i'_d)
-		matrix starsB[`i',1] =   ///
-			(.1 > p_2_`i'_e) +  ///
-			(.05 > p_2_`i'_e) +  ///
-			(.01 > p_2_`i'_e)
-		matrix starsC[`i',1] =   ///
-			(.1 > p_2_`i'_u) +  ///
-			(.05 > p_2_`i'_u) +  ///
-			(.01 > p_2_`i'_u)	
-		}
-
-
-* Table
-frmttable using E1_decomp_2.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Number of goats sold through the cooperative (count)","Difference") ///
-rtitle("Percentage of non-literate members"\""\ ///
-		"Percentage of members below the median number of goats owned"\""\ ///
-		"Coefficient of variation on members' goats"\""\ ///
-		"Size of membership fee"\""\"Extensive index"\""\ ///
-		"Percentage of members receiving sale information"\""\ ///
-		"Percentage of members receiving non-sale information"\""\ ///
-		"Percentage of members receiving loans"\""\ ///
-		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
-frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
-ctitle("Characteristics") merge
-frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
-ctitle("Returns") merge
-
-
-** loan amount
+** goat revenue
 * -----------------------------------------------------
 matrix A = mat_3_1_d
 matrix B = mat_3_1_e
@@ -560,8 +518,8 @@ matrix starsC=J(10,1,0)
 
 
 * Table
-frmttable using E1_decomp_3.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative loan amount (USD)","Difference") ///
+frmttable using E1_decomp_2.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
+ctitle("Total goat revenue (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -570,13 +528,13 @@ rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members receiving non-sale information"\""\ ///
 		"Percentage of members receiving loans"\""\ ///
 		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
-frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
+frmttable using E1_decomp_2.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
 ctitle("Characteristics") merge
-frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
+frmttable using E1_decomp_2.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
 
 
-** benefits index
+** Sells co-op goats
 * -----------------------------------------------------
 matrix A = mat_4_1_d
 matrix B = mat_4_1_e
@@ -609,8 +567,57 @@ matrix starsC=J(10,1,0)
 
 
 * Table
+frmttable using E1_decomp_3.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
+ctitle("Member sells goats through cooperative (0/1)","Difference") ///
+rtitle("Percentage of non-literate members"\""\ ///
+		"Percentage of members below the median number of goats owned"\""\ ///
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
+frmttable using E1_decomp_3.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
+ctitle("Characteristics") merge
+frmttable using E1_decomp_3.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
+ctitle("Returns") merge
+
+
+** Cooperative goat revenue
+* -----------------------------------------------------
+matrix A = mat_6_1_d
+matrix B = mat_6_1_e
+matrix C = mat_6_1_u
+
+
+forv i = 2/10 { // appends into single matrix
+	matrix A = A \ mat_6_`i'_d
+	matrix B = B \ mat_6_`i'_e
+	matrix C = C \ mat_6_`i'_u
+}
+
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_6_`i'_d) +  ///
+			(.05 > p_6_`i'_d) +  ///
+			(.01 > p_6_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_6_`i'_e) +  ///
+			(.05 > p_6_`i'_e) +  ///
+			(.01 > p_6_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_6_`i'_u) +  ///
+			(.05 > p_6_`i'_u) +  ///
+			(.01 > p_6_`i'_u)	
+		}
+
+
+* Table
 frmttable using E1_decomp_4.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
-ctitle("Cooperative benefits index","Difference") ///
+ctitle("Cooperative goat revenue (USD)","Difference") ///
 rtitle("Percentage of non-literate members"\""\ ///
 		"Percentage of members below the median number of goats owned"\""\ ///
 		"Coefficient of variation on members' goats"\""\ ///
@@ -624,6 +631,54 @@ ctitle("Characteristics") merge
 frmttable using E1_decomp_4.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
 ctitle("Returns") merge
 
+
+** Cooperative loan amount
+* -----------------------------------------------------
+matrix A = mat_7_1_d
+matrix B = mat_7_1_e
+matrix C = mat_7_1_u
+
+
+forv i = 2/10 { // appends into single matrix
+	matrix A = A \ mat_7_`i'_d
+	matrix B = B \ mat_7_`i'_e
+	matrix C = C \ mat_7_`i'_u
+}
+
+matrix starsA=J(10,1,0)
+matrix starsB=J(10,1,0)
+matrix starsC=J(10,1,0)
+	forvalues i = 1/10 {
+		matrix starsA[`i',1] =   ///
+			(.1 > p_7_`i'_d) +  ///
+			(.05 > p_7_`i'_d) +  ///
+			(.01 > p_7_`i'_d)
+		matrix starsB[`i',1] =   ///
+			(.1 > p_7_`i'_e) +  ///
+			(.05 > p_7_`i'_e) +  ///
+			(.01 > p_7_`i'_e)
+		matrix starsC[`i',1] =   ///
+			(.1 > p_7_`i'_u) +  ///
+			(.05 > p_7_`i'_u) +  ///
+			(.01 > p_7_`i'_u)	
+		}
+
+
+* Table
+frmttable using E1_decomp_5.tex, tex statmat(A) sdec(2) substat(1) coljust(l;c;l;l) title("Oaxaca Decomposition") annotate(starsA) asymbol(*,**,***) ///
+ctitle("Cooperative loan amount (USD)","Difference") ///
+rtitle("Percentage of non-literate members"\""\ ///
+		"Percentage of members below the median number of goats owned"\""\ ///
+		"Coefficient of variation on members' goats"\""\ ///
+		"Size of membership fee"\""\"Extensive index"\""\ ///
+		"Percentage of members receiving sale information"\""\ ///
+		"Percentage of members receiving non-sale information"\""\ ///
+		"Percentage of members receiving loans"\""\ ///
+		"Percentage of members who voted in cooperative elections"\""\"Intensive index"\"") replace	
+frmttable using E1_decomp_5.tex, tex statmat(B) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsB) asymbol(*,**,***) ///
+ctitle("Characteristics") merge
+frmttable using E1_decomp_5.tex, tex statmat(C) sdec(2) substat(1) coljust(l;c;l;l) annotate(starsC) asymbol(*,**,***) ///
+ctitle("Returns") merge
 
 
 
@@ -655,7 +710,7 @@ lab var MAN4 "Size of management committee (count)"
 		
 
 * extensive (drop certain controls)
-gl outcomes co_opsalevalue co_opgoatno_w co_loan_amt index_benefits
+gl outcomes bLS8 LS9_w bco_goat co_opsalevalue co_loan_amt
 	
 local listsize : list sizeof global(outcomes)
 tokenize $outcomes	
@@ -732,7 +787,7 @@ outreg2 using E1_ols_`i'_1.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0
 }
 
 * intensive (full set of controls)
-gl outcomes co_opsalevalue co_opgoatno_w co_loan_amt index_benefits
+gl outcomes bLS8 LS9_w bco_goat co_opsalevalue co_loan_amt
 	
 local listsize : list sizeof global(outcomes)
 tokenize $outcomes	
@@ -812,9 +867,5 @@ outreg2 using E1_ols_`i'_2.tex, drop(i.n_district) stats(coef se) dec(3) alpha(0
 
 		
 
-* oaxaca regression model
-* benefits index by literacy
-oaxaca index_benefits HHR4 ID10 goats_owned mem_length travel_time MAN2 MAN3 MAN4 MAN10 no_services, by(gr_pct_HHR14) vce(cluster idx) swap
-		
-		
+
 		

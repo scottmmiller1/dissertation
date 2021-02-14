@@ -58,9 +58,14 @@ rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Reve
 clear
 use "$d3/HH_Final.dta"
 
-drop if LS8 == 0
+*drop if LS8 == 0
 gen side_sell = outsidegoatno > 0
 replace rev_co_opgoat_w = . if co_opgoatno_w == 0
+replace rev_goat_w = . if rev_goat_w == 0
+replace co_opgoatno_w = .  if LS8_w == 0
+replace net_goat_income_w = .  if LS8_w == 0
+replace side_sell = .  if LS8_w == 0
+replace LS8_w = .  if LS8_w == 0
 
 
 ** HH indicators **
