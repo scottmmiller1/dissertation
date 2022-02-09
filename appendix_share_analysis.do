@@ -10,6 +10,13 @@ use "$d3/share_monthly_final.dta", clear
 xtset ___parent_index_n
 
 drop if LS8 ==.
+
+* generate binary sale indicator by month - accounts for zero price values
+gen bLS8 = (LS8 > 0)
+
+replace price =. if price ==0
+replace LS8 =. if LS8 ==0
+
 /*
 replace LS8 = 0 if LS8 ==.
 replace LS3 = 0 if LS3 ==.
@@ -17,8 +24,6 @@ replace LS9 = 0 if LS9 ==.
 replace price = 0 if price ==.
 */
 
-* generate binary sale indicator by month - accounts for zero price values
-gen bLS8 = (LS8 > 0)
 
 
 * variable labels for table
@@ -47,6 +52,9 @@ gen LS8_ihs = ln(LS8 + sqrt(LS8^2 + 1))
 lab var price_ihs "Log price (USD)"
 lab var LS8_ihs "Log goats sold (count)"
 
+gen price_log = ln(price)
+gen LS8_log = ln(LS8)
+
 
 * Table 1
 * ---------------------------------------------------------	
@@ -56,12 +64,12 @@ xtreg bLS8 share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table", tex addtext(Household FE, Yes, Month FE, Yes) label replace
 	
 * price - HH & Month FE
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table", tex addtext(Household FE, Yes, Month FE, Yes) label
 
 	
 * goats sold - HH & Month FE	
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table", tex addtext(Household FE, Yes, Month FE, Yes) label
 
 
@@ -79,20 +87,20 @@ outreg2 using "$d2/E2_appendix_results_table2", tex drop(i.month*) addtext(House
 
 	
 * price - HH & Month FE
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table2", tex drop(i.month*) addtext(Household FE, Yes, Month FE, Yes, Month X Distance FE, No) label
 
 * price - HH, Month & Month*distnace FE 
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month#c.ktm_dist_mi, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month#c.ktm_dist_mi, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table2", tex drop(i.month*) addtext(Household FE, Yes, Month FE, No, Month X Distance FE, Yes) label
 
 	
 * goats sold - HH & Month FE	
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table2", tex drop(i.month*) addtext(Household FE, Yes, Month FE, Yes, Month X Distance FE, No) label
 
 * goats sold - HH, Month & Month*distnace FE 
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month#c.ktm_dist_mi, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month#c.ktm_dist_mi, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table2", tex drop(i.month*) addtext(Household FE, Yes, Month FE, No, Month X Distance FE, Yes) label		
 	
 			
@@ -111,20 +119,20 @@ outreg2 using "$d2/E2_appendix_results_table3", tex drop(i.month* i.month#i.dist
 
 	
 * price - HH & Month FE
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table3", tex drop(i.month* i.month#i.district_n*) addtext(Household FE, Yes, Month FE, Yes, Month X District FE, No) label
 
 * price - HH, Month & Month*distnace FE 
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month#i.district_n, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month#i.district_n, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table3", tex drop(i.month* i.month#i.district_n*) addtext(Household FE, Yes, Month FE, No, Month X District FE, Yes) label
 
 	
 * goats sold - HH & Month FE	
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table3", tex drop(i.month* i.month#i.district_n*) addtext(Household FE, Yes, Month FE, Yes, Month X District FE, No) label
 
 * goats sold - HH, Month & Month*distnace FE 
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month#i.district_n, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month#i.district_n, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table3", tex drop(i.month* i.month#i.district_n*) addtext(Household FE, Yes, Month FE, No, Month X District FE, Yes) label		
 
 
@@ -143,19 +151,19 @@ outreg2 using "$d2/E2_appendix_results_table4", tex drop(i.month* i.month#i.idx_
 
 	
 * price - HH & Month FE
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg price c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table4", tex drop(i.month* i.month#i.idx*) addtext(Household FE, Yes, Month FE, Yes, Month X Cooperative FE, No) label
 
 * price - HH, Month & Month*distnace FE 
-xtreg price_ihs c.LS3##c.share_co bLS8 i.month#i.idx_n, fe cluster(idx)
+xtreg price LS3 i.month#i.idx_n, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table4", tex drop(i.month* i.month#i.idx_n*) addtext(Household FE, Yes, Month FE, No, Month X Cooperative FE, Yes) label
 
 	
 * goats sold - HH & Month FE	
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month, fe cluster(idx)
+xtreg LS8 c.LS3##c.share_co i.month, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table4", tex drop(i.month* i.month#i.idx_n*) addtext(Household FE, Yes, Month FE, Yes, Month X Cooperative FE, No) label
 
 * goats sold - HH, Month & Month*distnace FE 
-xtreg LS8_ihs c.LS3##c.share_co bLS8 i.month#i.idx_n, fe cluster(idx)
+xtreg LS8 LS3 i.month#i.idx_n, fe cluster(idx)
 outreg2 using "$d2/E2_appendix_results_table4", tex drop(i.month* i.month#i.idx_n*) addtext(Household FE, Yes, Month FE, No, Month X Cooperative FE, Yes) label		
 		

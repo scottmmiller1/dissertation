@@ -7,11 +7,15 @@ use "/Users/scottmiller/Dropbox (UFL)/LSIL 2/Work Spaces/Scott/Side-Selling/Data
 
 keep ___parent_index idx HH_IDSHG LS2 LS3 LS8 LS9 price
 
+drop if LS8 == .
+
+/*
 * give non-sellers zero values
 replace LS8 = 0 if LS8 ==.
 replace LS3 = 0 if LS3 ==.
 replace LS9 = 0 if LS9 ==.
 replace price = 0 if price ==.
+*/
 
 * make co-op sale binary
 replace LS3 = 0 if LS3 == 2

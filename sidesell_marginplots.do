@@ -44,47 +44,91 @@ gl covariates HHR4 HHR14 ID10 goats_owned bHHR16 mem_length bMEM4 MEM7 index_emp
 	
 */
 
-* distance squared
-gen geo_dist_mi_sq = geo_dist_mi*geo_dist_mi
-
 
 * polynomial distance + covariates	
-*probit LS3 c.geo_dist_mi##c.geo_dist_mi LS8_w COM3 $covariates, cluster(idx)	
+probit LS3 c.geo_dist_mi##c.geo_dist_mi LS8_w COM3 $covariates, cluster(idx)	
 
-probit LS3 geo_dist_mi geo_dist_mi_sq COM3 LS8_w $covariates, cluster(idx)	
+	margins, dydx(geo_dist_mi COM3 LS8_w $covariates) atmeans post
+	estimates store margins1
+	outreg2 [margins1] using "$d2/E2_margins_table", tex label replace
 
-	margins, dydx(geo_dist_mi geo_dist_mi_sq COM3 LS8_w $covariates) atmeans
-	outreg2 using "$d2/E2_margins_table", tex label replace
-
-probit bCOM3 geo_dist_mi geo_dist_mi_sq LS8_w $covariates, cluster(idx)		
+probit bCOM3 c.geo_dist_mi##c.geo_dist_mi LS8_w $covariates, cluster(idx)		
 	
-	margins, dydx(geo_dist_mi geo_dist_mi_sq LS8_w $covariates) atmeans
-	outreg2 using "$d2/E2_margins_table", tex label
+	margins, dydx(geo_dist_mi LS8_w $covariates) atmeans post
+	estimates store margins2
+	outreg2 [margins2] using "$d2/E2_margins_table", tex label
 
 	
 * margins plots	
 
 * distance in discrete levels
-sumdist geo_dist_mi_sq, n(5)
+sumdist geo_dist_mi, n(5)
 
+
+probit LS3 c.geo_dist_mi##c.geo_dist_mi LS8_w COM3 $covariates, cluster(idx)	
+
+margins, at(geo_dist_mi==(0(1)6)) atmeans
+marginsplot, yline(0) title("") ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Distance from the Cooperative (Miles), placement(6) margin(top) size(medium)) ///
+			graphregion(color(white) ilcolor(white)) ///
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Predicted Probability of Cooperative Sale, orientation(vertical)  size(medium))
+			graph export "$d0/Figures/Essay 2/E2_Margins_distance.png", replace	
+
+margins, at(COM3==(0(1)6)) atmeans
+marginsplot, yline(0) title("") ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Number of Times Contacted about Cooperative Sales (count), placement(6) margin(top) size(medium)) ///
+			graphregion(color(white) ilcolor(white)) ///
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Predicted Probability of Cooperative Sale, orientation(vertical)  size(medium))
+			graph export "$d0/Figures/Essay 2/E2_Margins_contact.png", replace	
+
+margins, at(n_services==(0(3)18)) atmeans
+marginsplot, yline(0) title("") ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Cooperative Services Offered (Count), placement(6) margin(top) size(medium)) ///
+			graphregion(color(white) ilcolor(white)) ///
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Predicted Probability of Cooperative Sale, orientation(vertical)  size(medium))
+			graph export "$d0/Figures/Essay 2/E2_Margins_services.png", replace	
+
+
+margins, at(LS8_w==(1(2)10)) atmeans
+marginsplot, yline(0) title("") ///
+			ylabel(,labsize(medium)) ///
+			xlabel(,labsize(medium)) ///
+			xtitle(Total Goats Sold (Count), placement(6) margin(top) size(medium)) ///
+			graphregion(color(white) ilcolor(white)) ///
+			title("") note("") ///
+			ylabel(, angle(0)) ytitle(Predicted Probability of Cooperative Sale, orientation(vertical)  size(medium))
+			graph export "$d0/Figures/Essay 2/E2_Margins_goatssold.png", replace	
+
+/*	
 gen dist_levels = 0
-replace dist_levels = 1 if (geo_dist_mi_sq >= `r(q1)' & geo_dist_mi_sq < `r(q2)')
-replace dist_levels = 2 if (geo_dist_mi_sq >= `r(q2)' & geo_dist_mi_sq < `r(q3)')
-replace dist_levels = 3 if (geo_dist_mi_sq >= `r(q3)' & geo_dist_mi_sq < `r(q4)')
-replace dist_levels = 4 if (geo_dist_mi_sq >= `r(q4)')
-	
+replace dist_levels = 1 if (geo_dist_mi >= `r(q1)' & geo_dist_mi < `r(q2)')
+replace dist_levels = 2 if (geo_dist_mi >= `r(q2)' & geo_dist_mi < `r(q3)')
+replace dist_levels = 3 if (geo_dist_mi >= `r(q3)' & geo_dist_mi < `r(q4)')
+replace dist_levels = 4 if (geo_dist_mi >= `r(q4)')
+
+
 probit LS3 i.dist_levels LS8_w COM3 $covariates, cluster(idx)	
 	
 	margins, atmeans dydx(dist_levels)
-	
 	marginsplot, yline(0) title("") ///
 			ylabel(,labsize(medium)) ///
-			xlabel(1 "2nd Quintile" 2 "3rd Quintile." 3 "4th Quintile" 4 "5th Quintile.",labsize(medium) angle(45)) ///
-			xtitle(Distance from the Cooperative Squared (Miles), placement(6) margin(top) size(medium)) ///
+			xlabel(1 "2nd Quintile" 2 "3rd Quintile" 3 "4th Quintile" 4 "5th Quintile",labsize(medium) angle(45)) ///
+			xtitle(Distance from the Cooperative (Miles), placement(6) margin(top) size(medium)) ///
 			graphregion(color(white) ilcolor(white)) ///
 			title("") note("") ///
 			ylabel(, angle(0)) ytitle(Marginal Effect on Probability of Cooperative Sale, orientation(vertical)  size(medium))
 			graph export "$d0/Figures/Essay 2/E2_Margins_distance.png", replace	
+			
+
 			
 			
 * # of times contacted in discrete levels			
@@ -95,7 +139,7 @@ forvalues i = 1/6 {
 replace COM3_levels = 6 if COM3 > 6 & COM3 !=.	
 
 
-probit LS3 i.COM3_levels geo_dist_mi geo_dist_mi_sq LS8_w $covariates, cluster(idx)		
+probit LS3 i.COM3_levels c.geo_dist_mi##c.geo_dist_mi LS8_w $covariates, cluster(idx)		
 
 		
 		margins, atmeans dydx(COM3_levels)
@@ -120,7 +164,7 @@ replace n_services_levels = 3 if (n_services >= `r(q3)' & n_services < `r(q4)')
 replace n_services_levels = 4 if (n_services >= `r(q4)')			
 
 
-probit LS3 i.n_services_levels geo_dist_mi geo_dist_mi_sq LS8_w COM3 HHR4 HHR14 ID10 goats_owned ///
+probit LS3 i.n_services_levels c.geo_dist_mi##c.geo_dist_mi LS8_w COM3 HHR4 HHR14 ID10 goats_owned ///
 			bHHR16 bMEM4 MEM7 index_emp nfloors dirt_floor mem_length, cluster(idx)		
 			
 		margins, atmeans dydx(n_services_levels)	
@@ -145,7 +189,7 @@ replace LS8_w_levels = 3 if (LS8_w > 2 & LS8_w <= 3)
 replace LS8_w_levels = 4 if (LS8_w > 3)			
 
 
-probit LS3 i.n_services_levels geo_dist_mi geo_dist_mi_sq LS8_w COM3 HHR4 HHR14 ID10 goats_owned ///
+probit LS3 i.n_services_levels c.geo_dist_mi##c.geo_dist_mi LS8_w COM3 HHR4 HHR14 ID10 goats_owned ///
 			bHHR16 bMEM4 MEM7 index_emp nfloors dirt_floor mem_length, cluster(idx)		
 			
 		margins, atmeans dydx(n_services_levels)	
@@ -159,3 +203,4 @@ probit LS3 i.n_services_levels geo_dist_mi geo_dist_mi_sq LS8_w COM3 HHR4 HHR14 
 			ylabel(, angle(0)) ytitle(Marginal Effect on Probability of Cooperative Sale, orientation(vertical)  size(medium))
 			graph export "$d0/Figures/Essay 2/E2_Margins_goatssold.png", replace				
 			
+*/

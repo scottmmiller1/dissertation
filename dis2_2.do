@@ -80,6 +80,10 @@ foreach i in A B C D X {
 	tab LS6`i'
 }
 
+tab CO_SER15 LS6D 
+
+bysort CO_SER15 : sum LS6D
+
 ********************************************* 
 ** Reasons sold outside co-op **
 

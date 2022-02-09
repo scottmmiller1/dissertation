@@ -58,7 +58,7 @@ rtitle("Members (count)"\"Revenue (USD)"\"Costs (USD)"\"Net revenue (USD)"\"Reve
 clear
 use "$d3/HH_Final.dta"
 
-*drop if LS8 == 0
+drop if LS8 == 0
 gen side_sell = outsidegoatno > 0
 replace rev_co_opgoat_w = . if co_opgoatno_w == 0
 replace rev_goat_w = . if rev_goat_w == 0
